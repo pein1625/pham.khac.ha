@@ -1,5 +1,5 @@
+'use strict';
 $(document).ready(function(){
-  'use strick';
   // click event on header button
   var bodyWidth = $(window).outerWidth();
   if (bodyWidth < 992) {
