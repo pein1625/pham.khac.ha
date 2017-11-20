@@ -270,7 +270,7 @@ gulp.task('dev', function (cb) {
     ],
     cb
     )
-})
+});
 
 // ================ Build
 gulp.task('build', function (cb) {
