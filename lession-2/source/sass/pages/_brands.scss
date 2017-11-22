@@ -1,0 +1,10 @@
+.brand-slide {
+  background-color: $milky;
+  &__wrapper {
+    width: 100%;
+    height: 106px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

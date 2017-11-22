@@ -1,0 +1,21 @@
+.intro {
+  margin: 20px 0;
+  font-weight: 600;
+  line-height: 40px;
+  &__icon-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    padding: 8px;
+    border-radius: 100%;
+    background-color: $grey;
+    float: left;
+  }
+  &__icon {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

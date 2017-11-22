@@ -1,38 +1,38 @@
 mixin header
   header
-    section.headertop.clearfix
+    section.top-page.clearfix
       .container.clearfix
         ul.float-left
-          li.headertop__shop
-            a.headertop__shoplink(href="#!") SUNSHOP
-          li.headertop__shop
-            a.headertop__shoplink(href="#!") MARKETPLACE
-          li.headertop__shop
-            a.headertop__shoplink(href="#!") HOT DEAL
-          li.headertop__shop
-            a.headertop__shoplink(href="#!") SMAGAZINE
+          li.d-inline-block
+            a.top-page__item(href="#!") SUNSHOP
+          li.d-inline-block
+            a.top-page__item(href="#!") MARKETPLACE
+          li.d-inline-block
+            a.top-page__item(href="#!") HOT DEAL
+          li.d-inline-block
+            a.top-page__item(href="#!") SMAGAZINE
         ul.float-right
-          li.headertop__account
-            a.headertop__accountlink(href="#!") CHAT
-          li.headertop__account
-            a.headertop__accountlink(href="#!") TÀI KHOẢN
-          li.headertop__account
-            a.headertop__accountlink(href="#!") TRỢ GIÚP
-    section.headermiddle
+          li.d-inline-block
+            a.top-page__item(href="#!") CHAT
+          li.d-inline-block
+            a.top-page__item(href="#!") TÀI KHOẢN
+          li.d-inline-block
+            a.top-page__item.top-page__item--lastchild(href="#!") TRỢ GIÚP
+    section.header
       .container
-        .headermiddle__logo
+        .header__logo
           a(href="#!")
-            img.headermiddle_logoimage(src="images/logo.png", alt="logo")
-        form.headermiddle__search
-          input.headermiddle__searchinput(type="text", placeholder="Tìm kiếm sản phẩm...")
-          button.headermiddle__searchbutton
-        .header_cart
-          img.headermiddle__carticon(src="images/icon-cart.png", alt="cart icon")
-          span.headermiddle__carttext 0 sản phẩm
-    section.headerbottom
+            img.header_logo-img(src="images/logo.png", alt="logo")
+        form.search
+          input.search__input(type="text", placeholder="Tìm kiếm sản phẩm...")
+          button.search__button
+        .cart
+          img.cart__icon(src="images/icon-cart.png", alt="cart icon")
+          span.cart__text 0 sản phẩm
+    section.header-nav
       .container
-        ul.headerbottom__nav
+        ul.header-nav__wrap
           - var headerNav = ['HÀNG MỚI VỀ', 'TRANG PHỤC', 'GIÀY TÚI XÁCH', 'PHỤ KIỆN', 'THỂ THAO', 'ĐỒNG HỒ', 'LÀM ĐẸP', 'TIN TỨC', 'CÁC THƯƠNG HIỆU', 'GIẢM ĐẾN 50%']
           each item in headerNav
             li.d-inline-block
-              a.headerbottom__navitem(href="#!")= item
+              a.header-nav__item(href="#!")= item
