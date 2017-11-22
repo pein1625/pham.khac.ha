@@ -1,0 +1,59 @@
+.footer {
+  background: $black;
+  color: $light-grey;
+}
+.footerAbove {
+  font-size: 14px;
+  padding: 25px 0;
+  &__logo {
+    height: 70px;
+    width: auto;
+    margin-bottom: 34px;
+  }
+  &__contactInfo {
+    position: relative;
+    padding-left: 20px;
+    line-height: 30px;
+    margin-bottom: 16px;
+  }
+  &__contactIcon {
+    position: absolute;
+    left: 0;
+    top: 7px;
+    font-size: 14px;
+    color: $light-green;
+  }
+  &__heading {
+    font-size: 18px;
+    color: $milky;
+    line-height: 77px;
+    margin: 0;
+    border-bottom: 1px solid $grey;
+  }
+  &__sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 25px;
+  }
+  &__sublistLink {
+    display: block;
+    color: $light-grey;
+    &:hover {
+      color: $light-green;
+      text-decoration: none;
+    }
+  }
+}
+.footerBelow {
+  border-top: 1px solid $grey;
+  &__copyright {
+    font-size: 12px;
+    line-height: 72px;
+    margin-bottom: 0;
+  }
+  &__payment {
+    margin-top: 21px;
+    height: 30px;
+  }
+}

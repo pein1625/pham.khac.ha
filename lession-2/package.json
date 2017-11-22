@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gulp-filelist": "^0.5.0",
     "bootstrap-sass": "^3.3.7",
     "browser-sync": "^2.14.0",
     "del": "^2.2.2",
@@ -40,6 +41,6 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "gulp-filelist": "^0.5.0"
+    "node-sass": "^4.7.1"
   }
 }

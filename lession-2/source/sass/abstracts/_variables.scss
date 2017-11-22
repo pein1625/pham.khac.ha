@@ -1,4 +1,4 @@
-// Media queries
+$block-caculator-font-size: 48px;
 $screen-ss-min: 599px;
 $high-res: 1600px;
 
@@ -9,3 +9,11 @@ $xl: "only screen and (min-width: $screen-lg)";
 $ssp: "only screen and (max-width:$screen-xs)";
 $xs: "only screen and (max-width:$screen-xs-max)";
 $sm: "only screen and (max-width:$screen-sm-max)";
+
+$white: #fff;
+$milky: #f3f3f3;
+$light-grey: #aaa;
+$grey: #484848;
+$black: #10100f;
+$light-green: #01c4c4;
+$roboto: 'Roboto', sans-serif;
