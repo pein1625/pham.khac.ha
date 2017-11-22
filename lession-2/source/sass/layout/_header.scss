@@ -1,4 +1,4 @@
-.headerTop {
+.headertop {
   background: $milky;
   font-size: 12px;
   font-weight: 600;
@@ -6,7 +6,7 @@
   &__shop {
     display: inline-block;
   }
-  &__shopLink {
+  &__shoplink {
     display: block;
     margin-right: 24px;
     color: $grey;
@@ -17,7 +17,7 @@
   &__account {
     display: inline-block;
   }
-  &__accountLink {
+  &__accountlink {
     display: inline-block;
     margin-left: 24px;
     color: $grey;
@@ -27,7 +27,7 @@
   }
 }
 
-.headerMiddle {
+.headermiddle {
   background: $black;
   border-top: 1px solid $grey;
   .container {
@@ -40,6 +40,9 @@
     max-width: 250px;
     height: 62px;
   }
+  &__logoimage {
+    width: 100%;
+  }
   &__search {
     display: flex;
     margin-left: auto;
@@ -48,7 +51,7 @@
     width: 392px;
     height: 36px;
   }
-  &__searchInput {
+  &__searchinput {
     width: 350px;
     height: 36px;
     padding: 0 20px;
@@ -56,7 +59,7 @@
     border: 1px solid $white;
     border-radius: 5px 0 0 5px;
   }
-  &__searchButton {
+  &__searchbutton {
     display: block;
     width: 40px;
     height: 100%;
@@ -64,16 +67,16 @@
     border-radius: 0 5px 5px 0;
     background: url('../images/icon-search.png') no-repeat $light-green;
   }
-  &__cartIcon {
+  &__carticon {
     margin-right: 10px;
   }
-  &__cartText {
+  &__carttext {
     font-size: 14px;
     vertical-align: middle;
     color: $white;
   }
 }
-.headerBottom {
+.headerbottom {
   height: 40px;
   background: $milky;
   font-size: 14px;
@@ -91,7 +94,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__navItem{
+  &__navitem{
     color: $grey;
     &:hover {
       color: $light-green;
