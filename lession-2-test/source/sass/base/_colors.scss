@@ -1,0 +1,28 @@
+$green: #3baf29;
+$white: #ffffff;
+$black: #000000;
+$yellow: #f0aa0a;
+$blue: #0089f2;
+$red: #d30d0d;
+$placeholder: #9B9B9B;
+$gray: #ddd;
+
+$darker-green: darken($green, 6%);
+$darkness-green: darken($green, 20%);
+$darker-blue: darken($blue, 3%);
+
+$lighter-green: lighten(desaturate(adjust-hue($green, -0.7208), 15.9696), 40.1961);
+$light-gray: #a3a3a3;
+$lightest-gray: #c4c6c7;
+$lighter-black: #282828;
+$lightest-black: #444;
+$lighter-blue: lighten($blue, 30%);
+$lighter-white: #f5f5f5;
+$lighten-grey: #f6f6f6;
+$lightest-grey: #f9f9f9;
+$border-gray: #e7e7e7;
+$black-collapse: #909090;
+$yellow-collapse: #fcf496;
+$green-collapse: #b7efa4;
+$red-collapse: #ffb0b2;
+$blue-collapse: #aec8f9;

@@ -1,0 +1,16 @@
+body {
+  font-family: $roboto;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1188px;
+  }
+}

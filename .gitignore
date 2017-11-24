@@ -1,5 +1,7 @@
 node_modules/
+lession-2-test/node_modules/
 dest/
+lession-2-test/dest/
 npm-debug.log
 .sass-cache
 .css

@@ -1,0 +1,65 @@
+.footer__wrap {
+  background-color: $black;
+  color: $light-grey;
+}
+.footer {
+  font-size: 14px;
+  padding: 25px 0;
+  border-bottom: 1px solid $grey;
+  &__logo {
+    height: 70px;
+    width: auto;
+    margin-bottom: 34px;
+  }
+  &__heading {
+    font-size: 18px;
+    color: $milky;
+    line-height: 77px;
+    margin: 0;
+    border-bottom: 1px solid $grey;
+  }
+  &__sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 25px;
+  }
+  &__listitem {
+    display: block;
+    color: $light-grey;
+    &:hover {
+      position: relative;
+      left: 10px;
+      color: $light-green;
+      text-decoration: none;
+    }
+  }
+}
+.contact__info {
+  position: relative;
+  padding-left: 20px;
+  line-height: 30px;
+  margin-bottom: 16px;
+  &:hover {
+    color: $light-green;
+  }
+}
+.contact__icon {
+  position: absolute;
+  left: 0;
+  top: 7px;
+  font-size: 14px;
+  color: $light-green;
+}
+.copyright {
+  font-size: 12px;
+  line-height: 72px;
+  margin-bottom: 0;
+}
+.payment {
+  margin-top: 21px;
+  height: 30px; 
+  &__img {
+    height: 100%;
+  }
+}
