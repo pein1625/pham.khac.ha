@@ -1,0 +1,100 @@
+.banner {
+  margin-bottom: 30px;
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+  &__navigation {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    border: 1px solid $light-green;
+    border-radius: 3px;
+  }
+  &__heading {
+    margin: 0;
+    padding: 0 32px;
+    line-height: 45px;
+    font-size: 16px;
+    background-color: $light-green;
+    color: $white;
+  }
+  &__nav {
+    padding: 10px 0;
+  }
+  &__nav-item {
+    font-size: 14px;
+    font-weight: 800;
+    display: block;
+    color: $grey;
+    padding: 0 32px;
+    &:hover {
+      color: $light-green;
+    }
+  }
+  &__nav-carret {
+    position: relative;
+    &::after {
+      content: '\f054';
+      font-family: 'FontAwesome';
+      font-size: 12px;
+      font-weight: 100;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      color: $grey;
+    }
+  }
+  &__nav--active {
+    position: relative;
+    &::after {
+      content: '\f078';
+      font-family: 'FontAwesome';
+      font-size: 12px;
+      font-weight: 100;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      color: $grey;
+    }
+  }
+  &__dropdown {
+    position: relative;
+  }
+  &__dropdown:hover > &__subnav {
+    display: block;
+  }
+  &__subnav {
+    display: none;
+    min-width: 200px;
+    position: absolute; 
+    right: -201px;
+    top: 0;
+    z-index: 10;
+    background-color: $white;
+    border-left: 4px solid $light-green;
+    padding: 10px 10px 10px 48px;
+    list-style: disc;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  }
+  &__subnav-item {
+    font-size: 14px;
+    color: $grey;
+    &:hover {
+      color: $light-green;
+    }
+  }
+  &__seemore {
+    padding: 0 32px;
+    color: $grey;
+    font-size: 14px;
+    &:hover {
+      color: $light-green;
+    }
+    .fa-plus-circle {
+      font-size: 16px;
+      color: $light-green;
+      margin-right: 5px;
+    }
+  }
+}

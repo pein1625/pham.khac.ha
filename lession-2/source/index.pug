@@ -1,14 +1,154 @@
 include modules/head
 include modules/header
-include modules/main
 include modules/footer
 include modules/script
+
+include modules/components/product
+include modules/components/news
 
 doctype html
 html
   +head
   body
     +header
-    +main
+    
+    main.main
+      .container
+        // intro section
+        ul.intro.d-flex.justify-content-between
+          li
+            .intro__icon-wrap 
+              img.intro__icon(src="images/icon-intro-1.png", alt="")
+            | Trả hàng trong 30 ngày
+          li
+            .intro__icon-wrap 
+              img.intro__icon(src="images/icon-intro-2.png", alt="")
+            | Giao hàng miễn phí
+          li
+            .intro__icon-wrap
+              img.intro__icon(src="images/icon-intro-3.png", alt="")
+            | Thanh toán linh hoạt
+          li
+            .intro__icon-wrap
+              img.intro__icon(src="images/icon-intro-4.png", alt="")
+            | Hotline: 090 407 9496
+        //end intro
+        // banner
+        section.banner
+          .row 
+            .col-lg-3
+              .banner__navigation.h-100
+                h5.banner__heading DANH MỤC SẢN PHẨM
+                ul.banner__nav
+                  li.banner__dropdown
+                    a.banner__nav-item.banner__nav-carret(href="#!") BÁN CHẠY NHẤT
+                  li.banner__dropdown
+                    a.banner__nav-item.banner__nav-carret(href="#!") HÀNG MỚI VỀ
+                  li.banner__dropdown
+                    a.banner__nav-item.banner__nav-carret(href="#!") GIẢM GIÁ ĐẾN 50%
+                  li.banner__dropdown
+                    a.banner__nav-item.banner__nav-carret(href="#!") QUẦN ÁO
+                    ul.banner__subnav
+                      li
+                        a.banner__subnav-item(href="#!") Áo thun 
+                      li
+                        a.banner__subnav-item(href="#!") Áo sơ mi
+                      li
+                        a.banner__subnav-item(href="#!") Quần Jeans
+                      li
+                        a.banner__subnav-item(href="#!") Quần Shorts
+                      li
+                        a.banner__subnav-item(href="#!") Xem thêm
+                  li.banner__dropdown
+                    a.banner__nav-item.banner__nav-carret(href="#!") GIÀY DÉP
+                    ul.banner__subnav
+                      li
+                        a.banner__subnav-item(href="#!") Giày casual
+                      li
+                        a.banner__subnav-item(href="#!") Giày da và giày tây
+                      li
+                        a.banner__subnav-item(href="#!") Sneakers
+                a.banner__seemore(href="#!")
+                  i.fa.fa-plus-circle
+                  | Xem thêm
+            .col-md-9
+              img.banner__image(src="images/banner-1.png", alt="")
+
+        // feature section
+        section.row
+          .col-md-4
+            .feature
+              img.feature__image(src="images/list-1.png", alt="")
+              .feature__description
+                img.feature__imgtext(src="images/feature-text-1.png", alt="")
+          .col-md-4
+            .feature
+              img.feature__image(src="images/list-2.png", alt="")
+              .feature__description
+                img.feature__imgtext(src="images/feature-text-2.png", alt="")
+          .col-md-4
+            .feature
+              img.feature__image(src="images/list-3.png", alt="")
+        // end feature
+        // best sell
+        section
+          .main__header
+            h3.main__heading Sản phẩm bán chạy
+            a.main__arrow.main__arrow--active(href="#!")
+              img.main_arrow-icon(src="images/arrow-l.png", alt="")
+            a.main__arrow(href="#!")
+              img.main_arrow-icon(src="images/arrow-r.png", alt="")
+          .row
+            each val in [1, 2, 3, 4]
+              .col-lg-3.col-md-4.col-sm-6.product
+                +product("images/item-"+val+".png")
+
+        // advertis section
+        section.advertis
+          img.advertis__image(src="images/banner-2.png", alt="")
+          
+        // all product
+        section.main__allproduct
+          .main__header
+            h3.main__heading Tất cả sản phẩm
+            ul
+              li.d-inline-block
+                a.main__filterproduct(href="#!") Nam
+              li.d-inline-block
+                a.main__filterproduct.main__filterproduct--active(href="#!") Nữ
+              li.d-inline-block
+                a.main__filterproduct.main__filterproduct--lastchild(href="#!") Trẻ em
+            a.main__arrow.main__arrow--active(href="#!")
+              img.main_arrow-icon(src="images/arrow-l.png", alt="")
+            a.main__arrow(href="#!")
+              img.main_arrow-icon(src="images/arrow-r.png", alt="")
+          .row
+            each val in [1, 2, 3, 4, 1, 2, 3, 4]
+              .col-lg-3.col-md-4.col-sm-6.product
+                +product("images/item-"+val+".png")
+        // end all product
+
+        // news
+        section.news
+          .main__header 
+            h3.main__heading Tin tức
+          .row
+            each val in [1, 2]
+              .col-md-6
+                +news("images/below-"+val+".png")
+    // brand slide
+    .brand-slide
+      .container
+        ul.brand-slide__wrapper
+          li.d-inline-block
+            a(href="#!").main__arrow
+              img.main__arrow-icon(src="images/arrow-l.png", alt="")
+          each val in [1, 2, 3, 4, 5, 6]
+            li.d-inline-block
+              a(href="#!")
+                img(src="images/brand-"+val+".png", alt="")
+          li.d-inline-block
+            a(href="#!").main__arrow.main__arrow--active
+              img.main__arrowIcon(src="images/arrow-r.png", alt="")
     +footer
     +script

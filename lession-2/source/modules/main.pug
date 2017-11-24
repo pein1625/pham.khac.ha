@@ -1,8 +1,20 @@
-include main/bestSell
-include main/allProduct
+include main/intro
+include main/banner
+include main/feature
+include main/bestsell
+include main/advertis
+include main/allproduct
+include main/news
+include main/brands
 
 mixin main
   main.main
     .container
-      +main__bestsell
-      +main__allproduct
+      +intro
+      +banner
+      +feature
+      +bestsell
+      +advertis
+      +allproduct
+      +news
+    +brands

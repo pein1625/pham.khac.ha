@@ -1,94 +1,93 @@
 mixin footer
-  footer.footer
-    .footerabove
+  footer.footer__wrap
+    .footer
       .container
         .row
           .col-lg-4
-            .footerabove__logo
+            .footer__logo
               a(href="#!")
                 img(src="images/logo.png", alt="")
-            p.footerabove__contactinfo
-              i.fa.fa-map-marker.footerabove__contacticon
+            p.contact__info
+              i.fa.fa-map-marker.contact__icon
               | Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn,  P. Cống Vị, Q. Ba Đình, Hà Nội
-            span.footerabove__contactinfo.d-inline-block
-              i.fa.fa-phone.footerabove__contacticon
+            span.contact__info.d-inline-block
+              i.fa.fa-phone.contact__icon
               | (04) 6674 2332 - 
-            span.footerabove__contactinfo.d-inline-block
-              i.fa.fa-fax.footerabove__contacticon
+            span.contact__info.d-inline-block
+              i.fa.fa-fax.contact__icon
               | (04) 3786 8904
-            p.footerabove__contactinfo 
-              i.fa.fa-phone.footerabove__contacticon
+            p.contact__info 
+              i.fa.fa-phone.contact__icon
               | (08) 6680 9686 
-            p.footerabove__contactinfo 
-              i.fa.fa-envelope.footerabove__contacticon
+            p.contact__info
+              i.fa.fa-envelope.contact__icon
               | support@bizweb.vn
           .col-lg-8
             .row
               .col-md-3
-                h5.footerabove__heading CHUYỂN HÀNG
-                ul.footerabove__sublist
+                h5.footer__heading CHUYỂN HÀNG
+                ul.footer__sublist
                   li
-                    a.footerabove__sublistlink(href="#!") Mua sắm trực tuyến
+                    a.footer__listitem(href="#!") Mua sắm trực tuyến
                   li
-                    a.footerabove__sublistlink(href="#!") Đến từ chúng tôi gửi đến
+                    a.footer__listitem(href="#!") Đến từ chúng tôi gửi đến
                   li
-                    a.footerabove__sublistlink(href="#!") Chính sách vận chuyển
+                    a.footer__listitem(href="#!") Chính sách vận chuyển
                   li
-                    a.footerabove__sublistlink(href="#!") Vận chuyển thông tin
+                    a.footer__listitem(href="#!") Vận chuyển thông tin
                   li
-                    a.footerabove__sublistlink(href="#!") Phiếu quà tặng
+                    a.footer__listitem(href="#!") Phiếu quà tặng
               .col-md-3
-                h5.footerabove__heading HỖ TRỢ
-                ul.footerabove__sublist
+                h5.footer__heading HỖ TRỢ
+                ul.footer__sublist
                   li
-                    a.footerabove__sublistlink(href="#!") Câu truyện của chúng ta
+                    a.footer__listitem(href="#!") Câu truyện của chúng ta
                   li
-                    a.footerabove__sublistlink(href="#!") Thanh toán an toàn
+                    a.footer__listitem(href="#!") Thanh toán an toàn
                   li
-                    a.footerabove__sublistlink(href="#!") Tuỳ chọn vận chuyển
+                    a.footer__listitem(href="#!") Tuỳ chọn vận chuyển
                   li
-                    a.footerabove__sublistlink(href="#!") Chính sách vận chuyển
+                    a.footer__listitem(href="#!") Chính sách vận chuyển
                   li
-                    a.footerabove__sublistlink(href="#!") Liên hệ với chúng tôi
+                    a.footer__listitem(href="#!") Liên hệ với chúng tôi
               .col-md-3
-                h5.footerabove__heading THÔNG TIN
-                ul.footerabove__sublist 
+                h5.footer__heading THÔNG TIN
+                ul.footer__sublist 
                   li
-                    a.footerabove__sublistlink(href="#!") Về chúng tôi
+                    a.footer__listitem(href="#!") Về chúng tôi
                   li
-                    a.footerabove__sublistlink(href="#!") Điều khoản & điều kiện
+                    a.footer__listitem(href="#!") Điều khoản & điều kiện
                   li
-                    a.footerabove__sublistlink(href="#!") Chính sách riêng tư
+                    a.footer__listitem(href="#!") Chính sách riêng tư
                   li
-                    a.footerabove__sublistlink(href="#!") Đơn đặt hàng và return
+                    a.footer__listitem(href="#!") Đơn đặt hàng và return
                   li
-                    a.footerabove__sublistlink(href="#!") Sơ đồ trang web
+                    a.footer__listitem(href="#!") Sơ đồ trang web
               .col-md-3
-                h5.footerabove__heading TÀI KHOẢN
-                ul.footerabove__sublist 
+                h5.footer__heading TÀI KHOẢN
+                ul.footer__sublist 
                   li
-                    a.footerabove__sublistlink(href="#!") Xem giỏ hàng
+                    a.footer__listitem(href="#!") Xem giỏ hàng
                   li
-                    a.footerabove__sublistlink(href="#!") Sản phẩm yêu thích
+                    a.footer__listitem(href="#!") Sản phẩm yêu thích
                   li
-                    a.footerabove__sublistlink(href="#!") Kiểm tra
+                    a.footer__listitem(href="#!") Kiểm tra
                   li
-                    a.footerabove__sublistlink(href="#!") Theo dõi đặt hàng của tôi
+                    a.footer__listitem(href="#!") Theo dõi đặt hàng của tôi
                   li
-                    a.footerabove__sublistlink(href="#!") Giúp
-    .footerbelow
-      .container.clearfix
-          p.float-left.footerbelow__copyright © Copyright 2015 - 2016 
-          ul.float-right.footerbelow__payment
-            li.d-inline-block.ml-3
-              a.footerbelow__paymentlink(href="#!")
-                img.footerbelow__paymentimage(src="images/brand-f1.png", alt="")
-            li.d-inline-block.ml-3
-              a.footerbelow__paymentlink(href="#!")
-                img.footerbelow__paymentimage(src="images/brand-f2.png", alt="")
-            li.d-inline-block.ml-3
-              a.footerbelow__paymentlink(href="#!")
-                img.footerbelow__paymentimage(src="images/brand-f3.png", alt="")
-            li.d-inline-block.ml-3
-              a.footerbelow__paymentlink(href="#!")
-                img.footerbelow__paymentimage(src="images/brand-f4.png", alt="")
+                    a.footer__listitem(href="#!") Giúp
+    .container.clearfix
+      p.float-left.copyright © Copyright 2015 - 2016 
+      ul.float-right.payment
+        li.d-inline-block.ml-3
+          a.payment__link(href="#!")
+            img.payment__img(src="images/payment-1.png", alt="")
+        li.d-inline-block.ml-3
+          a.payment__link(href="#!")
+            img.payment__img(src="images/payment-2.png", alt="")
+        li.d-inline-block.ml-3
+          a.payment__link(href="#!")
+            img.payment__img(src="images/payment-3.png", alt="")
+        li.d-inline-block.ml-3
+          a.payment__link(href="#!")
+            img.payment__img(src="images/payment-4.png", alt="")
