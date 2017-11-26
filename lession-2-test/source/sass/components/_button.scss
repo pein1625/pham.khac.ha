@@ -1,0 +1,40 @@
+.button {
+  display: inline-block;
+  width: 112px;
+  line-height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: $roboto;
+  text-align: center;
+  &--gold {
+    color: $white;
+    background-color: $gold;
+    &:hover {
+      color: $white;
+    }
+  }
+  &--black {
+    color: $white;
+    background-color: $lighter-black;
+    &:hover {
+      color: $white;
+    }
+  }
+  &--has-border {
+    color: $black;
+    border: 1px solid $black;
+    &:hover {
+      color: $black;
+    }
+  }
+  &--left {
+    margin-right: 5px;
+  }
+  &--center {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  &--lg {
+    font-size: 16px;
+  }
+}

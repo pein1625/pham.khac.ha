@@ -1,0 +1,15 @@
+mixin sub_header(title, nav=false)
+  .sub-header.clearfix
+    h4.sub-header__title.float-left
+      i.fa.fa-th-large.sub-header__icon
+      | #{title}
+    a.sub-header__btn.float-right(href="#!")
+      i.fa.fa-caret-right
+    a.sub-header__btn.float-right(href="#!")
+      i.fa.fa-caret-left
+    if (nav)
+      ul.sub-header__nav.clearfix.float-right
+        - var list = ['Máy khoan', 'Máy in 3D', 'Máy CNC', 'Máy tiện', 'Máy khác']
+        each item in list 
+          li.float-left
+            a.sub-header__item(href="#!")= item

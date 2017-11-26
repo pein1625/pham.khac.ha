@@ -1,0 +1,35 @@
+mixin product(img, size)
+  .product(class={'product--sm': size==='sm', 'product--md': size==='md', 'product--lg': size==='lg'})
+    .product__inner
+      .product__img-wrap
+        img.product__img(src=img, alt="")
+      p.product__price 1.550.000 Đ 
+      h6.product__name MÁY KHOAN BLACK DECKER
+      p.product__rate
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star-o
+        |   (12 Đánh giá)
+      .product__btn-wrap
+        a.button.button--gold.button--center(href="#!") MUA NGAY
+        a.button.button--black.button--center(href="#!") XEM CHI TIẾT
+
+mixin h_product(img)
+  .h-product.clearfix
+    .h-product__img-wrap.float-left
+      img.h-product__img(src=img, alt="")
+    .h-product__info
+      h6.h-product__name MÁY KHOAN CNC 3D
+      p.h-product__rate
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star
+        i.fa.fa-star-o
+        |   (12 Đánh giá)
+      p.h-product__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetu...
+      p.h-product__price 2.350.000 Đ
+      a.button.button--gold.button--left(href="#!") MUA NGAY
+      a.button.button--black.button--left(href="#!") XEM CHI TIẾT

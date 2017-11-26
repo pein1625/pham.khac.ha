@@ -1,0 +1,51 @@
+.sub-header {
+  & {
+    height: 32px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &__title {
+    position: relative;
+    padding-left: 20px;
+    font-weight: 800;
+  }
+  &__icon {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    font-size: 12px;
+    color: $gold;
+  }
+  &__btn {
+    display: block;
+    width: 34px;
+    line-height: 32px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid $black-collapse;
+    color: $black-collapse;
+    margin-left: 5px;
+    &:hover {
+      color: $white;
+      background-color: $lighter-black;
+      border-color: $lighter-black;
+    }
+  }
+  &__nav {
+    margin-right: 15px;
+  }
+  &__item {
+    display: block;
+    font-size: 13px;
+    line-height: 32px;
+    padding: 0 16px;
+    color: $black-collapse;
+    border: 1px solid $black-collapse;
+    margin-right: 10px;
+    &:hover {
+      color: $white;
+      background-color: $gold;
+      border-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.slide-wrap {
+  height: 500px;
+  width: 750px;
+  float: left;
+}
+.slider {
+  height: 500px;
+  width: 750px;
+  background: $lighter-white;
+  position: relative;
+  &__item {
+    height: 500px;
+    padding: 90px 0 0 50px;
+    position: relative;
+  }
+  &__img {
+    position: absolute;
+    right: 58px;
+    top: 50px;
+    max-height: 403px;
+    max-width: 276px;
+  }
+  &__type {
+    font-weight: 900;
+    margin: 0;
+  }
+  &__name {
+    font-size: 50px;
+    line-height: 50px;
+    color: $gold;
+    font-family: $maven;
+    margin: 10px 0 20px 0;
+  }
+  &__list {
+    margin-bottom: 30px;
+  }
+  &__list-item {
+    font-size: 20px;
+  }
+  &__icon {
+    display: inline-block;
+    width: 28px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 14px;
+    border: 2px solid $gold;
+    border-radius: 100%;
+    color: $gold;
+    margin-right: 10px;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    & > li {
+      width: 10px;
+      margin: 0 3px;
+      button::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 0;
+        border: 0;
+        background-color: $black-collapse;
+      }
+    }
+    li.slick-active > button::before {
+      background-color: $black;
+    }
+  }
+}
