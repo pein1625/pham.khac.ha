@@ -1,0 +1,52 @@
+.advertis {
+  width: 100%;
+  height: 180px;
+  background-color: $lighter-white;
+  margin-bottom: 45px;
+  &__img-wrap {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 180px;
+  }
+  &__img {
+    max-width: 50%;
+    max-height: 170px;
+    margin-left: 23px;
+  }
+  &__title {
+    margin-bottom: 12px;
+    margin-top: 20px;
+    font-weight: 900;
+    font-family: $maven;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 445px;
+    margin: auto;
+    margin-bottom: 14px;
+  }
+  &__btn {
+    display: inline-block;
+    width: 115px;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 3px;
+  }
+  &__btn--gold {
+    background-color: $gold;
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  &__btn--black {
+    border: 1px solid $black;
+    color: $black;
+    &:hover {
+      color: $black;
+    }
+  }
+}

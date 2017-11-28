@@ -1,65 +1,135 @@
-.footer__wrap {
-  background-color: $black;
-  color: $light-grey;
-}
-.footer {
-  font-size: 14px;
-  padding: 25px 0;
-  border-bottom: 1px solid $grey;
-  &__logo {
-    height: 70px;
-    width: auto;
-    margin-bottom: 34px;
+.l-footer {
+  background: $lighten-grey;
+  font-size: 13px;
+  color: $dark-gray;
+  padding-top: 45px;
+  &__border {
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid $border-gray;
+    margin: 50px 0 15px; 
   }
   &__heading {
-    font-size: 18px;
-    color: $milky;
-    line-height: 77px;
-    margin: 0;
-    border-bottom: 1px solid $grey;
-  }
-  &__sublist {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    padding-top: 25px;
-  }
-  &__listitem {
-    display: block;
-    color: $light-grey;
-    &:hover {
-      position: relative;
-      left: 10px;
-      color: $light-green;
-      text-decoration: none;
+    color: $black;
+    font-weight: 900;
+    margin-bottom: 40px;
+    &-icon {
+      color: $gold;
+      font-size: 10px;
+      line-height: 16px;
+      margin-right: 10px;
     }
   }
 }
-.contact__info {
-  position: relative;
-  padding-left: 20px;
-  line-height: 30px;
-  margin-bottom: 16px;
-  &:hover {
-    color: $light-green;
+.about {
+  &__description {
+    
+  }
+  &__contact {
+    padding-left: 26px;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  &__icon {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    color: $lighter-black;
   }
 }
-.contact__icon {
-  position: absolute;
-  left: 0;
-  top: 7px;
-  font-size: 14px;
-  color: $light-green;
-}
-.copyright {
-  font-size: 12px;
-  line-height: 72px;
-  margin-bottom: 0;
+.sublist {
+  &__item {
+    color: $dark-gray;
+    font-size: 13px;
+    &:hover {
+      color: $gold;
+    }
+  }
+  &--last {
+    .sublist__item {
+      padding-left: 20px;
+      position: relative;
+    }
+    .sublist__icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }
 .payment {
-  margin-top: 21px;
-  height: 30px; 
+  margin-bottom: 40px;
+  &__heading {
+    font-size: 13px;
+    font-weight: 600;
+    color: $dark-gray;
+    margin-bottom: 20px;
+  }
+  &__wrap {
+    display: block;
+    width: 114px;
+    height: 46px;
+    margin: 0 10px 10px 0;
+    border: 2px solid $lighter-blue;
+  }
   &__img {
+    width: 100%;
     height: 100%;
+  }
+}
+.contact {
+  margin-bottom: 40px;
+  &__heading {
+    font-size: 13px;
+    font-weight: 600;
+    color: $dark-gray;
+    margin-bottom: 20px;
+  }
+  &__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 2px solid $gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: $gold;
+    margin-right: 8px;
+  }
+  &__title {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+  &__number {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    color: $scalet;
+  }
+}
+.end-page {
+  background: $lighter-black;
+  &__nav {
+    margin-right: -10px;
+  }
+  &__item {
+    display: block;
+    font-size: 13px;
+    line-height: 60px;
+    padding: 0 10px;
+    color: $light-gray;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+.copyright {
+  font-size: 13px;
+  line-height: 60px;
+  margin-bottom: 0;
+  color: $light-gray;
+  &__hightlight {
+    color: $white;
   }
 }

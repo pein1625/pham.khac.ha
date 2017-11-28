@@ -1,89 +1,133 @@
 .top-page {
-  background-color: $milky;
+  height: 50px;
+  border-bottom: 1px solid $border-gray;
+  background-color: $lighten-grey;
+  &__login {
+    display: inline-block;
+    font-size: 12px;
+    line-height: 50px;
+    padding: 0 20px;
+    color: $lightest-black;
+    font-weight: 800;
+    border-right: 1px solid $border-gray;
+    &--first {
+      border-left: 1px solid $border-gray;
+    }
+    &:hover {
+      color: $gold;
+    }
+  }
+}
+.social {
   &__item {
     display: block;
-    margin-right: 22px;
-    font-size: 12px;
-    font-weight: 900;
-    line-height: 30px;
-    color: $black;
+    width: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: $lightest-black;
+    text-align: center;
+    border-right: 1px solid $border-gray;
+    &--first {
+      border-left: 1px solid $border-gray;
+    }
     &:hover {
-      color: $light-green;
+      background: $gold;
+      color: $white;
     }
   }
 }
 .header {
-  background-color: $black;
-  border-top: 1px solid $grey;
-  .container {
-    height: 78px;
-    display: flex;
-    align-items: center;
+  height: 120px;
+  background-color: $white;
+  .logo {
+    height: 90px;
+    width: auto;
+    margin-top: 15px;
+    &__img {
+      height: 100%;
+      width: auto;
+    }
   }
-  &__logo {
-    display: inline-block;
-    max-width: 250px;
-    height: 62px;
-  }
-  &__logo-img {
-    width: 100%;
+  .search {
+    width: 322px;
+    height: 50px;
+    margin-top: 35px;
+    position: relative;
+    &__input {
+      border: 1px solid $border-gray;
+      border-radius: 25px;
+      padding: 0 20px;
+      font-size: 14px;
+      font-family: $roboto-condensed;
+      box-shadow: none;
+    }
+    &__btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 50px;
+      width: 50px;
+      border-radius: 0 25px 25px 0;
+      border: 0;
+      background-color: transparent;
+      font-size: 16px;
+      color: $light-gray;
+      &:focus {
+        outline: 0;
+      }
+    }
   }
 }
-.search {
-  display: flex;
-  margin-left: auto;
-  margin-right: 46px;
-  border-radius: 3px;
-  width: 392px;
-  height: 36px;
-  &__input {
-    width: 350px;
-    height: 36px;
-    padding: 0 20px;
-    background-color: $milky;
-    border: 1px solid $white;
-    border-radius: 3px 0 0 3px;
-  }
-  &__button {
-    display: block;
-    width: 40px;
-    height: 100%;
-    border: 0;
-    border-radius: 0 3px 3px 0;
-    background: url('../images/icon-search.png') no-repeat $light-green;
-    background-position: center center;
-  }
-}
-.cart__icon {
-  margin-right: 10px;
-}
-.cart__text {
-  font-size: 14px;
-  vertical-align: middle;
-  color: $white;
-}
-.header-nav {
-  height: 40px;
-  background-color: $milky;
-  font-size: 14px;
-  font-weight: 500;
-  .container {
-    height: 100%;
-  }
-  &__wrap {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    justify-content: space-between;
-    align-items: center;
-  }
+.navigation {
+  height: 70px;
+  background-color: $lighter-black;
+  margin-bottom: 30px;
   &__item {
-    color: $grey;
-    &:hover {
-      color: $light-green;
+    display: block;
+    line-height: 70px;
+    padding: 0 30px;
+    font-size: 14px;
+    font-weight: 800;
+    color: $white;
+    border-right: 1px solid $lightest-black;
+    &--first {
+      border-left: 1px solid $lightest-black;
+    }
+    &:hover, &--active {
+      background-color: $gold;
+      color: $white;
+    }
+    &:focus {
+      color: $white;
+    }
+  }
+  .cart {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 70px;
+    height: 70px;
+    border-left: 1px solid $lightest-black;
+    border-right: 1px solid $lightest-black;
+    position: relative;
+    &__icon {
+      height: 20px;
+      width: auto;
+    }
+    &__number {
+      display: inline-block;
+      border-radius: 100%;
+      background-color: $gold;
+      text-align: center;
+      color: $white;
+      line-height: 14px;
+      font-size: 14px;
+      font-weight: 900;
+      padding: 4px 8px;
+      position: absolute;
+      z-index: 10;
+      bottom: 50%;
+      left: 50%;
     }
   }
 }

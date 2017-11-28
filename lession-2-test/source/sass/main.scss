@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:900');
+
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'abstracts/functions';
@@ -9,13 +12,24 @@
 
 @import 'vendors/bootstrap-override-variable';
 @import 'bootstrap';
+@import 'base/normalize';
 
 @import 'layout/grid';
-@import 'layout/content';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/section';
-@import 'layout/form';
+@import 'layout/subscribe';
+@import 'layout/brand_slide';
 
 @import 'abstracts/shame';
 
+@import 'components/product';
+@import 'components/h_product';
+@import 'components/sub_header';
+@import 'components/button';
+@import 'components/slider';
+@import 'components/intro_nav';
+@import 'components/category';
+@import 'components/sale';
+@import 'components/advertis';
+
+@import 'pages/lession_2_test';

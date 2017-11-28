@@ -1,6 +1,142 @@
+include modules/head
+include modules/header
+include modules/footer
+include modules/script
+include modules/components/product
+include modules/components/sub_header
+
 doctype html
 html
-  head
-    title lession 2 test
+  +head
   body
-    main
+    +header
+    main.l-main
+      .container
+        // banner
+        .l-main__banner.clearfix
+          .slider-wrap.float-left
+            .slider
+              each item in [1, 2, 3]
+                .slider__item
+                  h2.slider__type MÁY KHOAN ĐA NĂNG
+                  h1.slider__name DEWALT
+                  ul.slider__list
+                    li.slider__list-item
+                      i.fa.fa-check.slider__icon
+                      | Thiết kể nhỏ gọn, phù hợp, đa mục đích
+                    li.slider__list-item
+                      i.fa.fa-check.slider__icon
+                      | Mạnh mẽ, bền bỉ và hiệu suất lớn hơn
+                    li.slider__list-item
+                      i.fa.fa-check.slider__icon
+                      | Khoan cắt với độ chính xác tuyệt đối
+                  a.button.button--gold.button--left.button--lg(href="#!") ĐẶT HÀNG
+                  img.slider__img(src="images/banner-1.png", alt="")
+          ul.intro-nav.float-right
+            li.intro-nav__item.clearfix 
+              i.fa.fa-plane.float-left.intro-nav__icon
+              h5.intro-nav__heading MIỄN PHÍ VẬN CHUYỂN
+              p.intro-nav__description Chúng tôi vận chuyển miễn phí với các đơn hàng  trị giá trên 1000.000 Đ.
+            li.intro-nav__item.clearfix
+              i.fa.fa-refresh.float-left.intro-nav__icon
+              h5.intro-nav__heading CHÍNH SÁCH ĐỔI TRẢ
+              p.intro-nav__description Nếu phát hiện lỗi của nhà sản xuất, chúng tôi sẽ đổi mới sản phẩm trong 7 ngày đầu tiên.
+            li.intro-nav__item.clearfix
+              i.fa.fa-gift.float-left.intro-nav__icon
+              h5.intro-nav__heading KHUYẾN MẠI HÀNG TUẦN
+              p.intro-nav__description Mỗi thứ 7 hàng tuần đều có chương trình giảm giá và khuyến mại lớn.
+            li.intro-nav__item.clearfix
+              i.fa.fa-thumbs-up.float-left.intro-nav__icon
+              h5.intro-nav__heading CAM KẾT HÀNG CHÍNH HÃNG
+              p.intro-nav__description Chúng tôi cam kết bán hàng chính hãng 100% với tất cả các loại sản phẩm.
+        // hightlight product
+        .l-main__highlight
+          +sub_header("SẢN PHẨM NỔI BẬT")
+          .row
+            .col-md-3
+              ul.category
+                - var list = ['Máy khoan, cắt CNC', 'Máy in phun khổ lớn', 'Máy quét Canon 3D', 'Máy hàn điện Alumina', 'Máy khoan Decameta', 'Máy phay đa năng CNC', 'Máy mài, tiện DC 12V', 'Máy khoan, cắt CNC', 'Máy quay thông minh N3', 'Motor R34C đa dụng', 'Máy in laser màu 3D']
+                each item in list 
+                  li
+                    a.category__item(class={'category__item--last': item==='Máy in laser màu 3D'},href="#!")
+                      i.fa.fa-th-large
+                      | #{item}
+            .col-md-9
+              .row
+                each item in [1, 2, 3, 4, 5, 6]
+                  .col-md-4
+                    +product("images/hightlight-"+item+".png", 'sm')
+        // new products
+        .l-main__new
+          +sub_header("SẢN PHẨM MỚI", true)
+          .row
+            each item in [1, 2, 3]
+              .col-md-4
+                +product('images/new-'+item+'.png', 'md')
+        // sale product 
+        .row
+          .col-md-6
+            .sale
+              h1.sale__name DEMISHI
+              p.sale__description MÁY HÀN XÌ CHUYÊN NGHIỆP
+              span.sale__price 2.250.000 Đ
+              p.sale__gift CƠ HỘI TRÚNG NGAY TIVI SAMSUNG LCD
+              p.sale__gift-price TRỊ GIÁ
+                span.sale__gift-price--red 600.000 Đ
+              img.sale__img(src="images/sale-1.png", alt="")
+          .col-md-6
+            .sale
+              h1.sale__name MAKITA
+              p.sale__description MÁY KHOAN - CẮT ĐA NĂNG
+              p.sale__price 7.450.000 Đ
+              p.sale__gift TẶNG NGAY MỘT BỘ PHỤ KIỆN CAO CẤP
+              p.sale__gift-price TRỊ GIÁ 
+                span.sale__gift-price--red 600.000 Đ
+              img.sale__img(src="images/sale-2.png", alt="")
+        // best sell
+        .l-main__best-sell
+          +sub_header("SẢN PHẨM BÁN CHẠY", true)
+          .row
+            .col-md-3
+              +product("images/bestsell-1.png", 'sm')
+              +product("images/bestsell-4.png", 'sm')
+            .col-md-6
+              +product("images/bestsell-0.png", 'lg')
+            .col-md-3
+              +product("images/bestsell-2.png", 'sm')
+              +product("images/bestsell-3.png", 'sm')
+        // advertis 2
+        .advertis
+          .row
+            .col-lg-6
+              .advertis__img-wrap
+                img.advertis__img(src="images/ad-1.png", alt="")
+                img.advertis__img(src="images/ad-2.png", alt="")
+            .col-lg-6.text-center
+              h2.advertis__title ROCKET WOKARU
+              p.advertis__description Máy cắt, khoan đa năng tích hợp điều khiển từ xa loại nhỏ thích hợp với các hộ gia đình.
+              a.advertis__btn.advertis__btn--gold(href="#!") MUA NGAY
+              a.advertis__btn.advertis__btn--black(href="#!") CHI TIẾT
+        // coming up products
+        .l-main__coming-up
+          +sub_header("HÀNG MỚI VỀ")
+          .row
+            each item in [1, 2, 3, 4]
+              .col-md-6
+                +h_product("images/coming-"+item+".png")
+    // brand slide
+    .brand-slide
+      .container
+        ul.brand-slide__list
+          each item in [1, 2, 3, 4, 5, 6]
+            li
+              a.brand-slide__item(href="#!")
+                img.brand-slide__img(src="images/brand-"+item+".png", alt="")
+    // l-subscribe
+    .l-subscribe.text-center
+      h2.l-subscribe__heading Đăng kí để nhận tin tức khuyến mại hàng tuần
+      form.l-subscribe__form
+        input.l-subscribe__input.form-control(type="text", placeholder="Nhập email của bạn...")
+        button.l-subscribe__btn ĐĂNG KÍ
+    +footer
+    +script

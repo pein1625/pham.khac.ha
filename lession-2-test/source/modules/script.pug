@@ -1,0 +1,23 @@
+mixin script
+  script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
+  script.
+    $(document).ready(function(){
+      $('.brand-slide__list').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slideToScroll: 2
+      });
+
+      $('.slider').slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000
+      });
+    });
