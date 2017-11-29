@@ -1,112 +1,117 @@
 mixin footer
   // footer
-  footer.l-footer
-    .container
-      .row
-        .col-lg-4
-          .about
-            h5.l-footer__heading
-              i.fa.fa-th-large.l-footer__heading-icon
-              | VỀ CHÚNG TÔI
-            p.about__description Công ty Cổ phẩn Công nghệ DKT đã và đang  khẳng định được vị trí hàng đầu trong lĩnh vực Thương mại điện tử.
-            p.about__contact
-              i.fa.fa-map-marker.about__icon
-              | Tầng 4 - Tòa nhà Hanoi Group  442 Đội Cấn Ba Đình - Hà Nội
-            p.about__contact
-              i.fa.fa-envelope.about__icon
-              | support@dkt.com.vn
-            p.about__contact 
-              i.fa.fa-mobile.about__icon
-              | (84-4) 66558868  -  (84-4) 37868904
-        .col-lg-2
-          h5.l-footer__heading
-            i.fa.fa-th-large.l-footer__heading-icon
-            | CHÍNH SÁCH
-          ul.sublist
-            - var list = ['Chính sách giao hàng', 'Chính sách đổi sản phẩm', 'Chính sách bảo hành', 'Chính sách trả góp', 'Giới thiệu hàng dổi trả', 'Vận chuyển miễn phí'];
-            each item in list 
-              li.mb-3
-                a.sublist__item(href="#!")= item
-        .col-lg-2
-          h5.l-footer__heading
-            i.fa.fa-th-large.l-footer__heading-icon
-            | DỊCH VỤ VÀ HỖ TRỢ
-          ul.sublist
-            - var list = ['Hệ thống cửa hàng', 'Hướng dẫn mua hàng', 'Hướng dẫn thanh toán', 'Tích điểm đổi thưởng', 'Dịch vụ đổi trả hàng', 'Câu hỏi thường gặp'];
-            each item in list 
-              li.mb-3
-                a.sublist__item(href="#!")= item
-        .col-lg-2
-          h5.l-footer__heading
-            i.fa.fa-th-large.l-footer__heading-icon
-            | TIN TỨC - SỰ KIỆN
-          ul.sublist
-            - var list = ['Tin tức mới nhất', 'Tin tức khuyến mại', 'Tuyển dụng, đãi ngộ', 'Download tài liệu', 'Chương trình đối tác', 'Nhà phát triển ứng dụng']
-            each item in list 
-              li.mb-3 
-                a.sublist__item(href="#!")= item
-        .col-lg-2
-          h6.l-footer__heading
-            i.fa.fa-th-large.l-footer__heading-icon
-            | KẾT NỐI
-          ul.sublist.sublist--last
-            li.mb-3
-              a.sublist__item(href="#!")
-                i.fa.fa-facebook.sublist__icon
-                | Facebook
-            li.mb-3
-              a.sublist__item(href="#!")
-                i.fa.fa-twitter.sublist__icon
-                | Twitter
-            li.mb-3
-              a.sublist__item(href="#!")
-                i.fa.fa-google-plus.sublist__icon
-                | Google
-            li.mb-3
-              a.sublist__item(href="#!")
-                i.fa.fa-skype.sublist__icon
-                | Skype
-            li.mb-3
-              a.sublist__item(href="#!")
-                i.fa.fa-instagram.sublist__icon
-                | Instagram
-      .l-footer__border
+  footer.footer
+    .container.clearfix
+      .about
+        h5.widget__heading
+          i.fa.fa-th-large.widget__icon
+          | VỀ CHÚNG TÔI
+        p.about__desc Công ty Cổ phẩn Công nghệ DKT đã và đang  khẳng định được vị trí hàng đầu trong lĩnh vực Thương mại điện tử.
+        p.about__contact
+          i.fa.fa-map-marker.about__icon
+          | Tầng 4 - Tòa nhà Hanoi Group  442 Đội Cấn Ba Đình - Hà Nội
+        p.about__contact
+          i.fa.fa-envelope.about__icon
+          | support@dkt.com.vn
+        p.about__contact
+          i.fa.fa-mobile.about__icon
+          | (84-4) 66558868  -  (84-4) 37868904
+      .footer-widgets
+        .row
+          .col-lg-3
+            .widget
+              h5.widget__heading
+                i.fa.fa-th-large.widget__icon
+                | CHÍNH SÁCH
+              ul.widget__list
+                - var list = ['Chính sách giao hàng', 'Chính sách đổi sản phẩm', 'Chính sách bảo hành', 'Chính sách trả góp', 'Giới thiệu hàng dổi trả', 'Vận chuyển miễn phí'];
+                each item in list 
+                  li
+                    a.widget__link(href="#!")= item
+          .col-lg-3
+            .widget
+              h5.widget__heading
+                i.fa.fa-th-large.widget__icon
+                | DỊCH VỤ VÀ HỖ TRỢ
+              ul.widget__list
+                - var list = ['Hệ thống cửa hàng', 'Hướng dẫn mua hàng', 'Hướng dẫn thanh toán', 'Tích điểm đổi thưởng', 'Dịch vụ đổi trả hàng', 'Câu hỏi thường gặp'];
+                each item in list 
+                  li
+                    a.widget__link(href="#!")= item
+          .col-lg-3
+            .widget
+              h5.widget__heading
+                i.fa.fa-th-large.widget__icon
+                | TIN TỨC - SỰ KIỆN
+              ul.sublist
+                - var list = ['Tin tức mới nhất', 'Tin tức khuyến mại', 'Tuyển dụng, đãi ngộ', 'Download tài liệu', 'Chương trình đối tác', 'Nhà phát triển ứng dụng']
+                each item in list 
+                  li
+                    a.widget__link(href="#!")= item
+          .col-lg-3
+            .widget
+              h5.widget__heading
+                i.fa.fa-th-large.widget__icon
+                | KẾT NỐI
+              ul.widget
+                li
+                  a.widget__link.footer-social(href="#!")
+                    i.fa.fa-facebook.footer-social__icon
+                    | Facebook
+                li
+                  a.widget__link.footer-social(href="#!")
+                    i.fa.fa-twitter.footer-social__icon
+                    | Twitter
+                li
+                  a.widget__link.footer-social(href="#!")
+                    i.fa.fa-google-plus.footer-social__icon
+                    | Google
+                li
+                  a.widget__link.footer-social(href="#!")
+                    i.fa.fa-skype.footer-social__icon
+                    | Skype
+                li
+                  a.widget__link.footer-social(href="#!")
+                    i.fa.fa-instagram.footer-social__icon
+                    | Instagram
+      .footer__crossline
       .row
         .col-lg-6
-          .payment
-            h6.payment__heading Thanh toán:
-            ul.payment__list
+          .footer__block
+            h6.footer__heading Thanh toán:
+            ul.payment
               each val in [1, 2, 3, 4, 5, 6, 7, 8]
-                li.d-inline-block
-                  a.payment__wrap(href="#!")
+                li.payment__item
+                  a(href="#!")
                     img.payment__img(src="images/bank-"+val+".png", alt="")
         .col-lg-6
-          .contact
-            h6.contact__heading Giải đáp nhanh:
+          .footer__block
+            h6.footer__heading Giải đáp nhanh:
             .row
-              .col-sm-6.clearfix
-                .contact__icon.float-left
-                  i.fa.fa-phone
-                .contact__box.float-left.text-center
-                  p.contact__title Tư vấn miễn phí (24/7)
-                  p.contact__number 1900 650 650    
-              .col-sm-6.clearfix
-                .contact__icon.float-left
-                  i.fa.fa-comments
-                .contact__box.float-left.text-center
-                  p.contact__title Góp ý - phản hồi - thắc mắc
-                  p.contact__number 1900 650 650    
-    .end-page
-      .container
-        .clearfix
-          p.copyright.float-left
-            | Bản quyền thuộc về
-            span.copyright__hightlight Design Team
-            | . Phát triển bởi 
-            span.copyright__hightlight Bizweb
-            | .
-          ul.end-page__nav.float-right
-            - var list = ['Trang chủ', 'Giới thiệu', 'Sản phẩm', 'Tin khuyến mại', 'Dịch vụ', 'Liên hệ']
-            each item in list
-              li.d-inline-block
-                a.end-page__item(href="#!")= item
+              .col-sm-6
+                .contact
+                  .contact__icon
+                    i.fa.fa-phone
+                  .contact__box.text-center
+                    p.contact__title Tư vấn miễn phí (24/7)
+                    p.contact__number 1900 650 650
+              .col-sm-6
+                .contact
+                  .contact__icon
+                    i.fa.fa-comments
+                  .contact__box.text-center
+                    p.contact__title Góp ý - phản hồi - thắc mắc
+                    p.contact__number 1900 650 650
+    .site-end
+      .container.clearfix
+        p.copyright
+          | Bản quyền thuộc về
+          span.copyright__hightlight Design Team
+          | . Phát triển bởi
+          span.copyright__hightlight Bizweb
+          | .
+        ul.nav-footer
+          - var list = ['Trang chủ', 'Giới thiệu', 'Sản phẩm', 'Tin khuyến mại', 'Dịch vụ', 'Liên hệ']
+          each item in list
+            li.nav-footer__item
+              a.nav-footer__link(href="#!")= item

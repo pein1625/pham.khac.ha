@@ -1,0 +1,65 @@
+.navigation {
+  background-color: $lighter-black;
+  overflow: hidden;
+}
+
+.main-menu {
+  float: left;
+  overflow-y: hidden;
+
+  &__item {
+    float: left;
+  }
+
+  &__link {
+    display: block;
+    padding: 20px 30px;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: $roboto;
+    color: $white;
+    border-right: 1px solid $lightest-black;
+
+    &--first {
+      border-left: 1px solid $lightest-black;
+    }
+
+    &:hover, &.is-active, &:focus {
+      background-color: $gold;
+      color: $white;
+    }
+  }
+}
+
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 70px;
+  height: 70px;
+  float: right;
+  border-left: 1px solid $lightest-black;
+  border-right: 1px solid $lightest-black;
+  position: relative;
+
+  &__icon {
+    height: 20px;
+    width: auto;
+  }
+
+  &__number {
+    display: inline-block;
+    border-radius: 100%;
+    background-color: $gold;
+    text-align: center;
+    color: $white;
+    line-height: 14px;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 4px 8px;
+    position: absolute;
+    z-index: 10;
+    bottom: 50%;
+    left: 50%;
+  }
+}

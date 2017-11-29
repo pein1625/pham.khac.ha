@@ -1,10 +1,11 @@
-.l-subscribe {
+.subscribe {
   background: url('../images/subscribe-bg.png') no-repeat;
   background-attachment: fixed;
   background-size: cover;
   padding: 60px 0;
   position: relative;
   z-index: 1;
+  text-align: center;
   &::before {
     content: '';
     position: absolute;

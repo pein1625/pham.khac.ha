@@ -1,40 +1,47 @@
 .button {
   display: inline-block;
   width: 112px;
-  line-height: 40px;
+  line-height: 38px;
   font-size: 12px;
   font-weight: bold;
   font-family: $roboto;
   text-align: center;
+  border: 1px solid transparent;
   &--gold {
     color: $white;
     background-color: $gold;
     &:hover {
-      color: $white;
+      color: $gold;
+      border-color: $gold;
+      background-color: $white;
     }
   }
   &--black {
     color: $white;
     background-color: $lighter-black;
+    margin-left: 5px;
     &:hover {
-      color: $white;
+      color: $lighter-black;
+      border-color: $lighter-black;
+      background-color: $white;
     }
-  }
-  &--has-border {
-    color: $black;
-    border: 1px solid $black;
-    &:hover {
-      color: $black;
-    }
-  }
-  &--left {
-    margin-right: 5px;
-  }
-  &--center {
-    margin-left: 3px;
-    margin-right: 3px;
   }
   &--lg {
     font-size: 16px;
+  }
+}
+
+.arrow-btn {
+  display: block;
+  width: 34px;
+  line-height: 32px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid $black-collapse;
+  color: $black-collapse;
+  &:hover {
+    color: $white;
+    background-color: $lighter-black;
+    border-color: $lighter-black;
   }
 }

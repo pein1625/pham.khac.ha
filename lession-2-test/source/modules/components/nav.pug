@@ -1,0 +1,11 @@
+mixin nav
+  .navigation
+    .container.clearfix
+      ul.main-menu
+        each item in ['TRANG CHỦ', 'GIỚI THIỆU', 'SẢN PHẨM', 'TIN KHUYẾN MẠI', 'DỊCH VỤ', 'LIÊN HỆ']
+          li.main-menu__item
+            a.main-menu__link(class={'is-active navigation__link--first': item === 'TRANG CHỦ'} ,href="#!")= item
+      .cart
+        a(href="#!")
+          img.cart__icon(src="images/icon-cart.png", alt="")
+        span.cart__number 0

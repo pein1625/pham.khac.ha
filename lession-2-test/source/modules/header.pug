@@ -1,31 +1,24 @@
+include components/nav
+
 mixin header
   header
-    section.top-page
+    .top-site
       .container.clearfix
-        ul.social.clearfix.float-left
+        .account
+          a.account__btn(href="#!") ĐĂNG KÍ
+          a.account__btn(href="#!") ĐĂNG NHẬP
+        ul.social.clearfix
           each item in ['facebook', 'google-plus', 'instagram', 'twitter']
-            li.float-left
-              a.social__item(class={'social__item--first': item==='facebook'}, href="#")
+            li.social__item
+              a.social__link(href="#")
                 i.fa(class="fa-"+item)
-        .float-right
-          a.top-page__login.top-page__login--first(href="#!") ĐĂNG KÍ
-          a.top-page__login(href="#!") ĐĂNG NHẬP
-    section.header
-      .container.clearfix
-        .logo.float-left
-          a.logo__wrap(href="#!")
+    .header
+      .container
+        .logo
+          a(href="#!")
             img.logo__img(src="images/logo.png", alt="")
-        form.search.float-right
-          input.search__input.form-control(type="text", placeholder="Tìm kiếm...")
+        form.search
+          input.search__input(type="text", placeholder="Tìm kiếm...")
           button.search__btn
             i.fa.fa-search
-    section.navigation
-      .container.clearfix
-        ul.clearfix.float-left
-          each item in ['TRANG CHỦ', 'GIỚI THIỆU', 'SẢN PHẨM', 'TIN KHUYẾN MẠI', 'DỊCH VỤ', 'LIÊN HỆ']
-            li.float-left
-              a.navigation__item(class={'navigation__item--active navigation__item--first': item === 'TRANG CHỦ'} ,href="#!")= item  
-        .cart.float-right
-          a(href="#!")
-            img.cart__icon(src="images/icon-cart.png", alt="")
-          span.cart__number 0
+    +nav

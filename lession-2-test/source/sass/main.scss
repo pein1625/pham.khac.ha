@@ -12,24 +12,21 @@
 
 @import 'vendors/bootstrap-override-variable';
 @import 'bootstrap';
-@import 'base/normalize';
 
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/subscribe';
-@import 'layout/brand_slide';
+@import 'layout/brands';
 
 @import 'abstracts/shame';
+@import 'base/normalize';
+
+@import 'components/nav';
 
 @import 'components/product';
 @import 'components/h_product';
-@import 'components/sub_header';
+@import 'components/headbar';
 @import 'components/button';
-@import 'components/slider';
-@import 'components/intro_nav';
-@import 'components/category';
-@import 'components/sale';
-@import 'components/advertis';
 
 @import 'pages/lession_2_test';

@@ -21,4 +21,5 @@ $breakpoints: (
 }
 .container {
   padding: 0;
+  @include clearfix;
 }

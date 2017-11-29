@@ -1,18 +1,25 @@
 .h-product {
   width: 100%;
-  height: 235px;
   margin-bottom: 30px;
-  padding: 20px 10px;
+  padding: 20px 10px 40px;
   border: 1px solid $lighter-white;
+  position: relative;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  @include clearfix;
   &:hover {
     box-shadow: 0 3px 6px rgba(0,0,0,0.3);
   }
   &__img-wrap {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 190px;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
     height: 100%;
+    padding: 20px 20px 40px;
   }
   &__img {
     max-width: 100%;
@@ -23,26 +30,32 @@
   }
   &__name {
     font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 12px;
+    font-family: $roboto;
+    font-weight: 600;
+    margin-bottom: 8px;
     margin-top: 0;
   }
   &__rate {
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     color: $black-collapse;
   }
   &__description {
     font-size: 13px;
     color: $black-collapse;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     line-height: 16px;
   }
   &__price {
     font-size: 18px;
-    font-weight: 800;
-    line-height: 18px;
+    font-family: $roboto;
+    font-weight: 600;
+    line-height: 20px;
     color: $scalet;
     margin-bottom: 16px;
+  }
+  .fa-star, .fa-star-o {
+    color: $gold;
+    margin-left: -2px;
   }
 }

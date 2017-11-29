@@ -1,11 +1,13 @@
 body {
-  font-family: $roboto;
+  font-family: Helvetica, Arial, Open Sans, sans-serif;
 }
+
 ul, ol {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 a{
   &,
   &:hover,
@@ -13,5 +15,14 @@ a{
   &:focus {
     outline: 0;
     text-decoration: none;
+  }
+}
+
+input,
+button {
+  &,
+  &:active,
+  &:focus {
+    outline: 0;
   }
 }

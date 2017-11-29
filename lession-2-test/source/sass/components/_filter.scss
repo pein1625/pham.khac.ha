@@ -1,0 +1,16 @@
+.filter {
+  &__option {
+    display: block;
+    font-size: 13px;
+    line-height: 32px;
+    padding: 0 16px;
+    color: $black-collapse;
+    border: 1px solid $black-collapse;
+    margin-right: 10px;
+    &:hover {
+      color: $white;
+      background-color: $gold;
+      border-color: transparent;
+    }
+  }
+}
