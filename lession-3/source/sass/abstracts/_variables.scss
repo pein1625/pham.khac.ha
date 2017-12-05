@@ -1,0 +1,11 @@
+$block-caculator-font-size: 48px;
+$screen-ss-min: 599px;
+$high-res: 1600px;
+
+$ss: "only screen and (max-width:#{$screen-ss-min})";
+$ll: "only screen and (max-width:$screen-md-max)";
+$xl: "only screen and (min-width: $screen-lg)";
+
+$ssp: "only screen and (max-width:$screen-xs)";
+$xs: "only screen and (max-width:$screen-xs-max)";
+$sm: "only screen and (max-width:$screen-sm-max)";
