@@ -1,2 +1,71 @@
 mixin header
-  header
+  header.header
+    .container.header-inner.clearfix
+      .logo
+        a(href="#")
+          img.logo__img(src="images/logo.png", alt="")
+      span.header-btn
+        i.fa.fa-search.header-icon.js-header-icon
+        form.search.header-dropdown.js-header-dropdown
+          input.search__input(type="text", placeholder="gõ từ khoá ở đây...")
+          button.search__btn Tìm kiếm
+      span.header-btn
+        i.fa.fa-shopping-cart.header-icon.js-header-icon
+        .cart.header-dropdown.js-header-dropdown
+          .cart__products
+            .product-cart.clearfix
+              span.product-cart__btn x
+              img.product-cart__img(src="images/cart.png", alt="")
+              h6.product-cart__name Áo sơ mi nam
+              span.product-cart__price 120.000
+                sup đ
+            .product-cart.clearfix
+              span.product-cart__btn x
+              img.product-cart__img(src="images/cart.png", alt="")
+              h6.product-cart__name Áo sơ mi nam
+              span.product-cart__price 120.000
+                sup đ
+          span.cart__pricing
+            span.cart__text Tổng số
+            span.cart__totalprice 240.000
+              sup đ
+          button.cart__btn GIỎ HÀNG
+      nav.navigation
+        ul.menu
+          li.menu__item.menu__item--first
+            a.menu__link(href="#") TRANG CHỦ
+          li.menu__item
+            a.menu__link(href="#") GIỚI THIỆU
+          li.menu__item.dropdown
+            a.menu__link.dropdown-btn.arrow-down(href="#") SẢN PHẨM
+            .menu-dropdown
+              .menu-span
+                h6.menu-span__heading DƯỠNG DA
+                .menu-span__line
+                ul.submenu
+                  - var list = ['Áo khoác', 'Bộ áo liền quần', 'Dresses', 'Quần / Váy', 'Quần short', 'Quần jean', 'Đồ đan', 'Áo nỉ'];
+                  each item in list
+                    li
+                      a.submenu__link(href="#")= item
+              .menu-span
+                h6.menu-span__heading NƯỚC HOA
+                .menu-span__line
+                ul.submenu
+                  - var list = ['Áo cánh / Áo sơ mi', 'Túi xách & Balô', 'Khăn quàng cổ và Foulards', 'Dệt kim Hats & Gloves', 'Vớ & Socks', 'Jewerly', 'Bị bảo vệ', 'Giày'];
+                  each item in list
+                    li
+                      a.submenu__link(href="#")= item
+              .menu-span
+                h6.menu-span__heading TRANG SỨC
+                .menu-span__line
+                ul.submenu
+                  - var list = ['Áo cánh / Áo sơ mi', 'Túi xách & Balô', 'Khăn quàng cổ và Foulards', 'Dệt kim Hats & Gloves', 'Vớ & Socks', 'Jewerly', 'Bị bảo vệ', 'Giày'];
+                  each item in list
+                    li
+                      a.submenu__link(href="#")= item
+          li.menu__item
+            a.menu__link(href="#") TIN TỨC
+          li.menu__item
+            a.menu__link(href="#") BẢN ĐỒ
+          li.menu__item
+            a.menu__link(href="#") LIÊN HỆ
