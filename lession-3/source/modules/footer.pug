@@ -1,2 +1,68 @@
 mixin footer
-  footer
+  footer.footer
+    .container.clearfix
+      .contact
+        h5.footer-heading LIÊN HỆ VỚI CHÚNG TÔI
+        span.contact__info
+          i.fa.fa-map-marker.contact__icon
+          | Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+        br          
+        span.contact__info
+          i.fa.fa-phone.contact__icon
+          | (04) 6674 2332  -
+        span.contact__info
+          i.fa.fa-fax.contact__icon
+          |  (04) 3786 8904
+        br          
+        span.contact__info
+          i.fa.fa-phone.contact__icon
+          |  (08) 6680 9686
+        span.contact__info.pushright_10
+          i.fa.fa-envelope.contact__icon
+          |  Support@bizweb.vn
+      .footer-grid
+        .row
+          .col-md-3
+            h5.footer-heading CHUYỂN HÀNG
+            ul.sublist
+              - var list = ['Mua sắm trực tuyến', 'Đến từ chúng tôi gửi đến', 'Chính sách vận chuyển', 'Vận chuyển thông tin']
+              each item in list
+                li.sublist__item
+                  a.sublist__link(href="#")= item
+          .col-md-3
+            h5.footer-heading HỖ TRỢ
+            ul.sublist
+              - var list = ['Câu chuyện của chúng ta', 'Thanh toán an toàn', 'Tùy chọn Vận Chuyển', 'Chính sách vận chuyển']
+              each item in list
+                li.sublist__item
+                  a.sublist__link(href="#")= item
+          .col-md-3
+            h5.footer-heading THÔNG TIN
+            ul.sublist
+              - var list = ['Về Chúng Tôi', 'Điều khoản & điều kiện', 'Chính Sách Riêng Tư', 'Đơn đặt hàng và Returns'];
+              each item in list
+                li.sublist__item
+                  a.sublist__link(href="#")= item
+          .col-md-3
+            h5.footer-heading MY ACCOUNT
+            ul.sublist
+              - var list = ['Xem Giỏ hàng', 'Sản phẩm yêu thích', 'Kiểm tra', 'Theo dõi đặt hàng của tôi'];
+              each item in list
+                li.sublist__item
+                  a.sublist__link(href="#")= item
+    .site-end
+      .container.clearfix
+        span.copyright © Copyright 2008-2014 DKT Technology JSC
+        ul.payments
+          li.payments__item
+            a(href="#")
+              img.payments__img(src="images/payments-1.png", alt="")
+          li.payments__item
+            a(href="#")
+              img.payments__img(src="images/payments-2.png", alt="")
+          li.payments__item
+            a(href="#")
+              img.payments__img(src="images/payments-3.png", alt="")
+          li.payments__item
+            a(href="#")
+              img.payments__img(src="images/payments-4.png", alt="")
