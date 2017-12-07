@@ -17,6 +17,12 @@
 @import 'abstracts/shame';
 @import 'base/normalize';
 
+@import 'components/blog';
+@import 'components/button';
+@import 'components/tags';
+
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
+
+@import 'pages/home';
