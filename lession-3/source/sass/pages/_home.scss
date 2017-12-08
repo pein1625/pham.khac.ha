@@ -1,32 +1,196 @@
-.hash-line {
-  display: flex;
-  height: 10px;
-  width: 150px;
-  align-items: center;
-  font-size: 10px;
-  line-height: 10px;
-  color: $grey;
+.intro {
+  text-align: center;
+  margin: 40px 0 42px 0;
+  border-right: 1px solid $light-grey;
 
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    flex: 1;
-    height: 1px;
-    background-color: $grey;
+  &--last {
+    border-right: 0;
   }
 
-  &::before {
-    margin-right: 5px;
+  &__icon {
+    height: 25px;
+    width: auto;
+    margin-bottom: 6px;
   }
-
-  &::after {
-    margin-left: 5px;
+  &__text {
+    font-size: 14px;
+    line-height: 19px;
   }
+}
 
-  &--w100 {
+.homegrid {
+  &__link {
+    display: inline-block;
     width: 100%;
-    margin-bottom: 40px;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__card {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 100;
+      border: 22px solid;
+      top: 50%;
+      margin-top: -22px;
+    }
+  }
+
+  &__card-1 {
+    background-color: $brownish-yellow;
+    color: $white;
+
+    .hash-line {
+      color: $lighten-grey;
+      &::before,
+      &::after {
+        background-color: $lighten-grey;
+      }
+    }
+    &::before {
+      right: 100%;
+      border-color: transparent $brownish-yellow transparent transparent;
+    }
+  }
+
+  &__card-2 {
+    background-color: $bluish-gray;
+    &::before {
+      left: 100%;
+      border-color: transparent transparent transparent $bluish-gray;
+    }
+  }
+
+  &__card-3 {
+    background-color: $greenish-blue;
+    &::before {
+      left: 100%;
+      border-color: transparent transparent transparent $greenish-blue;
+    }
+  }
+
+  &__card-4 {
+    background-color: $pink;
+    &::before {
+      right: 100%;
+      border-color: transparent $pink transparent transparent;
+    }
+  }
+
+  &__heading {
+    font-size: 30px;
+    font-weight: 300;
+    font-family: $robotoslab;
+  }
+
+  &__hashline {
+    color: $lighter-black;
+
+    &::before,
+    &::after {
+      background-color: $lighter-black;
+    }
+  }
+}
+
+.speak {
+  padding: 100px 0;
+  background-image: url('../images/speak-bg.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  &__slider {
+    max-width: 780px;
+    position: relative;
+
+    .owl-dots {
+      position: absolute;
+      left: 200px;
+      bottom: -20px;
+      @include clearfix;
+    }
+
+    .owl-dot {
+      display: inline-block;
+      float: left;
+      margin-right: 8px;
+
+      & > span {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        background-color: $gray;
+      }
+
+      &.active > span {
+        background-color: $lighter-black;
+      }
+    }
+  }
+
+  &__slide {
+    @include clearfix;
+  }
+
+  &__avatar {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: 3px solid $greenish-grey;
+    border-radius: 50%;
+    padding: 10px;
+    float: left;
+  }
+  
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text {
+    font-size: 16px;
+    margin: 20px 0 25px 200px;
+
+    &::before {
+      content: '"';
+      font-size: 18px;
+      color: $lighter-green;
+      margin-right: 4px;
+    }
+
+    &::after {
+      content: '"';
+      font-size: 18px;
+      color: $lighter-green;
+      margin-left: 4px;
+    }
+  }
+
+  &__speaker {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: $opensans;
+    margin-left: 200px;
+    color: $lighter-black;
+
+    &--italic {
+      font-style: italic;
+      color: $gray;
+      font-size: 15px;
+      font-weight: 500;
+    }
   }
 }
 
