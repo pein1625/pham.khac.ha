@@ -3,13 +3,24 @@ include modules/header
 include modules/footer
 include modules/script
 include modules/components/blog
+include modules/components/product
 
 doctype html
 html(lang="en")
-  +head 
+  +head
   body
     +header
     main.main
+      //banner
+      .banner
+        .banner-product
+          img.banner-product__img(src="images/banner-flower.png", alt="")
+          h1.banner-product__name GreenVera
+          h5.banner-product__desc Sản phẩm tinh dầu dưỡng da mới nhất của Mandala
+          span.banner-product__price GIÁ CHỈ 750.000
+            sup đ
+          a.banner-product__buy(href="#") MUA HÀNG
+        img.banner__img(src="images/banner-girl.png", alt="")
       .container
         //intro
         .row
@@ -92,6 +103,49 @@ html(lang="en")
               .speak__speaker  
                 | TUITILE
                 span.speak__speaker--italic _ Giám đốc phát triển sản phẩm 
+      //product
+      .home-product
+        ul.category
+          li.category__item.js-category__item(data-tab="new")
+            span Sản phẩm mới
+          li.category__line
+          li.category__item.js-category__item.active(data-tab="sell")
+            span Sản phẩm bán chạy
+          li.category__line
+          li.category__item.category__item--last.js-category__item(data-tab="special")
+            span Sản phẩm đặc biệt
+        .hash-line ///////////////    
+        ul.category-2.js-category-2(data-cate="new")
+          li.category-2__item.js-category-2__item Mỹ phẩm
+          li.category-2__item.js-category-2__item Chăm sóc da
+          li.category-2__item.js-category-2__item Dành cho tóc
+          li.category-2__item.js-category-2__item.active Nước hoa
+          li.category-2__item.js-category-2__item Trang sức
+          li.category-2__item.category-2__item--last.js-category-2__item Quà tặng
+        ul.category-2.js-category-2(data-cate="sell")
+          li.category-2__item.js-category-2__item Mỹ phẩm
+          li.category-2__item.js-category-2__item Chăm sóc da
+          li.category-2__item.js-category-2__item Dành cho tóc
+          li.category-2__item.js-category-2__item.active Nước hoa
+          li.category-2__item.js-category-2__item Trang sức
+          li.category-2__item.category-2__item--last.js-category-2__item Quà tặng
+        ul.category-2.js-category-2(data-cate="special")
+          li.category-2__item.js-category-2__item Mỹ phẩm
+          li.category-2__item.js-category-2__item Chăm sóc da
+          li.category-2__item.js-category-2__item Dành cho tóc
+          li.category-2__item.js-category-2__item.active Nước hoa
+          li.category-2__item.js-category-2__item Trang sức
+          li.category-2__item.category-2__item--last.js-category-2__item Quà tặng
+        // home product slider
+        .product-slider
+          .product-slider__next.js-next-product
+            img(src="images/icon-arrow-right.png", alt="")
+          .product-slider__prev.js-prev-product
+            img(src="images/icon-arrow-left.png", alt="")
+          .slider.owl-carousel.js-product-slider
+            each item in [1, 2, 3, 4, 5, 6]
+              .slider__slide
+                +product("images/product-"+item+".png")
       // more info
       .home-info.container
         //social
@@ -143,7 +197,7 @@ html(lang="en")
               form.sendmail
                 input.sendmail__input(type="email", placeholder="Email của bạn")
                 p.sendmail__desc Gửi email để nhận những ưu đãi mới nhất
-                button.site-btn GỬI
+                button.button-form GỬI
             .widget
               h5.widget__heading TAG SẢN PHẨM
               .hash-line.hash-line--w100 ///////////

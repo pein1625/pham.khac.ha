@@ -1,4 +1,35 @@
-.site-btn {
+.button {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 11px 14px 9px;
+  border-radius: 10px;
+
+  &--black {
+    color: $white;
+    background-color: $lighter-green;
+    border: 2px solid transparent;
+
+    &:hover {
+      color: $white;
+      background-color: $lighter-black;
+    }
+  }
+  
+  &--white {
+    color: $lighter-black;
+    border: 2px solid $lighter-grey;
+
+    &:hover {
+      color: $white;
+      background-color: $lighter-black;
+      border-color: transparent;
+    }
+  }
+}
+
+.button-form {
   height: 32px;
   padding: 0 27px;
   font-size: 12px;
