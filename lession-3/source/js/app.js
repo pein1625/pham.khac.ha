@@ -10,7 +10,16 @@ $(document).ready(function(){
   });
 
   $('html, body').on('click', function(){
-    console.log('hello')
     $('.js-header-dropdown').fadeOut(0);
+  });
+
+  //- speak slider 
+  $('.js-speak__slider').owlCarousel({
+    loop: true,
+    nav: false,
+    dots: true,
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 3000
   });
 });

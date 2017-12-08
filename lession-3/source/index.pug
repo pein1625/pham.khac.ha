@@ -10,6 +10,88 @@ html(lang="en")
   body
     +header
     main.main
+      .container
+        //intro
+        .row
+          .col-md-4
+            .intro
+              img.intro__icon(src="images/icon-plane.png", alt="")
+              .intro__text Miễn phí vận chuyển
+          .col-md-4
+            .intro
+              img.intro__icon(src="images/icon-gift.png", alt="")
+              .intro__text Nhận ngay quà tặng trị giá 350.000đ
+          .col-md-4
+            .intro.intro--last
+              img.intro__icon(src="images/icon-star.png", alt="")
+              .intro__text Giảm 30% cho đơn hàng trên 5.000.000đ
+        //grid
+        .row.row-gutter-5
+          .col-md-6.col-gutter-5
+            .row.row-gutter-5
+              .col-6.col-gutter-5
+                a(href="#").homegrid__link
+                  img.homegrid__img(src="images/home-grid-1.png", alt="")
+              .col-6.col-gutter-5
+                .homegrid__card.homegrid__card-1
+                  h1.homegrid__heading SỮA TẮM
+                  .hash-line.homegrid__hashline //////////
+              .gutter-5
+              .col-6.col-gutter-5
+                .homegrid__card.homegrid__card-2
+                  h1.homegrid__heading NƯỚC HOA
+                  .hash-line.homegrid__hashline //////////
+              .col-6.col-gutter-5
+                a(href="#").homegrid__link
+                  img.homegrid__img(src="images/home-grid-2.png", alt="")
+          .col-md-6.col-gutter-5
+            a(href="#").homegrid__link
+              img.homegrid__img(src="images/home-grid-3.png", alt="")
+          .gutter-5
+          .col-md-6.col-gutter-5
+            a(href="#").homegrid__link
+              img.homegrid__img(src="images/home-grid-4.png", alt="")
+          .col-md-6.col-gutter-5
+            .row.row-gutter-5
+              .col-6.col-gutter-5
+                .homegrid__card.homegrid__card-3
+                  h1.homegrid__heading TRANG SỨC
+                  .hash-line.homegrid__hashline //////////
+              .col-6.col-gutter-5
+                a(href="#").homegrid__link
+                  img.homegrid__img(src="images/home-grid-5.png", alt="")
+              .gutter-5
+              .col-6.col-gutter-5
+                a(href="#").homegrid__link
+                  img.homegrid__img(src="images/home-grid-6.png", alt="")
+              .col-6.col-gutter-5
+                .homegrid__card.homegrid__card-4
+                  a(href="#").homegrid__link
+                    img.homegrid__img(src="images/home-grid-7.png", alt="")
+        //speak
+        .speak
+          .speak__slider.owl-carousel.js-speak__slider
+            .speak__slide
+              .speak__avatar
+                img.speak__img(src="images/speak-avatar.png", alt="")
+              p.speak__text Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto
+              .speak__speaker  
+                | TUITILE
+                span.speak__speaker--italic _ Giám đốc phát triển sản phẩm    
+            .speak__slide
+              .speak__avatar
+                img.speak__img(src="images/speak-avatar.png", alt="")
+              p.speak__text Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto
+              .speak__speaker  
+                | TUITILE
+                span.speak__speaker--italic _ Giám đốc phát triển sản phẩm    
+            .speak__slide
+              .speak__avatar
+                img.speak__img(src="images/speak-avatar.png", alt="")
+              p.speak__text Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto
+              .speak__speaker  
+                | TUITILE
+                span.speak__speaker--italic _ Giám đốc phát triển sản phẩm 
       // more info
       .home-info.container
         //social
