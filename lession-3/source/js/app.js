@@ -28,6 +28,11 @@ $(document).ready(function(){
     if ($(this).hasClass('active')) return false;
     $(this).siblings('.active').removeClass('active');
     $(this).addClass('active');
+    var tab = $(this).data('tab');
+    $('.js-category-2').hide();
+    $('.js-category-2[data-cate='+tab+']').show();
+    $('.js-product-tab').hide();
+    $('.js-product-tab[data-product='+tab+']').show();
   });
 
   //- product category 2
@@ -42,18 +47,35 @@ $(document).ready(function(){
   productSlide.owlCarousel({
     loop: true,
     nav: false,
-    items: 5,
+    responsive: {
+      0: {
+        items: 1
+      },
+      850: {
+        items: 3
+      },
+      1090: {
+        items: 4
+      },
+      1367: {
+        items: 5
+      },
+      1620: {
+        items: 6
+      }
+    },
     slideBy: 1
   });
 
   function checkClass() {
     var total = $('.js-product-slider .owl-stage .owl-item.active').length;
+    console.log(total);
     $('.js-product-slider .owl-stage .owl-item').removeClass('js-first-item js-last-item');
     $('.js-product-slider .owl-stage .owl-item.active').each(function(index){
-      if (index === 0) {
+      if (index === 0 || index === total/3 || index === total*2/3) {
         $(this).addClass('js-first-item');
       }
-      if ( index === total - 1 && total > 1) {
+      if ((index === total - 1 || index === total/3-1 || index === total*2/3-1) && total > 1) {
         $(this).addClass('js-last-item');
       }
     });
@@ -66,8 +88,25 @@ $(document).ready(function(){
 
   $('.js-next-product').on('click', function(){
     productSlide.trigger('next.owl.carousel');
-  })
+  });
+
   $('.js-prev-product').on('click', function(){
     productSlide.trigger('prev.owl.carousel');
-  })
+  });
+
+  $('.js-product-tab').hide();
+  $('.js-product-tab[data-product="sell"').show();
+
+  // list sidebar dropdown
+  $('.js-list-dropdown-btn').on('click', function(){
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).siblings('.js-list-dropdown-menu').slideUp(200);
+      return false;
+    }
+    $('.js-list-dropdown-btn.active').removeClass('active');
+    $(this).addClass('active');
+    $('.js-list-dropdown-menu').slideUp(200);
+    $(this).siblings('.js-list-dropdown-menu').slideToggle(200);
+  });
 });

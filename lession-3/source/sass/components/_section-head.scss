@@ -1,0 +1,38 @@
+.section-head {
+  @include clearfix;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $lighten-grey;
+
+  &__btn {
+    float: left;
+    color: $lightest-black;
+    font-size: 12px;
+    margin-right: 10px;
+  }
+}
+
+.page-number {
+  float: right;
+  @include clearfix;
+
+  &__item {
+    float: left;
+    margin-left: 12px;
+  }
+  
+  &__caret {
+    font-size: 14px;
+    color: $black;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-family: $roboto;
+    color: $light-grey;
+    &:hover,
+    &:active,
+    &.active {
+      color: $black;
+    }
+  }
+}
