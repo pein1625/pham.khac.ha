@@ -1,0 +1,17 @@
+mixin product(img)
+  .product
+    .product__info
+      img.product__img(src=img , alt="")
+      h6.product__subname HOME
+      h5.product__name Mỹ phẩm châu Âu
+      .product__price
+        span.product__price--new 350.000
+          sup đ
+        span.product__price--old 450.000
+          sup đ
+    .product__btn
+      a.button.button--white.product__btn--mr8(href="#") MUA HÀNG
+      a.button.button--black.product__btn--mr8(href="#")
+        i.fa.fa-heart
+      a.button.button--white(href="#")
+        i.fa.fa-refresh
