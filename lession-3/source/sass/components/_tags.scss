@@ -1,4 +1,6 @@
 .tags {
+  @include clearfix;
+  
   &__tag {
     display: inline-block;
     float: left;

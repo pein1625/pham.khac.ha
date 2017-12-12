@@ -1,0 +1,117 @@
+include modules/head
+include modules/header
+include modules/footer
+include modules/script
+include modules/components/breadcumb
+include modules/components/section-head
+include modules/components/product
+
+doctype html
+html
+  +head
+  body
+    +header
+    //breadcumb
+    +breadcumb("Home", "Trang sức")
+
+    //list banner
+    .list-banner
+      .container
+        .list-banner__wrap
+          .list-intro
+            h1.list-intro__heading Giảm giá 50%
+            h4.list-intro__subheading TRONG VÒNG 30 NGÀY
+              br
+              span.list-intro__time ( 25/5 - 28/5/2015 )
+          img.list-banner__img(src="images/list-banner.png", alt="")
+    //main-content
+    main.list-main
+      .container
+        .row
+          .col-lg-3
+            //side bar
+            aside.list-sidebar
+              .list-sidebar-block
+                h2.list-sidebar-block__heading
+                  i.fa.fa-bars.list-sidebar-block__icon
+                  | DANH MỤC SẢN PHẨM
+                ul.list-menu
+                  li.list-menu__item
+                    a.list-menu__link.js-list-dropdown-btn(href="#!") MỸ PHẨM
+                    ul.list-submenu.js-list-dropdown-menu
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Vòng tay
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Nhẫn
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Lắc chân
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Phụ kiện khác
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Giày Lười Giày Mọi
+                  li.list-menu__item
+                    a.list-menu__link.js-list-dropdown-btn(href="#!") TRANG SỨC
+                    ul.list-submenu.js-list-dropdown-menu
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Vòng tay
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Nhẫn
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Lắc chân
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Phụ kiện khác
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Giày Lười Giày Mọi
+                  li.list-menu__item
+                    a.list-menu__link.js-list-dropdown-btn(href="#!") PHỤ KIỆN
+                    ul.list-submenu.js-list-dropdown-menu
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Vòng tay
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Nhẫn
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Lắc chân
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Phụ kiện khác
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Giày Lười Giày Mọi
+                  li.list-menu__item
+                    a.list-menu__link.js-list-dropdown-btn(href="#!") NƯỚC HOA
+                    ul.list-submenu.js-list-dropdown-menu
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Vòng tay
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Nhẫn
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Lắc chân
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Phụ kiện khác
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!") Giày Lười Giày Mọi
+              .list-sidebar-block
+                h2.list-sidebar-block__heading SO SÁNH SẢN PHẨM
+                p.list-compare Bạn chưa có sản phẩm nào để so sánh
+              .list-sidebar-block
+                h2.list-sidebar-block__heading TAG SẢN PHẨM
+                ul.tags.list-tags
+                  - var list = ['Hoa tai', 'Son', 'Nước hoa', 'Giày', 'Scandel', 'Áo sơ mi', 'Nước hoa', 'Trẻ em', 'Thời trang nữ'];
+                  each item in list
+                    li.tags__tag
+                      a.tags__link.list-tags__link(href="#")= item
+              .list-sidebar-block
+                img.list-ads(src="images/list-ads.png", alt="")
+
+          .col-lg-9
+            //product list
+            .list-content
+              +section-head
+              .list-product
+                .row
+                  each item in [1, 2, 3, 4, 5 , 6]
+                    .col-lg-4
+                      +product("images/product-"+item+".png")
+
+              +section-head
+
+    +footer
+    +script

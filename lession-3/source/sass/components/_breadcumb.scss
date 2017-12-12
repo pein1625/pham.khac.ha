@@ -1,0 +1,37 @@
+.breadcumb {
+  margin-top: 79px;
+  padding: 20px 0;
+
+  &__item {
+    float: left;
+  }
+
+  &__link {
+    display: inline-block;
+    color: $light-gray;
+    margin-right: 8px;
+    font-size: 12px;
+    font-family: $opensans;
+    &.active {
+      color: $lighter-green;
+    }
+
+    &::after {
+      content: '\f054';
+      font-family: "FontAwesome";
+      font-size: 8px;
+      margin-left: 5px;
+    }
+
+    &--last {
+      color: $lighter-green;
+      &::after {
+        content: '';
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

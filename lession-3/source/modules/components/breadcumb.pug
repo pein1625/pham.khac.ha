@@ -1,0 +1,11 @@
+mixin breadcumb(...list)
+  .breadcumb
+    .container
+      ul.breadcumb__list.clearfix
+        - for (i=0; i<list.length; i++)
+          - if (i === list.length - 1)
+            li.breadcumb__item
+              a.breadcumb__link.breadcumb__link--last(href="#")= list[i]
+          - else
+            li.breadcumb__item
+              a.breadcumb__link(href="#")= list[i]
