@@ -1,6 +1,10 @@
 .breadcumb {
   margin-top: 79px;
-  padding: 20px 0;
+
+  &__list {
+    padding: 20px 0;
+    border-bottom: 1px dashed $lighten-grey;
+  }
 
   &__item {
     float: left;
