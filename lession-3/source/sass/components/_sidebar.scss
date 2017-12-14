@@ -1,0 +1,28 @@
+.sidebar {
+
+  &__block {
+    padding-bottom: 30px;
+  }
+
+  &__heading {
+    font-family: $opensans;
+    font-size: 18px;
+    font-weight: 800;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $lighten-grey;
+    margin: 0 0 20px;
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__item {
+    padding: 15px 0;
+    border-bottom: 1px dashed $lighten-grey;
+
+    &--last {
+      border-bottom: 0;
+    }
+  }
+}
