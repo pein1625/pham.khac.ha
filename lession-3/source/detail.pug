@@ -15,24 +15,24 @@ html(lang="en")
       .container
         section.product-section
           .row
-            .col-md-7
+            .col-lg-7
               .product-img
                 ul.small-img
                   li.small-img__item.js-img-up
                     span.arrow.arrow--up
                   li.small-img__item.js-small-img
-                    img.small-img__img(src="images/ring-1-1.png", alt="")
+                    img.small-img__img(src="images/ring-1.png", alt="")
                   li.small-img__item.js-small-img
-                    img.small-img__img(src="images/ring-1-2.png", alt="")
+                    img.small-img__img(src="images/ring-2.png", alt="")
                   li.small-img__item.js-small-img
-                    img.small-img__img(src="images/ring-1-3.png", alt="")
+                    img.small-img__img(src="images/ring-1.png", alt="")
                   li.small-img__item.js-small-img
-                    img.small-img__img(src="images/ring-1-4.png", alt="")
+                    img.small-img__img(src="images/ring-2.png", alt="")
                   li.small-img__item.js-img-down
                     span.arrow.arrow--down
                 .large-img
                   img.large-img__img.js-large-img(src="images/ring-1.png", alt="")
-            .col-md-5
+            .col-lg-5
               .product-detail
                 h1.product-detail__name LẮC TAY TYFFANY XU HƯỚNG MỚI NHẤT
                 h4.product-detail__code TYFFANY MS 3201
@@ -40,7 +40,6 @@ html(lang="en")
                   span.product-detail__price--new 955.000đ
                   span.product-detail__price--old 999.000đ
                 p.product-detail__desc Không thể phủ nhận, thời trang và phong cách chính là “tuyên ngôn” không lời mạnh mẽ nhất của mỗi người phụ nữ. Do đó, việc mua sắm thời trang trở thành niềm vui, và có khi là nguồn cảm hứng vô tận để phái đẹp sống vui, sống đẹp hơn trong mắt nửa còn lại của thế giới. Để F5 tủ đồ của mình trước những xu hướng ngày một đa dạng hơn trong thế giới thời trang, nhiều chị em không ngần ngại chi tiêu “mạnh tay” để sở hữu những món đồ yêu thích.
-                
                 .product-custom
                   label.product-custom__label MÀU SẮC
                   select.product-select
@@ -53,9 +52,8 @@ html(lang="en")
                     option 12
                     option 13
                     option 14
-                .product-custom
+                .product-custom.product-custom--last
                   label.product-custom__label SỐ LƯỢNG
-                  input.product-custom__number(type="number")
                 .product-detail__btn
                   a.button.button--white.product-detail__btn--mr8(href="#!") MUA HÀNG
                   a.button.button--black.product-detail__btn--mr8(href="#!")
@@ -63,27 +61,28 @@ html(lang="en")
                   a.button.button--white(href="#!")
                     i.fa.fa-refresh
                 .detail-social
-                  span.detail-social__text Shipping &
-                    span.detail-social__text--red Returns
-                  ul.mini-social
-                    li.mini-social__item
-                      a.mini-social__link(href="#!")
-                        img.mini-social__icon(src="images/btn-facebook.png", alt="")
-                      span.mini-social__count 0
-                    li.mini-social__item
-                      a.mini-social__link(href="#!")
-                        img.mini-social__icon(src="images/btn-twitter.png", alt="")
-                      span.mini-social__count 0
-                    li.mini-social__item
-                      a.mini-social__link(href="#!")
-                        img.mini-social__icon(src="images/btn-google-plus.png", alt="")
-                      span.mini-social__count 0
-                    li.mini-social__item
-                      a.mini-social__link(href="#!")
-                        img.mini-social__icon(src="images/btn-linkedin.png", alt="")
-                    li.mini-social__item
-                      a.mini-social__link(href="#!")
-                        img.mini-social__icon(src="images/btn-pinterest.png", alt="")
+                  .detail-social__wrap
+                    span.detail-social__text Shipping &
+                      span.detail-social__text--red Returns
+                    ul.mini-social
+                      li.mini-social__item
+                        a.mini-social__link(href="#!")
+                          img.mini-social__icon(src="images/btn-facebook.png", alt="")
+                        span.mini-social__count 0
+                      li.mini-social__item
+                        a.mini-social__link(href="#!")
+                          img.mini-social__icon(src="images/btn-twitter.png", alt="")
+                        span.mini-social__count 0
+                      li.mini-social__item
+                        a.mini-social__link(href="#!")
+                          img.mini-social__icon(src="images/btn-google-plus.png", alt="")
+                        span.mini-social__count 0
+                      li.mini-social__item
+                        a.mini-social__link(href="#!")
+                          img.mini-social__icon(src="images/btn-linkedin.png", alt="")
+                      li.mini-social__item
+                        a.mini-social__link(href="#!")
+                          img.mini-social__icon(src="images/btn-pinterest.png", alt="")
         section.more-products
           .more-detail
             h1.more-detail__header
