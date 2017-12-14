@@ -1,8 +1,10 @@
 mixin blog(img)
   .blog
     .blog__imgwrap
-      img.blog__img(src=img , alt="")
-    h6.blog__title REVIEW SON KEM BOURJOIS VELVET
+      a.blog__link(href="#!")
+        img.blog__img(src=img , alt="")
+    h6.blog__title
+      a.blog__link(href="#!") REVIEW SON KEM BOURJOIS VELVET
     hr.grey-line
     p.blog__content Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
     p.blog__author Bởi NamTran ( 27 / 05 / 2015 )
@@ -10,3 +12,13 @@ mixin blog(img)
     .blog__anchors
       a.blog__anchor.arrow-right(href="#!") Đọc thêm
       a.blog__anchor(href="#!") 23 Bình luận
+
+mixin blog-post(img)
+  .blog-post
+    .blog-post__imgwrap
+      a.blog-post__link(href="#")
+        img.blog-post__img(src=img , alt="")
+    a.blog-post__date(href="#")
+      span.blog-post__day 11
+      span.blog-post__month / Tháng 5
+    .blog-post__author Đăng bởi Giangle
