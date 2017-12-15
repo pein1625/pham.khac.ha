@@ -1,7 +1,21 @@
 $(document).ready(function(){
-  $('.js-header-icon').on('click', function(e){
-    $('.js-header-dropdown').fadeOut(0);
-    $(this).next('.js-header-dropdown').fadeToggle(300);
+  $('.js-menu-btn').on('click', function(){
+    $('.js-mobile-nav').addClass('active');
+  });
+
+  $('.js-mobile-nav-btn').on('click', function(){
+    $('.js-mobile-nav').removeClass('active');
+  });
+
+  $('.js-mobile-nav-trigger').on('click', function(){
+    $(this).toggleClass('active');
+    $(this).siblings('.js-mobile-subnav').slideToggle(200);
+  });
+
+  $('.js-header-btn').on('click', function(e){
+    var data = $(this).data('target');
+    $('.js-header-dropdown').hide();
+    $(data).fadeToggle(200);
     e.stopPropagation();
   });
 

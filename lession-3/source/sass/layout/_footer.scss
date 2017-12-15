@@ -1,55 +1,46 @@
 .footer {
   background-color: $black;
   padding-top: 40px;
+
+  &__title {
+    font-size: 18px;
+    font-family: $opensans;
+    font-weight: 400;
+    color: $lighter-grey;
+    margin-bottom: 16px;
+    word-break: break-word;
+  }
 }
 
 .contact {
-  display: inline-block;
-  max-width: 320px;
-  margin-bottom: 30px;
-  word-break: break-word;
+  display: flex;
+  float: left;
+  margin-right: 17px;
+
+  &__icon {
+    height: 14px;
+    width: auto;
+    margin-top: 8px;
+    margin-right: 10px;
+  }
 
   &__info {
+    flex: 1 0 0;
     font-size: 14px;
-    font-family: $roboto;
+    font-family: $opensans;
+    font-weight: 300;
     line-height: 30px;
-    position: relative;
-    padding-left: 20px;
-
+    color: $lightest-black;
+    word-break: break-word;
     &:hover {
       color: $lighter-green;
     }
   }
-
-  &__icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 16px;
-    color: $lighter-green;
-  }
-}
-
-.pushright_10 {
-  margin-left: 10px;
-}
-
-.footer-grid {
-  width: 780px;
-  float: right;
-  margin-bottom: 30px;
-}
-
-.footer-heading {
-  font-size: 18px;
-  font-family: $opensans;
-  font-weight: 400;
-  color: $lighter-grey;
-  margin-bottom: 16px;
-  word-break: break-word;
 }
 
 .sublist {
+  margin-bottom: 30px;
+
   &__link {
     display: block;
     font-size: 14px;
@@ -58,20 +49,34 @@
     line-height: 30px;
     color: $lightest-black;
     word-break: break-word;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: none;
+      width: 4px;
+      height: 4px;
+      background-color: $lighter-green;
+      position: absolute;
+      left: -10px;
+      top: 13px;
+    }
 
     &:hover {
       color: $lighter-green;
-      position: relative;
+      left: 10px;
 
       &::before {
-        content: '';
-        display: inline-block;
-        width: 4px;
-        height: 4px;
-        background-color: $lighter-green;
-        margin-right: 6px;
-        margin-bottom: 3px;
-      } 
+        display: block;
+      }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $lighter-black;
+
+    &--last {
+      border-bottom: 0;
     }
   }
 }
@@ -94,11 +99,22 @@
   float: right;
 
   &__item {
-    margin-left: 17px;
+    margin-right: 17px;
+
+    &--last {
+      margin-right: 0;
+    }
   }
 
   &__img {
     display: block;
     max-height: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .payments {
+    float: left;
+    margin-top: 12px;
   }
 }
