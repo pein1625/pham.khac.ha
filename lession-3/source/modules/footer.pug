@@ -1,55 +1,57 @@
 mixin footer
   footer.footer
-    .container.clearfix
-      .contact
-        h5.footer-heading LIÊN HỆ VỚI CHÚNG TÔI
-        span.contact__info
-          i.fa.fa-map-marker.contact__icon
-          | Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
-        br          
-        span.contact__info
-          i.fa.fa-phone.contact__icon
-          | (04) 6674 2332  -
-        span.contact__info
-          i.fa.fa-fax.contact__icon
-          |  (04) 3786 8904
-        br          
-        span.contact__info
-          i.fa.fa-phone.contact__icon
-          |  (08) 6680 9686
-        span.contact__info.pushright_10
-          i.fa.fa-envelope.contact__icon
-          |  Support@bizweb.vn
-      .footer-grid
-        .row
-          .col-md-3
-            h5.footer-heading CHUYỂN HÀNG
-            ul.sublist
-              - var list = ['Mua sắm trực tuyến', 'Đến từ chúng tôi gửi đến', 'Chính sách vận chuyển', 'Vận chuyển thông tin']
-              each item in list
-                li.sublist__item
-                  a.sublist__link(href="#")= item
-          .col-md-3
-            h5.footer-heading HỖ TRỢ
-            ul.sublist
-              - var list = ['Câu chuyện của chúng ta', 'Thanh toán an toàn', 'Tùy chọn Vận Chuyển', 'Chính sách vận chuyển']
-              each item in list
-                li.sublist__item
-                  a.sublist__link(href="#")= item
-          .col-md-3
-            h5.footer-heading THÔNG TIN
-            ul.sublist
-              - var list = ['Về Chúng Tôi', 'Điều khoản & điều kiện', 'Chính Sách Riêng Tư', 'Đơn đặt hàng và Returns'];
-              each item in list
-                li.sublist__item
-                  a.sublist__link(href="#")= item
-          .col-md-3
-            h5.footer-heading MY ACCOUNT
-            ul.sublist
-              - var list = ['Xem Giỏ hàng', 'Sản phẩm yêu thích', 'Kiểm tra', 'Theo dõi đặt hàng của tôi'];
-              each item in list
-                li.sublist__item
-                  a.sublist__link(href="#")= item
+    .container
+      .row
+        .col-xl-4
+          h5.footer__title LIÊN HỆ VỚI CHÚNG TÔI
+          ul.sublist
+            li.sublist__item.clearfix
+              .contact
+                img.contact__icon(src="images/icon-map-marker.png", alt="")
+                span.contact__info Tầng 4, Tòa nhà Hanoi Group Số 442 Đội Cấn, P. Cống Vị, Q. Ba Đình, Hà Nội
+            li.sublist__item.clearfix
+              .contact
+                img.contact__icon(src="images/icon-phone.png", alt="")
+                span.contact__info (04) 6674 2332
+              .contact
+                img.contact__icon(src="images/icon-fax.png", alt="")
+                span.contact__info (04) 3786 8904
+            li.sublist__item.clearfix
+              .contact
+                img.contact__icon(src="images/icon-phone.png", alt="")
+                span.contact__info  (08) 6680 9686
+              .contact
+                span.contact__space
+                img.contact__icon(src="images/icon-envelope.png", alt="")
+                span.contact__info  Support@bizweb.vn
+        .col-xl-2
+          h5.footer__title CHUYỂN HÀNG
+          ul.sublist
+            - var list = ['Mua sắm trực tuyến', 'Đến từ chúng tôi gửi đến', 'Chính sách vận chuyển', 'Vận chuyển thông tin']
+            each item in list
+              li.sublist__item
+                a.sublist__link(href="#")= item
+        .col-xl-2
+          h5.footer__title HỖ TRỢ
+          ul.sublist
+            - var list = ['Câu chuyện của chúng ta', 'Thanh toán an toàn', 'Tùy chọn Vận Chuyển', 'Chính sách vận chuyển']
+            each item in list
+              li.sublist__item
+                a.sublist__link(href="#")= item
+        .col-xl-2
+          h5.footer__title THÔNG TIN
+          ul.sublist
+            - var list = ['Về Chúng Tôi', 'Điều khoản & điều kiện', 'Chính Sách Riêng Tư', 'Đơn đặt hàng và Returns'];
+            each item in list
+              li.sublist__item
+                a.sublist__link(href="#")= item
+        .col-xl-2
+          h5.footer__title MY ACCOUNT
+          ul.sublist
+            - var list = ['Xem Giỏ hàng', 'Sản phẩm yêu thích', 'Kiểm tra', 'Theo dõi đặt hàng của tôi'];
+            each item in list
+              li.sublist__item
+                a.sublist__link(href="#")= item
     .site-end
       .container.clearfix
         span.copyright © Copyright 2008-2014 DKT Technology JSC
@@ -63,6 +65,6 @@ mixin footer
           li.payments__item
             a(href="#")
               img.payments__img(src="images/payments-3.png", alt="")
-          li.payments__item
+          li.payments__item.payments__item--last
             a(href="#")
               img.payments__img(src="images/payments-4.png", alt="")
