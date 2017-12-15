@@ -110,6 +110,27 @@ $(document).ready(function(){
   $('.js-product-tab').hide();
   $('.js-product-tab[data-product="sell"').show();
 
+  // home social slider
+  $('.social').owlCarousel({
+    loop: true,
+    nav: false,
+    dots: false,
+    responsive: {
+      0: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      992: {
+        items: 4
+      },
+      1200: {
+        items: 6
+      }
+    }
+  });
+
   // list sidebar dropdown
   $('.js-list-dropdown-btn').on('click', function(){
     if ($(this).hasClass('active')) {

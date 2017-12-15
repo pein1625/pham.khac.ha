@@ -1,7 +1,6 @@
 include modules/head
 include modules/header
 include modules/footer
-include modules/script
 include modules/components/blog
 include modules/components/product
 
@@ -168,7 +167,7 @@ html(lang="en")
       // more info
       .home-info.container
         //social
-        ul.social
+        ul.social.owl-carousel
           li.social__item
             a.social__link(href="#")
               i.fa.fa-facebook.social__icon
@@ -226,4 +225,4 @@ html(lang="en")
                 li.tags__tag
                   a.tags__link(href="#")= item
     +footer
-    +script
+    script(src="js/main.js")

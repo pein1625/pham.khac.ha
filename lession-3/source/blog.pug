@@ -1,7 +1,6 @@
 include modules/head
 include modules/header
 include modules/footer
-include modules/script
 include modules/components/blog
 include modules/components/breadcumb
 include modules/components/section-head
@@ -22,4 +21,4 @@ html
               +blog("images/blog-"+item+".png")
         +section-head
     +footer
-    +script
+    script(src="js/main.js")
