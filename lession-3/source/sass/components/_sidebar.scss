@@ -18,10 +18,11 @@
   }
 
   &__item {
-    padding: 15px 0;
+    padding: 5px 0 15px;
     border-bottom: 1px dashed $lighten-grey;
 
-    &--last {
+    &--last,
+    &--border0 {
       border-bottom: 0;
     }
   }

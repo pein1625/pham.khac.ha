@@ -1,0 +1,72 @@
+include modules/head
+include modules/header
+include modules/footer
+include modules/script
+include modules/components/blog
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    +breadcumb("Home", "Liên hệ")
+    main.blogs.detail-blogs
+      .container
+        h1.blogs__title BLOG
+        .blogs-detail
+          aside.sidebar.blogs-detail__sidebar
+            .sidebar__block
+              h2.sidebar__heading BÀI VIẾT MỚI NHẤT
+              ul.sidebar__list
+                li.sidebar__item.sidebar__item--border0
+                  +blog-post("images/blog-2.png")
+                li.sidebar__item.sidebar__item--border0
+                  +blog-post("images/blog-2.png")
+                li.sidebar__item.sidebar__item--border0
+                  +blog-post("images/blog-2.png")
+            .sidebar__block
+              h2.sidebar__heading BLOG TAGS
+              ul.tags
+                each item in ['Đồng hồ', 'Túi', 'Phụ kiện', 'Giày', 'Scandal', 'Áo sơ mi', 'Nước hoa', 'Trẻ em', 'Thời trang nữ']
+                  li.tags__tag
+                    a.tags__link(href="#")= item
+          .blogs-detail__content
+            .blog.blog--detail
+              .blog__imgwrap.blog--detail__imgwrap
+                img.blog__img(src="images/blog-4.png" , alt="")
+              h6.blog__title.blog--detail__title NÀNG BÉO KHÔNG NGẠI DIỆN VÁY ÁO NỔI BẬT
+              hr.grey-line
+              p.blog__content.blog--detail__content Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.Trong tiết xuân hè, nàng ngoại cỡ thắp sáng phong cách bằng quần họa tiết nhiệt đới đi kèm áo sơ mi nhã nhặn.Trang phục họa tiết điện tử được nàng phối cùng chân váy kẻ caro, làm nên style vừa hiện đại, vừa phảng phất nét cổ điển.Lối diện đồ hàng ngày đơn giản, khỏe khoắn của cô khi kết hợp chất liệu jean.Nữ blogger rực rỡ khi hòa trộn các gam đỏ, hồng, tím... một cách vui tươi, kèm theo các phụ kiện điệu đà. 
+              p.blog__author.blog--detail__author Bởi NamTran ( 27 / 05 / 2015 )
+              hr.grey-line
+              .blog__anchors.blog--detail__anchors
+                a.blog__anchor.arrow-right.blog--detail__anchor(href="#!") Đọc thêm
+                a.blog__anchor.blog--detail__anchor(href="#!") 23 Bình luận
+            .blog-tags
+              span.blog-tags__title Tags: 
+              ul.blog-tags__list
+                li.blog-tags__tag
+                  a(href="#").blog-tags__link Men
+            form.comments
+              h4.comments__title ĐÓNG GÓP Ý KIẾN
+              .comments__group
+                label.comments__label
+                  | Tên
+                  span.fa.fa-star.comments__icon
+                input.comments__input(type="text")
+              .comments__group
+                label.comments__label
+                  | Email
+                  span.fa.fa-star.comments__icon
+                input.comments__input(type="email")
+              .comments__group
+                label.comments__label
+                  | Ý kiến
+                  span.fa.fa-star.comments__icon
+                textarea.comments__comment(rows="10")
+              .comments__group
+                label.comments__label
+                button.button-form.comments__btn(type="submit") Gửi ý kiến
+    +footer
+    +script

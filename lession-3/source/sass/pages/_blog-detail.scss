@@ -1,0 +1,141 @@
+.detail-blogs {
+  margin-bottom: 70px;
+}
+
+.blogs-detail {
+  display: flex;
+  flex-flow: row wrap;
+  &__sidebar {
+    width: 270px;
+    margin-right: 30px;
+  }
+
+  &__content {
+    flex: 1;
+    padding-top: 32px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .blogs-detail__sidebar {
+    flex: 0 0 100%;
+    margin: 0;
+    -webkit-order: 2;
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blogs-detail__sidebar {
+    display: none;
+  }
+}
+
+.blog--detail {
+  margin-bottom: 60px;
+  word-break: break-word;
+
+  &__imgwrap {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 26px;
+    color: $black;
+  }
+
+  &__content {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 30px 0;
+  }
+
+  &__author {
+    font-size: 18px;
+    margin-bottom: 23px;
+  }
+
+  &__anchors {
+    margin-top: 20px;
+  }
+
+  &__anchor {
+    font-size: 18px;
+  }
+}
+
+.blog-tags {
+  font-size: 18px;
+  font-family: $opensans;
+  padding-bottom: 20px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid $lighten-grey;
+
+  &__title {
+    color: $light-gray;
+  }
+    
+  &__list {
+    display: inline-block;
+  }
+
+  &__tag {
+    margin-left: 16px;
+  }
+
+  &__link {
+    color: $lighter-black;
+  }
+}
+
+.comments {
+  font-size: 16px;
+  font-family: opensans;
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $lighten-black;
+    font-weight: 600;
+  }
+
+  &__group {
+    display: flex;
+    margin-bottom: 35px;
+  }
+
+  &__label {
+    width: 65px;
+    margin-top: 8px;
+    color: $lighten-black;
+    font-weight: 600;
+  }
+
+  &__icon {
+    font-size: 6px;
+    color: $lighter-green;
+    position: relative;
+    bottom: 3px;
+  }
+
+  &__input {
+    flex: 1;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid $lighten-grey;
+    color: $lighten-black;
+  }
+
+  &__comment {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid $lighten-grey;
+    color: $lighten-black;
+  }
+
+  &__btn {
+    height: 46px;
+    font-size: 16px;
+  }
+}
