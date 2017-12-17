@@ -12,29 +12,30 @@ html(lang="en")
     main.main
       //banner
       .banner
-        .banner-product
-          img.banner-product__img(src="images/banner-flower.png", alt="")
-          h1.banner-product__name GreenVera
-          h5.banner-product__desc Sản phẩm tinh dầu dưỡng da mới nhất của Mandala
-          span.banner-product__price GIÁ CHỈ 750.000
-            sup đ
-          a.banner-product__buy(href="#") MUA HÀNG
-        img.banner__img(src="images/banner-girl.png", alt="")
+        .container
+          .banner__wrap
+            .banner-product
+              img.banner-product__img(src="images/banner-flower.png", alt="")
+              h1.banner-product__name GreenVera
+              h5.banner-product__desc Sản phẩm tinh dầu dưỡng da mới nhất của Mandala
+              span.banner-product__price GIÁ CHỈ 750.000
+                sup đ
+              a.banner-product__buy(href="#") MUA HÀNG
+            .banner__image
+              img.banner__img(src="images/banner-girl.png", alt="")
+
       .container
         //intro
-        .row
-          .col-md-4
-            .intro
-              img.intro__icon(src="images/icon-plane.png", alt="")
-              .intro__text Miễn phí vận chuyển
-          .col-md-4
-            .intro
-              img.intro__icon(src="images/icon-gift.png", alt="")
-              .intro__text Nhận ngay quà tặng trị giá 350.000đ
-          .col-md-4
-            .intro.intro--last
-              img.intro__icon(src="images/icon-star.png", alt="")
-              .intro__text Giảm 30% cho đơn hàng trên 5.000.000đ
+        .intro.row
+          .col-md-4.intro__item
+            img.intro__icon(src="images/icon-plane.png", alt="")
+            .intro__text Miễn phí vận chuyển
+          .col-md-4.intro__item
+            img.intro__icon(src="images/icon-gift.png", alt="")
+            .intro__text Nhận ngay quà tặng trị giá 350.000đ
+          .col-md-4.intro__item.intro__item--last
+            img.intro__icon(src="images/icon-star.png", alt="")
+            .intro__text Giảm 30% cho đơn hàng trên 5.000.000đ
         //grid
         .row.row-gutter-5
           .col-md-6.col-gutter-5
@@ -45,19 +46,17 @@ html(lang="en")
               .col-6.col-gutter-5
                 .homegrid__card.homegrid__card-1
                   h1.homegrid__heading SỮA TẮM
-                  .hash-line.homegrid__hashline //////////
-              .gutter-5
+                  .hash-line.homegrid__hashline ///////
               .col-6.col-gutter-5
                 .homegrid__card.homegrid__card-2
                   h1.homegrid__heading NƯỚC HOA
-                  .hash-line.homegrid__hashline //////////
+                  .hash-line.homegrid__hashline ///////
               .col-6.col-gutter-5
                 a(href="#").homegrid__link
                   img.homegrid__img(src="images/home-grid-2.png", alt="")
           .col-md-6.col-gutter-5
             a(href="#").homegrid__link
               img.homegrid__img(src="images/home-grid-3.png", alt="")
-          .gutter-5
           .col-md-6.col-gutter-5
             a(href="#").homegrid__link
               img.homegrid__img(src="images/home-grid-4.png", alt="")
@@ -66,11 +65,10 @@ html(lang="en")
               .col-6.col-gutter-5
                 .homegrid__card.homegrid__card-3
                   h1.homegrid__heading TRANG SỨC
-                  .hash-line.homegrid__hashline //////////
+                  .hash-line.homegrid__hashline ///////
               .col-6.col-gutter-5
                 a(href="#").homegrid__link
                   img.homegrid__img(src="images/home-grid-5.png", alt="")
-              .gutter-5
               .col-6.col-gutter-5
                 a(href="#").homegrid__link
                   img.homegrid__img(src="images/home-grid-6.png", alt="")
@@ -80,6 +78,7 @@ html(lang="en")
                     img.homegrid__img(src="images/home-grid-7.png", alt="")
         //speak
         .speak
+          img.speak__bg(src="images/speak-bg.png", alt="")
           .speak__slider.owl-carousel.js-speak__slider
             .speak__slide
               .speak__avatar
@@ -87,83 +86,87 @@ html(lang="en")
               p.speak__text Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto
               .speak__speaker  
                 | TUITILE
-                span.speak__speaker--italic _ Giám đốc phát triển sản phẩm    
+                span.speak__speaker--italic Giám đốc phát triển sản phẩm
             .speak__slide
               .speak__avatar
                 img.speak__img(src="images/speak-avatar.png", alt="")
               p.speak__text Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto
               .speak__speaker  
                 | TUITILE
-                span.speak__speaker--italic _ Giám đốc phát triển sản phẩm    
+                span.speak__speaker--italic Giám đốc phát triển sản phẩm    
             .speak__slide
               .speak__avatar
                 img.speak__img(src="images/speak-avatar.png", alt="")
               p.speak__text Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto
               .speak__speaker  
                 | TUITILE
-                span.speak__speaker--italic _ Giám đốc phát triển sản phẩm 
+                span.speak__speaker--italic Giám đốc phát triển sản phẩm 
       //product
       .home-product
-        ul.category
-          li.category__item.js-category__item(data-tab="new")
-            span Sản phẩm mới
-          li.category__line
-          li.category__item.js-category__item.active(data-tab="sell")
-            span Sản phẩm bán chạy
-          li.category__line
-          li.category__item.category__item--last.js-category__item(data-tab="special")
-            span Sản phẩm đặc biệt
-        .hash-line ///////////////    
-        ul.category-2.js-category-2(data-cate="new")
-          li.category-2__item.js-category-2__item Mỹ phẩm
-          li.category-2__item.js-category-2__item Chăm sóc da
-          li.category-2__item.js-category-2__item Dành cho tóc
-          li.category-2__item.js-category-2__item.active Nước hoa
-          li.category-2__item.js-category-2__item Trang sức
-          li.category-2__item.category-2__item--last.js-category-2__item Quà tặng
-        ul.category-2.js-category-2(data-cate="sell")
-          li.category-2__item.js-category-2__item Mỹ phẩm
-          li.category-2__item.js-category-2__item Chăm sóc da
-          li.category-2__item.js-category-2__item Dành cho tóc
-          li.category-2__item.js-category-2__item.active Nước hoa
-          li.category-2__item.js-category-2__item Trang sức
-          li.category-2__item.category-2__item--last.js-category-2__item Quà tặng
-        ul.category-2.js-category-2(data-cate="special")
-          li.category-2__item.js-category-2__item Mỹ phẩm
-          li.category-2__item.js-category-2__item Chăm sóc da
-          li.category-2__item.js-category-2__item Dành cho tóc
-          li.category-2__item.js-category-2__item.active Nước hoa
-          li.category-2__item.js-category-2__item Trang sức
-          li.category-2__item.category-2__item--last.js-category-2__item Quà tặng
-        // home product slider
-        .product-slider.js-product-tab(data-product='new')
-          .product-slider__next.js-next-product
-            img(src="images/icon-arrow-right.png", alt="")
-          .product-slider__prev.js-prev-product
-            img(src="images/icon-arrow-left.png", alt="")
-          .slider.owl-carousel.js-product-slider
-            each item in [1, 2, 3, 4, 5, 6]
-              .slider__slide
-                +product("images/product-3.png")
-        .product-slider.js-product-tab(data-product='sell')
-          .product-slider__next.js-next-product
-            img(src="images/icon-arrow-right.png", alt="")
-          .product-slider__prev.js-prev-product
-            img(src="images/icon-arrow-left.png", alt="")
-          .slider.owl-carousel.js-product-slider
-            each item in [1, 2, 3, 4, 5, 6]
-              .slider__slide
-                +product("images/product-"+item+".png")
-        .product-slider.js-product-tab(data-product='special')
-          .product-slider__next.js-next-product
-            img(src="images/icon-arrow-right.png", alt="")
-          .product-slider__prev.js-prev-product
-            img(src="images/icon-arrow-left.png", alt="")
-          .slider.owl-carousel.js-product-slider
-            each item in [1, 2, 3, 4, 5, 6]
-              .slider__slide
-                +product("images/product-4.png")
-
+        .container
+          ul.category
+            li.category__item.js-category__item(data-target="new")
+              span Sản phẩm mới
+            li.category__item.js-category__item.active(data-target="sell")
+              span Sản phẩm bán chạy
+            li.category__item.category__item--last.js-category__item(data-target="special")
+              span Sản phẩm đặc biệt
+          .hash-line ///////////////
+        
+        .product-tabs.container.js-product-tabs(data-tab="new")
+          ul.category-2
+            li.category-2__item.js-category-2__item Mỹ phẩm
+            li.category-2__item.js-category-2__item Chăm sóc da
+            li.category-2__item.js-category-2__item Dành cho tóc
+            li.category-2__item.js-category-2__item.active Nước hoa
+            li.category-2__item.js-category-2__item Trang sức
+            li.category-2__item.category-2__item--last.js-category-2__item Quà tặng
+          // home product slider
+          .product-slider
+            .product-slider__next.js-next-product
+              img(src="images/icon-arrow-right.png", alt="")
+            .product-slider__prev.js-prev-product
+              img(src="images/icon-arrow-left.png", alt="")
+            .slider.owl-carousel.js-product-slider
+              each item in [1, 2, 3, 4, 5, 6]
+                .slider__slide
+                  +product("images/product-3.png")
+        .product-tabs.container.js-product-tabs(data-tab="sell").active
+          ul.category-2
+            li.category-2__item.js-category-2__item Mỹ phẩm
+            li.category-2__item.js-category-2__item Chăm sóc da
+            li.category-2__item.js-category-2__item Dành cho tóc
+            li.category-2__item.js-category-2__item.active Nước hoa
+            li.category-2__item.js-category-2__item Trang sức
+            li.category-2__item.category-2__item--last.js-category-2__item Quà tặng
+          // home product slider
+          .product-slider
+            .product-slider__next.js-next-product
+              img(src="images/icon-arrow-right.png", alt="")
+            .product-slider__prev.js-prev-product
+              img(src="images/icon-arrow-left.png", alt="")
+            .slider.owl-carousel.js-product-slider
+              each item in [1, 2, 3, 4, 5, 6]
+                .slider__slide
+                  +product("images/product-"+item+".png")
+        .product-tabs.container.js-product-tabs(data-tab="special")
+          ul.category-2
+            li.category-2__item.js-category-2__item Mỹ phẩm
+            li.category-2__item.js-category-2__item Chăm sóc da
+            li.category-2__item.js-category-2__item Dành cho tóc
+            li.category-2__item.js-category-2__item.active Nước hoa
+            li.category-2__item.js-category-2__item Trang sức
+            li.category-2__item.category-2__item--last.js-category-2__item Quà tặng
+          // home product slider
+          .product-slider
+            .product-slider__next.js-next-product
+              img(src="images/icon-arrow-right.png", alt="")
+            .product-slider__prev.js-prev-product
+              img(src="images/icon-arrow-left.png", alt="")
+            .slider.owl-carousel.js-product-slider
+              each item in [1, 2, 3, 4, 5, 6]
+                .slider__slide
+                  +product("images/product-4.png")
       // more info
       .home-info.container
         //social
@@ -207,7 +210,7 @@ html(lang="en")
             .widget
               h5.widget__heading BLOG
               .hash-line.hash-line--w100 ///////////
-              +blog
+              +blog("images/blog-2.png")
           .col-md-4
             .widget
               h5.widget__heading GỬI EMAIL CHO CHÚNG TÔI
@@ -219,10 +222,10 @@ html(lang="en")
             .widget
               h5.widget__heading TAG SẢN PHẨM
               .hash-line.hash-line--w100 ///////////
-            ul.tags.clearfix
-              - var list = ['Đồng hồ', 'Túi', 'Phụ kiện', 'Đồng hồ', 'Túi', 'Giày', 'Scandal', 'Áo sơ mi', 'Nước hoa', 'Giày', 'Sandal', 'Trẻ em', 'Thời trang nữ', 'Trẻ em', 'Thời trang nữ'];
-              each item in list
-                li.tags__tag
-                  a.tags__link(href="#")= item
+              ul.tags.clearfix
+                - var list = ['Đồng hồ', 'Túi', 'Phụ kiện', 'Đồng hồ', 'Túi', 'Giày', 'Scandal', 'Áo sơ mi', 'Nước hoa', 'Giày', 'Sandal', 'Trẻ em', 'Thời trang nữ', 'Trẻ em', 'Thời trang nữ'];
+                each item in list
+                  li.tags__tag
+                    a.tags__link(href="#")= item
     +footer
     script(src="js/main.js")

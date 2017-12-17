@@ -39,14 +39,17 @@ $(document).ready(function(){
 
   //- product category
   $('.js-category__item').on('click', function(){
-    if ($(this).hasClass('active')) return false;
-    $(this).siblings('.active').removeClass('active');
-    $(this).addClass('active');
-    var tab = $(this).data('tab');
-    $('.js-category-2').hide();
-    $('.js-category-2[data-cate='+tab+']').show();
-    $('.js-product-tab').hide();
-    $('.js-product-tab[data-product='+tab+']').show();
+    if ($(this).hasClass('active')) {
+      return false;
+    }
+    else {
+      $('.js-category__item.active').removeClass('active');
+      $(this).addClass('active');
+      var data = $(this).data('target');
+      $('.js-product-tabs.active').removeClass('active');
+      $('.js-product-tabs[data-tab='+data+']').addClass('active');
+      checkClass();
+    }
   });
 
   //- product category 2
@@ -65,14 +68,12 @@ $(document).ready(function(){
       0: {
         items: 1
       },
-      850: {
-        items: 3
+
+      768: {
+        items: 2
       },
-      1090: {
+      1200: {
         items: 4
-      },
-      1367: {
-        items: 5
       },
       1620: {
         items: 6
@@ -84,18 +85,25 @@ $(document).ready(function(){
   function checkClass() {
     var total = $('.js-product-slider .owl-stage .owl-item.active').length;
     $('.js-product-slider .owl-stage .owl-item').removeClass('js-first-item js-last-item');
-    $('.js-product-slider .owl-stage .owl-item.active').each(function(index){
-      if (index === 0 || index === total/3 || index === total*2/3) {
-        $(this).addClass('js-first-item');
-      }
-      if ((index === total - 1 || index === total/3-1 || index === total*2/3-1) && total > 1) {
-        $(this).addClass('js-last-item');
-      }
-    });
+
+    if ($(window).width() > 1200) {
+      $('.js-product-slider .owl-stage .owl-item.active').each(function(index){
+        if (index === 0 || index === total/3 || index === total*2/3) {
+          $(this).addClass('js-first-item');
+        }
+        if ((index === total - 1 || index === total/3-1 || index === total*2/3-1) && total > 1) {
+          $(this).addClass('js-last-item');
+        }
+      });
+    }
   }
 
   checkClass();
   productSlide.on('translated.owl.carousel', function(){
+    checkClass();
+  });
+
+  $(window).resize(function(){
     checkClass();
   });
 
