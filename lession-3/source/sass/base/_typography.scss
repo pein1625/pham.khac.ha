@@ -1,8 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster|Playball|Raleway|Roboto|Open+Sans|Roboto+Slab');
 
+@font-face {
+  font-family: 'UTMadrogyne';
+  src: url('../fonts/UTM Adrogyne.ttf');
+}
+
+@font-face {
+  font-family: 'UTMviceroyJF';
+  src: url('../fonts/UTM ViceroyJF.ttf');
+}
+
+
+$viceroy: 'UTMviceroyJF', sans-serif;
 $lobster: 'Lobster', cursive;
 $roboto: 'Roboto', sans-serif;
 $robotoslab: 'Roboto Slab', serif;
 $playball: 'Playball', cursive;
 $raleway: 'Raleway', sans-serif;
 $opensans: 'Open Sans', sans-serif;
+$adrogyne: 'UTMadrogyne', sans-serif;
