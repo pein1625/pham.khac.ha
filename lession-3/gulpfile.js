@@ -62,8 +62,9 @@ var scss = {
     precison: 3,
     errLogToConsole: true,
     includePaths: [
-      './node_modules/bootstrap-sass/assets/stylesheets',
+      './node_modules/bootstrap/scss',
       './node_modules/font-awesome/scss/',
+      './node_modules/owl.carousel2/src/scss/',
     ]
   }
 };

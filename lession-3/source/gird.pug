@@ -1,7 +1,6 @@
 include modules/head
 include modules/header
 include modules/footer
-include modules/script
 include modules/components/breadcumb
 include modules/components/section-head
 include modules/components/product
@@ -108,8 +107,6 @@ html
               .list-product
                 each item in [1, 2, 3, 4]
                   +product-h("images/product-"+item+".png")
-
               +section-head
-
     +footer
-    +script
+    script(src="js/main.js")

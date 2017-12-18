@@ -1,52 +1,10 @@
-//** Input
-$input-border-radius: 4px;
-$input-height-base: 50px;
-$input-border: #e7e7e7;
-$input-border-focus: #ffffff;
-
-//** Form
-$form-group-margin-bottom: 0;
-
-$panel-default-border: #3baf29;
-$panel-border-radius: 0;
-$panel-default-heading-bg: #3baf29;
-
-//** Unit-less `line-height` for use in components like buttons.
-$line-height-base: 1.428571429; // 30/14
-
-//** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width: 30px;
-
-
-//== Container sizes
+// Grid containers
 //
-//## Define the maximum width of `.container` for different screen sizes.
-$container-lg: (1170px + $grid-gutter-width);
+// Define the maximum width of `.container` for different screen sizes.
 
-
-
-//== Typography
-//
-//## Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif:  "游ゴシック","Yu Gothic","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro","ＭＳ ゴシック",sans-serif;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif;
-
-
-$screen-xs: 320px;
-
-
-//== Buttons
-//
-//## For each of Bootstrap's buttons, define text, background and border color.
-$btn-default-bg: $green;
-$btn-border-radius-base: 40px;
-$btn-default-border: transparent;
-$btn-default-color: white;
-
-//== Colors
-//
-//## Gray and brand colors for use across Bootstrap.
-
-
-
-$brand-primary: $green;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+) !default;
