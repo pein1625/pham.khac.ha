@@ -2,6 +2,7 @@ include modules/head
 include modules/header
 include modules/footer
 include modules/components/blog
+include modules/components/about
 include modules/components/product
 
 doctype html
@@ -201,11 +202,7 @@ html(lang="en")
             .widget.home-about
               h5.widget__heading VỀ CHÚNG TÔI
               .hash-line.hash-line--w100 ///////////
-              .home-about__logo
-                img.home-about__img(src="images/logo.png", alt="")
-              h6.home-about__heading GIỚI THIỆU CHUNG VỀ MỸ PHẨM HANDMADE MANDALA
-              p.home-about__text Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt. Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.
-              a.home-about__readmore(href="#") Xem thêm
+              +about
           .col-md-4
             .widget
               h5.widget__heading BLOG
@@ -216,9 +213,9 @@ html(lang="en")
               h5.widget__heading GỬI EMAIL CHO CHÚNG TÔI
               .hash-line.hash-line--w100 ///////////
               form.sendmail
-                input.sendmail__input(type="email", placeholder="Email của bạn")
+                input.sendmail__input(type="email", name="email", placeholder="Email của bạn", required, data-msg="Bạn chưa điền mục này", data-msg-email="Email không đúng")
                 p.sendmail__desc Gửi email để nhận những ưu đãi mới nhất
-                button.button-form GỬI
+                input.button-form.sendmail__btn(type="submit", value="GỬI")
             .widget
               h5.widget__heading TAG SẢN PHẨM
               .hash-line.hash-line--w100 ///////////

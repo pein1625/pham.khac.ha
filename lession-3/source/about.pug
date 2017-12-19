@@ -1,0 +1,25 @@
+include modules/head
+include modules/header
+include modules/footer
+include modules/components/breadcumb
+include modules/components/about
+
+doctype html
+html
+  +head
+  body
+    +header
+    //breadcumb
+    +breadcumb("Home", "Về chúng tôi")
+
+    .container
+      .page-header
+        h2.page-header__title VỀ CHÚNG TÔI
+      .about-page.row
+        .col-md-6.about-page__col
+          img.about-page__img(src="images/about.png", alt="")
+        .col-md-6.about-page__col
+          +about("lg")
+
+    +footer
+    script(src="js/main.js")

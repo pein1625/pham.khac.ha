@@ -277,4 +277,13 @@ $(document).ready(function(){
       }
     }
   });
+
+  $('.sendmail').validate({
+    rules: {
+      email: {
+        required: true,
+        email: true
+      }
+    }
+  });
 });
