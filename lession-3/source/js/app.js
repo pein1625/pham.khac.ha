@@ -286,4 +286,19 @@ $(document).ready(function(){
       }
     }
   });
+
+  $('.contact-form').validate({
+    rules: {
+      name: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      message: {
+        required: true
+      }
+    }
+  });
 });

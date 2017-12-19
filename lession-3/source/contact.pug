@@ -1,0 +1,37 @@
+include modules/head
+include modules/header
+include modules/footer
+include modules/components/breadcumb
+include modules/components/about
+
+doctype html
+html
+  +head
+  body
+    +header
+    //breadcumb
+    +breadcumb("Home", "Về chúng tôi")
+
+    .container
+      .page-header
+        h2.page-header__title VỀ CHÚNG TÔI
+      .contact-page.row
+        .col-md-6.contact-page__col
+          <iframe class="contact-page__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22169.509752859743!2d106.71442818473096!3d10.807278043960231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQ4JzE0LjciTiAxMDbCsDQzJzE5LjIiRQ!5e0!3m2!1sen!2s!4v1513669827338" frameborder="0" style="border:0" allowfullscreen></iframe>
+        .col-md-6.contact-page__col
+          form.contact-form
+            h5.contact-form__heading GỬI EMAIL CHO CHÚNG TÔI
+            .contact-form__group
+              label.contact-form__label Tên *
+              input.contact-form__input(type="text", name="name", required, data-msg="Bạn chưa điền mục này")
+            .contact-form__group
+              label.contact-form__label Email *
+              input.contact-form__input(type="email", name="email", required, data-msg="Bạn chưa điền mục này", data-msg-email="Email không đúng")
+            .contact-form__group.contact-form__group--mb-18
+              label.contact-form__label Tin nhắn *
+              textarea.contact-form__textarea(rows="6", name="message", required, data-msg="Bạn chưa điền mục này")
+            .contact-form__group.contact-form__group--mb-0
+              input.button-form.contact-form__btn(type="submit", value="GỬI")
+
+    +footer
+    script(src="js/main.js")
