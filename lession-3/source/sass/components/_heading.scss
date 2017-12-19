@@ -1,0 +1,12 @@
+.page-header {
+  @include clearfix;
+  margin: 28px 0 25px;
+
+  &__title {
+    font-family: $opensans;
+    font-size: 28px;
+    line-height: 34px;
+    word-break: break-word;
+    margin-bottom: 0;
+  }
+}

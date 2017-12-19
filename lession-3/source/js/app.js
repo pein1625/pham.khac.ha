@@ -239,4 +239,30 @@ $(document).ready(function(){
     $('.js-more-detail__tabs.active').removeClass('active');
     $('.js-more-detail__tabs[data-tab='+data+']').addClass('active');
   });
+
+  // validate
+  $('.register').validate({
+    rules: {
+      firstname: {
+        required: true
+      },
+      lastname: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      password: {
+        required: true
+      },
+      password2: {
+        required: true
+      },
+      re_password2: {
+        required: true,
+        equalTo: '.register__password2'
+      }
+    }
+  });
 });

@@ -1,0 +1,13 @@
+.register {
+  margin-bottom: 63px;
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+
+  &__mb-35 {
+    margin-bottom: 35px;
+  }
+}

@@ -23,11 +23,12 @@
 @import 'components/product';
 @import 'components/product-h';
 @import 'components/product-aside';
-
+@import 'components/form';
 @import 'components/breadcumb';
 @import 'components/section-head';
 @import 'components/arrow';
 @import 'components/sidebar';
+@import 'components/heading';
 
 @import 'layout/header';
 @import 'layout/footer';
@@ -38,3 +39,4 @@
 @import 'pages/detail';
 @import 'pages/blog';
 @import 'pages/blog-detail';
+@import 'pages/register';
