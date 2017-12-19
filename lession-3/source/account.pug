@@ -1,0 +1,79 @@
+include modules/head
+include modules/header
+include modules/footer
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //breadcumb
+    +breadcumb("Home", "Tài khoản")
+
+    .container
+      .row
+        .col-md-9
+          .page-header
+            h2.page-header__title TÀI KHOẢN
+          form.account-form
+            table.tb.acc-tb
+              thead.tb__head
+                tr.tb__headrow
+                  th.tb__headcol.acc-tb__headcol Order
+                  th.tb__headcol.acc-tb__headcol Date
+                  th.tb__headcol.acc-tb__headcol TÌNH TRẠNG THANH TOÁN
+                  th.tb__headcol.acc-tb__headcol TỔNG
+                  th.tb__headcol.acc-tb__headcol NỢ
+              tbody.tb__body
+                tr.tb__row
+                  td.tb__col.acc-tb__col #1006
+                  td.tb__col.acc-tb__col May 13, 2013
+                  td.tb__col.acc-tb__col.acc-tb__col--red Đã thanh toán
+                  td.tb__col.acc-tb__col 350.000
+                    sup đ
+                  td.tb__col.acc-tb__col 0
+                    sup
+                tr.tb__row
+                  td.tb__col.acc-tb__col #1006
+                  td.tb__col.acc-tb__col May 13, 2013
+                  td.tb__col.acc-tb__col.acc-tb__col--red Đã thanh toán
+                  td.tb__col.acc-tb__col 350.000
+                    sup đ
+                  td.tb__col.acc-tb__col 0
+                    sup
+                tr.tb__row
+                  td.tb__col.acc-tb__col #1006
+                  td.tb__col.acc-tb__col May 13, 2013
+                  td.tb__col.acc-tb__col.acc-tb__col--red Đã thanh toán
+                  td.tb__col.acc-tb__col 350.000
+                    sup đ
+                  td.tb__col.acc-tb__col 0
+                    sup
+                tr.tb__row
+                  td.tb__col.acc-tb__col #1006
+                  td.tb__col.acc-tb__col May 13, 2013
+                  td.tb__col.acc-tb__col.acc-tb__col--red Thanh toán 50%
+                  td.tb__col.acc-tb__col 350.000
+                    sup đ
+                  td.tb__col.acc-tb__col 275.000
+                    sup đ
+        .col-md-3
+          .account-sidebar
+            h6.account-sidebar__heading CHI TIẾT TÀI KHOẢN
+            ul.account-detail
+              li.account-detail__item.account-detail__item--first
+                i.fa.fa-user.account-detail__icon
+                .account-detail__text
+                  span.account-detail__text--big GiangLe
+                  br
+                  | Leanhgiang89@gmail.com
+              li.account-detail__item
+                i.fa.fa-map-marker.account-detail__icon
+                span.account-detail__text Toà nhà Hà Nội group 442 Đội Cấn, Ba Đình Hà Nội
+              li.account-detail__item
+                i.fa.fa-phone.account-detail__icon
+                span.account-detail__text (04) 3786 8904
+
+    +footer
+    script(src="js/main.js")

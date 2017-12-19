@@ -1,0 +1,44 @@
+.tb {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  @include clearfix;
+
+  &__headcol,
+  &__col {
+    border: 1px solid $lighten-grey;
+    text-align: center;
+    padding: 5px;
+  }
+  
+  &__headcol {
+    font-family: $lato;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: $lightest-grey;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: block;
+    position: relative;
+    width: 100%;
+
+    &__head {
+      display: block;
+      float: left;
+    }
+
+    &__headcol,
+    &__col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__body {
+      display: flex;
+      overflow-x: auto;
+      width: auto;
+    }
+  }
+}

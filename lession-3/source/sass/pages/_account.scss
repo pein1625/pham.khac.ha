@@ -1,0 +1,76 @@
+.acc-tb {
+  margin-bottom: 84px;
+
+  &__headcol {
+    font-size: 12px;
+    font-weight: 700;
+    font-family: $opensans;
+    height: 50px;
+    color: $black;
+  }
+
+  &__col {
+    font-size: 14px;
+    font-family: $opensans;
+    color: $lighter-black;
+    height: 50px;
+
+    &--red {
+      color: $red;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    
+    &__headcol {
+      max-width: 100px;
+    }
+
+    &__col {
+      min-width: 100px;
+    }
+  }
+}
+
+.account-sidebar {
+  margin-bottom: 84px;
+  
+  &__heading {
+    line-height: 17px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: $opensans;
+    margin: 50px 0 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $lighten-grey;
+  }
+}
+
+.account-detail {
+  font-family: $opensans;
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+
+    &--first {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__icon {
+    font-size: 16px;
+    margin-right: 13px;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $black;
+    width: calc(100% - 26px);
+
+    &--big {
+      font-size: 20px;
+    }
+  }
+}
