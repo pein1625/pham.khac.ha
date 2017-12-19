@@ -1,0 +1,48 @@
+include modules/head
+include modules/header
+include modules/footer
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //breadcumb
+    +breadcumb("Home", "Đăng ký")
+
+    .container
+      .page-header
+        h2.page-header__title ĐĂNG KÝ
+      form.form-site.register
+        h4.form-site__title THÔNG TIN CÁ NHÂN
+        .form-site__group
+          label.form-site__label Tên trước *
+          input.form-site__input(type="text", name="firstname", required, data-msg="Bạn chưa điền mục này")
+        .form-site__group
+          label.form-site__label Tên sau *
+          input.form-site__input(type="text", name="lastname", required, data-msg="Bạn chưa điền mục này")
+        .form-site__group
+          label.form-site__label Email *
+          input.form-site__input(type="Email", name="email", required, data-msg="Bạn chưa điền mục này", data-msg-email="Email không đúng")
+        .form-site__group
+          label.form-site__label Password *
+          input.form-site__input(type="password", name="password", required, data-msg="Bạn chưa điền mục này")
+        .form-site__group.register__mb-35
+          input#get-news.form-site__checkbox(type="checkbox", name="getnews")
+          label(for="get-news").form-site__checkbox-text Đăng kí nhận bản tin
+        h4.form-site__title THÔNG TIN ĐĂNG NHẬP
+        .form-site__group
+          label.form-site__label.form-site__label--light Mật khẩu *
+          input.form-site__input.register__password2(type="password", name="password2", required, data-msg="Bạn chưa điền mục này")
+        .form-site__group
+          label.form-site__label.form-site__label--light Xác nhận mật khẩu *
+          input.form-site__input(type="password", name="re_password2", required, data-msg="Bạn chưa điền mục này", data-msg-equalTo="Xác nhận mật khẩu không đúng")
+        .register__btns
+          input.form-site__btn(type="submit" value="Gửi")
+          a(href="#!").form-site__btn
+            i.fa.fa-reply
+            |  QUAY LẠI
+
+    +footer
+    script(src="js/main.js")

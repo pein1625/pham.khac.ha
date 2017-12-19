@@ -36,6 +36,7 @@
     "htmlhint-stylish": "^1.0.3",
     "install": "^0.8.1",
     "jquery": "2.2.1",
+    "jquery-validation": "^1.17.0",
     "jshint": "^2.9.2",
     "npm": "^3.10.6",
     "owl.carousel2": "^2.2.1",
