@@ -1,4 +1,14 @@
 $(document).ready(function(){
+  $(window).load(function(){
+    if (!document.cookie) {
+      $('.popup').addClass('active');
+      $('.popup__close').on('click', function(){
+        $('.popup').removeClass('active');
+      });
+      document.cookie = "assign";
+    }
+  });
+
   $('.js-menu-btn').on('click', function(){
     $('.js-mobile-nav').addClass('active');
   });
@@ -298,6 +308,15 @@ $(document).ready(function(){
       },
       message: {
         required: true
+      }
+    }
+  });
+
+  $('.popup__form').validate({
+    rules: {
+      email: {
+        required: true,
+        email: true
       }
     }
   });

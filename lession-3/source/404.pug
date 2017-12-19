@@ -1,0 +1,17 @@
+include modules/head
+
+doctype html
+html
+  +head
+  body
+    .page-404
+      img.page-404__img(src="images/404.png", alt="")
+      p.page-404__message Đây không phải là trang web bạn đang tìm kiếm
+      form.page-404__form
+        input.page-404__input(type="text")
+        button.page-404__btn(type="submit")
+          i.fa.fa-search
+      .page-404__links
+        a.page-404__link(href="contact.html") LIÊN HỆ
+        a.page-404__link.page-404__link--last(href="index.html") TRANG CHỦ
+    script(src="js/main.js")

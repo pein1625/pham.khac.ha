@@ -1,0 +1,9 @@
+mixin popup
+  .popup
+    .popup__close
+    .popup__box
+      h2.popup__title GỬI EMAIL
+      p.popup__message Hãy gửi email của bạn liên hệ với chúng tôi để đc tư vấn tốt nhất. Sự hài lòng của bạn là thành công của chúng tôi.
+      form.popup__form
+        input.popup__input(type="text", name="email", placeholder="Email của bạn", data-msg="Bạn chưa điền email", data-msg-email="Email không đúng")
+        input.popup__submit(type="submit" value="GỬI EMAIL")
