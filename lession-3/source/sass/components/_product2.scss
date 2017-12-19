@@ -1,0 +1,93 @@
+.product2 {
+  @include clearfix;
+  margin-bottom: 30px;
+
+  &__image {
+    display: inline-block;
+    padding: 15px 0;
+    float: left; 
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__name {
+    font-family: $opensans;
+    font-weight: 600;
+    color: $black;
+    margin-bottom: 15px;
+  }
+
+  &__rate {
+    margin-bottom: 20px;
+    color: $black;
+  }
+
+  &__purchases {
+    font-family: $robotoslab;
+    font-weight: 300;
+    color: $gray;
+  }
+
+  &__desc {
+    font-family: $opensans;
+    font-size: 12px;
+    line-height: 18px;
+    color: $dark-gray;
+    margin-bottom: 25px;
+  }
+
+  &__price {
+    font-family: $lobster;
+    font-size: 24px;
+    color: $black;
+    margin-bottom: 25px;
+  }
+
+  &__btns {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: flex-end;
+  }
+
+  &__btn {
+    margin: 0 8px 8px 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__image {
+      width: 85px;
+    }
+
+    &__info {
+      margin-left: 100px
+    }
+
+    &__name {
+      font-size: 14px;
+    }
+
+    &__rate {
+      font-size: 14px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__image {
+      width: 270px;
+    }
+
+    &__info {
+      margin-left: 300px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+
+    &__rate {
+      font-size: 14px;
+    }
+  }
+}

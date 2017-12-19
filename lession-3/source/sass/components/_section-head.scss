@@ -8,6 +8,12 @@
     color: $lightest-black;
     font-size: 12px;
     margin-right: 10px;
+    
+    &:hover,
+    &:active,
+    &:focus {
+      color: $black;
+    }
   }
 }
 

@@ -1,8 +1,8 @@
-mixin section-head
+mixin section-head(grid = "#!", list="#!")
   .section-head
-    a.section-head__btn(href="#!")
+    a.section-head__btn(href=grid)
       i.fa.fa-th-large
-    a.section-head__btn(href="#!")
+    a.section-head__btn(href=list)
       i.fa.fa-th-list
     ul.page-number
       li.page-number__item
