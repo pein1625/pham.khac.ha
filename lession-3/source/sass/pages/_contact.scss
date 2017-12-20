@@ -1,0 +1,82 @@
+.contact-page {
+  margin-bottom: 47px;
+  align-items: stretch;
+
+  &__col {
+    margin-bottom: 30px;
+  }
+
+  &__map {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    background-color: $grey;
+  }
+}
+
+.contact-form {
+  font-family: $opensans;
+  word-break: break-word;
+
+  &__heading {
+    font-size: 16px;
+    margin: 0 0 25px;
+    color: $lighter-black;
+  }
+
+  &__group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 30px;
+
+    &--mb-18 {
+      margin-bottom: 18px;
+    }
+
+    &--mb-0 {
+      margin-bottom: 0;
+    }
+  }
+
+  label.error {
+    display: block;
+    width: 100%;
+    padding-left: 75px;
+    font-size: 12px;
+    color: $red;
+    margin-bottom: 0;
+  }
+
+  .error {
+    color: $red;
+  }
+
+  &__label {
+    display: blog;
+    width: 75px;
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $black;
+  }
+
+  &__textarea,
+  &__input {
+    flex: 1;
+    font-size: 12px;
+    font-weight: 500;
+    color: $lighter-black;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid $lighten-grey;
+  }
+
+  &__input {
+    height: 26px;
+  }
+
+  &__btn {
+    margin-left: auto;
+    padding: 6px 14px 4px;
+  }
+}
