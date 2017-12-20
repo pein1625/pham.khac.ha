@@ -1,0 +1,60 @@
+include modules/head
+include modules/header
+include modules/footer
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //breadcumb
+    +breadcumb("Home", "Sản phẩm", "Trang sức")
+
+    .container
+      .page-header
+        h2.page-header__title GIỎ HÀNG
+      form.cart-form
+        table.tb.cart-tb
+          thead.tb__head
+            tr.tb__headrow
+              th.tb__headcol.cart-tb__headcol.cart-tb__headcol--first ẢNH
+              th.tb__headcol.cart-tb__headcol TÊN SẢN PHẨM
+              th.tb__headcol.cart-tb__headcol GIÁ
+              th.tb__headcol.cart-tb__headcol SỐ LƯỢNG
+              th.tb__headcol.cart-tb__headcol TỔNG SỐ
+              th.tb__headcol.cart-tb__headcol.cart-tb__headcol--last XOÁ
+          tbody.tb__body
+            tr.tb__row
+              td.tb__col.cart-tb__image
+                img.cart-tb__img(src="images/ring-mini.png", alt="anh san pham")
+              td.tb__col.cart-tb__name Lắc tay D&G
+              td.tb__col.cart-tb__price 345.000
+                sup đ
+              td.tb__col.cart-tb__number
+                input.cart-tb__input(type="text", value="1")
+              td.tb__col.cart-tb__price 345.000
+                sup đ
+              td.tb__col.cart-tb__delete
+                a.cart-tb__del-link(href="#!")
+                  i.fa.fa-trash-o
+            tr.tb__row
+              td.tb__col.cart-tb__image
+                img.cart-tb__img(src="images/ring-mini.png", alt="anh san pham")
+              td.tb__col.cart-tb__name Lắc tay D&G
+              td.tb__col.cart-tb__price 345.000
+                sup đ
+              td.tb__col.cart-tb__number
+                input.cart-tb__input(type="text", value="1")
+              td.tb__col.cart-tb__price 345.000
+                sup đ
+              td.tb__col.cart-tb__delete
+                a.cart-tb__del-link(href="#!")
+                  i.fa.fa-trash-o
+        .cart-form__btns
+          a.button-form.cart-form__btn(href="#!") TIẾP TỤC MUA HÀNG
+          a.button-form.cart-form__btn.cart-form__btn--px28(href="#!") XOÁ
+          a.button-form.cart-form__btn.cart-form__btn--green(href="#!") CẬP NHẬT
+
+    +footer
+    script(src="js/main.js")
