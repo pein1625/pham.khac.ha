@@ -8,34 +8,50 @@
 
   &__item {
     float: left;
-  }
-
-  &__link {
-    display: inline-block;
-    color: $light-gray;
-    margin-right: 8px;
-    font-size: 12px;
-    font-family: $opensans;
-    &.active {
-      color: $lighter-green;
-    }
 
     &::after {
       content: '\f054';
       font-family: "FontAwesome";
       font-size: 8px;
-      margin-left: 5px;
+      margin-right: 3px;
     }
 
     &--last {
       color: $lighter-green;
+
       &::after {
         content: '';
+        display: none;
       }
+    }
+  }
+
+  &__link,
+  &__thispage {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 12px;
+    font-family: $opensans;    
+  }
+
+  &__thispage {
+    color: $lighter-green;
+
+    &--red {
+      color: $red;
+    }
+  }
+
+  &__link {
+    color: $light-gray;
+
+    &.active {
+      color: $lighter-green;
     }
 
     &:hover {
       text-decoration: underline;
+      color: $lighter-green;
     }
   }
 }

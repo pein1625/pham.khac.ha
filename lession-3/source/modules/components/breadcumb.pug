@@ -4,8 +4,8 @@ mixin breadcumb(...list)
       ul.breadcumb__list.clearfix
         - for (i=0; i<list.length; i++)
           - if (i === list.length - 1)
-            li.breadcumb__item
-              a.breadcumb__link.breadcumb__link--last(href="#")= list[i]
+            li.breadcumb__item.breadcumb__item--last
+              span.breadcumb__thispage= list[i]
           - else
             li.breadcumb__item
               a.breadcumb__link(href="#")= list[i]

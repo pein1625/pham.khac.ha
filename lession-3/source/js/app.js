@@ -236,7 +236,7 @@ $(document).ready(function(){
   });
 
   function changeImage (){
-    var src = $('.js-small-img.active > .small-img__img').attr('src');
+    var src = $('.js-small-img.active > .small-img__img').data('img');
     $('.js-large-img').attr('src', src);
   }
 
