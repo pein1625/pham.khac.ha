@@ -1,12 +1,14 @@
 include modules/head
 include modules/header
 include modules/footer
+include modules/components/popup
 include modules/components/blog
 include modules/components/about
 include modules/components/product
 
 doctype html
 html(lang="en")
+  +popup
   +head
   body
     +header
@@ -24,7 +26,6 @@ html(lang="en")
               a.banner-product__buy(href="#") MUA HÀNG
             .banner__image
               img.banner__img(src="images/banner-girl.png", alt="")
-
       .container
         //intro
         .intro.row
