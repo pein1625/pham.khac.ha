@@ -18,7 +18,7 @@
     background-color: $lightest-grey;
   }
 
-  @media screen and (max-width: 767px) {
+  @include respond-to('phone-and-down') {
     display: block;
     position: relative;
     width: 100%;

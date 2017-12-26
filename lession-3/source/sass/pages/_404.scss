@@ -21,7 +21,7 @@
     font-weight: 200;
     color: $darker-green;
     text-align: center;
-    @media screen and (max-width: 768px) {
+    @include respond-to('phone-and-down') {
       font-size: 20px;
     }
   }

@@ -24,48 +24,44 @@
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .menu {
+.menu {
+  display: inline-block;
+  position: relative;
+
+  @include respond-to('desktop-and-down') {
     display: none;
   }
-}
 
-@media screen and (min-width: 1200px) {
-  .menu {
+  &__item {
     display: inline-block;
-    position: relative;
+    margin-left: 38px;
 
-    &__item {
-      display: inline-block;
-      margin-left: 38px;
+    &--first {
+      margin-left: 0;
+    }
+  }
 
-      &--first {
-        margin-left: 0;
-      }
+  &__link {
+    display: inline-block;
+    line-height: 19px;
+    margin: 30px 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: $lighter-black;
+    &:hover {
+      color: $lighter-green;
     }
 
-    &__link {
-      display: inline-block;
-      line-height: 19px;
-      margin: 30px 0;
-      font-size: 12px;
-      font-weight: bold;
-      color: $lighter-black;
-      &:hover {
-        color: $lighter-green;
-      }
+    &.dropdown-btn {
+      position: relative;
 
-      &.dropdown-btn {
+      &::after {
+        content: '\f078';
+        font-family: "FontAwesome";
+        font-size:  10px;
+        margin-left: 5px;
         position: relative;
-
-        &::after {
-          content: '\f078';
-          font-family: "FontAwesome";
-          font-size:  10px;
-          margin-left: 5px;
-          position: relative;
-          bottom: 1px;
-        }
+        bottom: 1px;
       }
     }
   }
@@ -170,25 +166,32 @@
     color: $black;
     cursor: pointer;
 
+    &--first {
+      margin-right: 36px;
+    }
+
     &--last {
-      margin-right: 0;
+      display: none;
     }
 
     &--black { 
       color: $white;
       background-color: $black;
     }
-  }
-}
 
-@media screen and (min-width: 1199px) {
-  .trigger__btn--first {
-    margin-right: 36px;
+    @include respond-to('desktop-and-down') {
+
+      &--first {
+        margin-right: 10px;
+      }
+
+      &--last {
+        display: flex;
+        margin-right: 0;
+      }
+    }
   }
 
-  .trigger__btn--last {
-    display: none;
-  }
 }
 
 .cart {
@@ -306,14 +309,14 @@
     content: '';
     position: absolute;
     z-index: 1001;
-    right: 58px;
+    right: 25px;
     bottom: 100%;
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     border-bottom: 6px solid $lighter-green;
 
-    @media screen and (min-width: 1200px) {
-      right: 25px;
+    @include respond-to('desktop-and-down') {
+      right: 58px;
     }
   }
 
@@ -368,15 +371,7 @@
   transition: transform .3s ease-in-out;
   transform: translateX(-100%);
   overflow-y: auto;
-
-  @media screen and (max-width: 450px) {
-    width: 100vw;
-    max-width: 100%;
-  }
-
-  @media screen and (min-width: 450px) {
-    width: 250px;
-  }
+  width: 250px;
 
   &.active {
     transform: translateX(0);

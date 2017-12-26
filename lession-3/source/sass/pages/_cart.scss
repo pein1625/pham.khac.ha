@@ -61,8 +61,8 @@
       color: $black;
     }
   }
-
-  @media screen and (max-width: 767px) {
+  
+  @include respond-to('phone-and-down') {
     &__image {
       height: 150px;
     }
