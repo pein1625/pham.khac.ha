@@ -16,7 +16,7 @@
   }
 }
 
-@media screen and (max-width: 991px) {
+@include respond-to('tablet-and-down') {
   .blogs-detail__sidebar {
     flex: 0 0 100%;
     margin: 0;
@@ -25,7 +25,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@include respond-to('phone-and-down') {
   .blogs-detail__sidebar {
     display: none;
   }

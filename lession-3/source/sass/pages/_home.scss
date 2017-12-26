@@ -18,17 +18,14 @@
     z-index: 100;
     height: 100%;
     top: 0;
+    left: 40px;
 
-    @media screen and (max-width: 399px) {
-      display: none;
-    }
-
-    @media screen and (min-width: 400px) and (max-width: 767px) {
+    @include respond-to('phone-and-down') {
       left: -35px;
     }
 
-    @media screen and (min-width: 768px) {
-      left: 40px;
+    @include respond-to('smallerphone-and-down') {
+      display: none;
     }
   }
 }
@@ -36,8 +33,48 @@
 .banner-product {
   text-align: center;
   padding: 110px 0 40px;
+  width: 490px;
   
-  @media screen and (max-width: 1199px) {
+  &__img {
+    height: 400px;
+    mix-blend-mode: multiply;
+    filter: contrast(1.3);
+  }
+
+  &__name {
+    font-family: $viceroy;
+    line-height: 1;
+    color: $lighter-green;
+    font-size: 140px;
+  }
+
+  &__desc {
+    font-family: $opensans;
+    font-weight: 300;
+    color: $brown;
+    font-size: 19px;
+  }
+
+  &__price {
+    display: block;
+    font-family: $opensans;
+    font-weight: 300;
+    color: $lighter-green;
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+
+  &__buy {
+    font-family: $opensans;
+    font-size: 18px;
+    color: $black;
+    text-decoration: underline;
+    &:hover {
+      color: $lighter-green;
+    }
+  }
+
+  @include respond-to('desktop-and-down') {
     width: 300px;
 
     &__img {
@@ -58,69 +95,34 @@
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @include respond-to('smallerphone-and-down') {
     width: 100%;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 490px;
-
-    &__img {
-      height: 400px;
-    }
-
-    &__name {
-      font-size: 140px;
-    }
-
-    &__desc {
-      font-size: 19px;
-    }
-
-    &__price {
-      font-size: 45px;
-      margin-bottom: 20px;
-    }
-  }
-
-  &__img {
-    mix-blend-mode: multiply;
-    filter: contrast(1.3);
-  }
-
-  &__name {
-    font-family: $viceroy;
-    line-height: 1;
-    color: $lighter-green;
-  }
-
-  &__desc {
-    font-family: $opensans;
-    font-weight: 300;
-    color: $brown;
-  }
-
-  &__price {
-    display: block;
-    font-family: $opensans;
-    font-weight: 300;
-    color: $lighter-green;
-  }
-
-  &__buy {
-    font-family: $opensans;
-    font-size: 18px;
-    color: $black;
-    text-decoration: underline;
-    &:hover {
-      color: $lighter-green;
-    }
   }
 }
 
 .intro {
+  margin: 40px 0 45px;
+
+  &__item {
+    border-right: 1px solid $light-grey;
+    text-align: center;
+
+    &--last {
+      border-right: 0;
+    } 
+  }
+
+  &__icon {
+    width: 25px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 19px;
+  }
   
-  @media screen and (max-width: 767px) {
+  @include respond-to('phone-and-down') {
     margin: 10px 0;
 
     &__item {
@@ -129,6 +131,7 @@
       align-items: center;
       margin: 0 auto;
       padding: 30px 0;
+      border-right: 0;
       border-bottom: 1px solid $light-grey;
 
       &--last {
@@ -146,29 +149,6 @@
       display: inline-block;
       width: 200px;
       vertical-align: middle;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    margin: 40px 0 45px;
-
-    &__item {
-      border-right: 1px solid $light-grey;
-      text-align: center;
-
-      &--last {
-        border-right: 0;
-      } 
-    }
-
-    &__icon {
-      width: 25px;
-      margin-bottom: 10px;
-    }
-
-    &__text {
-      font-size: 14px;
-      line-height: 19px;
     }
   }
 }
@@ -247,17 +227,14 @@
   &__heading {
     font-weight: 300;
     font-family: $robotoslab;
+    font-size: 30px;
 
-    @media screen and (max-width: 575px) {
-      font-size: 18px;
-    }
-
-    @media screen and (min-width: 576px) {
+    @include respond-to('desktop-and-down') {
       font-size: 24px;
     }
 
-    @media screen and (min-width: 1200px) {
-      font-size: 30px;
+    @include respond-to('smallphone-and-down') {
+      font-size: 18px;
     }
   }
 
@@ -282,27 +259,25 @@
     right: 0;
     max-height: 100%;
     max-width: 100%;
-  }
+    bottom: 0;
 
-  @media screen and (max-width: 991px) {
-    &__bg {
+    @include respond-to('tablet-and-down') {
       opacity: 0.5;
+      bottom: auto;
       top: 50%;
       transform: translateY(-50%);
     }
   }
 
-  @media screen and (min-width: 992px) {
-    &__bg {
-      bottom: 0;
-    }
-  }
-
   &__avatar {
     display: inline-block;
+    width: 150px;
+    height: 150px;
     border: 3px solid $greenish-grey;
     border-radius: 50%;
     padding: 6px;
+    float: left;
+    margin-right: 50px;
   }
 
   &__img {
@@ -313,6 +288,9 @@
   &__text {
     font-family: $opensans;
     font-weight: 600;
+    max-width: 630px;
+    margin-left: 200px;
+    font-size: 16px;
 
     &::before {
       content: '"';
@@ -340,6 +318,10 @@
       color: $gray;
       font-size: 15px;
       font-weight: 500;
+
+      &::before {
+        content: '_ ';
+      }
     }
   }
 
@@ -348,6 +330,8 @@
 
     .owl-dots {
       position: absolute;
+      left: 200px;
+      bottom: -20px;
       @include clearfix;
     }
 
@@ -369,7 +353,11 @@
     }
   }
 
-  @media screen and (max-width: 575px) {
+  &__slide { 
+    @include clearfix;
+  }
+
+  @include respond-to('smallphone-and-down') {
     &__slide {
       display: flex;
       flex-flow: row wrap;
@@ -393,6 +381,7 @@
     }
 
     &__speaker {
+      display: inline-block;
       width: calc(100% - 106px);
       padding-top: 20px;
       -webkit-order: 2;
@@ -400,6 +389,11 @@
 
       &--italic {
         display: block;
+
+        &::before {
+          content: '';
+          display: none;
+        }
       }
     }
 
@@ -408,36 +402,6 @@
         left: 50%;
         bottom: 120px;
         transform: translate(-50%);
-      }
-    }
-  }
-
-  @media screen and (min-width: 576px) {
-    &__slide { 
-      @include clearfix;
-    }
-
-    &__avatar {
-      float: left;
-      width: 150px;
-      height: 150px;
-      margin-right: 50px;
-    }
-
-    &__text {
-      max-width: 630px;
-      margin-left: 200px;
-      font-size: 16px;
-    }
-
-    &__speaker--italic::before {
-      content: "_ ";
-    }
-
-    &__slider {
-      .owl-dots {
-        left: 200px;
-        bottom: -20px;
       }
     }
   }
@@ -456,6 +420,8 @@
 }
 
 .category {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 
   &__item {
@@ -466,6 +432,12 @@
     margin: 3px 0;
     cursor: pointer;
     transition: font-size .1s ease-in-out;
+    border-right: 1px solid $lighter-grey;
+    padding: 0 22px;
+
+    &--last {
+      border-right: 0;
+    }
 
     &.active {
       font-size: 34px; 
@@ -480,26 +452,18 @@
     background-color: $lighten-grey;
   }
 
-  @media screen and (max-width: 767px) {
+  @include respond-to('phone-and-down') {
+    flex-flow: row wrap;
+
     &__item {
+      display: block;
+      flex: 0 1 100%;
       margin-left: 30px;
+      border-right:  0;
+      padding: 0;
         
       &.active {
         font-size: 34px;
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-
-    &__item {
-      border-right: 1px solid $lighter-grey;
-      padding: 0 22px;
-
-      &--last {
-        border-right: 0;
       }
     }
   }
@@ -509,6 +473,7 @@
   display: flex;
   flex-flow: row wrap;
   margin: 40px 0 60px;
+  justify-content: center;
   
   &__item {
     padding: 0 15px;
@@ -522,31 +487,24 @@
     &.active {
       color: $lighter-green;
       font-weight: 600;
+    }  
+
+    &::after {
+      content: '.';
+      position: relative;
+      left: 15px;
+    }
+
+    &--last::after {
+      content: '';
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @include respond-to('phone-and-down') {
     list-style: disc inside;
 
     &__item {
       width: 50%;
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    justify-content: center;
-
-    &__item {
-      
-      &::after {
-        content: '.';
-        position: relative;
-        left: 15px;
-      }
-
-      &--last::after {
-        content: '';
-      }
     }
   }
 }
@@ -554,16 +512,11 @@
 .product-tabs {
   height: 0;
   overflow: hidden;
+  max-width: 100%;
+  width: 100%;
 
   &.active {
     height: auto;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .product-tabs {
-    max-width: 100%;
-    width: 100%;
   }
 }
 
@@ -571,35 +524,33 @@
 .product-slider {
   position: relative;
 
-  @media screen and (max-width: 1199px) {
-    &__next,
-    &__prev {
-      display: none;
-    }
+  &__next,
+  &__prev {
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(83.33333% - 15px);
   }
-
-  @media screen and (min-width: 1200px) {
-    &__next,
-    &__prev {
-      position: absolute;
-      z-index: 200;
-      top: 50%;
-      transform: translateY(-50%);
+  &__prev {
+    left: auto;
+    right: calc(83.3333% - 15px);
+  }
+  
+  @include respond-to('large-desktop-and-down') {
+    &__next {
       left: calc(75% - 15px);
     }
+
     &__prev {
-      left: auto;
       right: calc(75% - 15px);
     }
   }
-
-  @media screen and (min-width: 1600px) {
+  
+  @include respond-to('desktop-and-down') {
+    &__next,
     &__prev {
-      right: calc(83.3333% - 15px);
-    }
-
-    &__next {
-      left: calc(83.33333% - 15px);
+      display: none;
     }
   }
 }

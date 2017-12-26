@@ -2,12 +2,9 @@
   font-family: $opensans;
   background-color: $lightest-grey;
   border: 1px solid $lighten-grey;
+  padding: 30px 15px;
 
-  @media screen and (max-width: 767px) {
-    padding: 30px 15px;
-  }
-
-  @media screen and (min-width: 768px) {
+  @include respond-to ('phone-and-down') {
     padding: 40px 55px 45px;
   }
 

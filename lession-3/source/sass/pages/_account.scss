@@ -19,8 +19,7 @@
       color: $red;
     }
   }
-
-  @media screen and (max-width: 767px) {
+  @include respond-to('phone-and-down') {
     margin-bottom: 30px;
     
     &__headcol {
