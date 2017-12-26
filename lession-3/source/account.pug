@@ -8,9 +8,14 @@ html
   +head
   body
     +header
-    //breadcumb
-    +breadcumb("Home", "Tài khoản")
-
+    //breadcumb  .breadcumb
+    .breadcumb
+      .container
+        ul.breadcumb__list.clearfix
+          li.breadcumb__item
+            a.breadcumb__link(href="#") Home
+          li.breadcumb__item.breadcumb__item--last
+            span.breadcumb__thispage.breadcumb__thispage--red Tài khoản
     .container
       .row
         .col-md-9
