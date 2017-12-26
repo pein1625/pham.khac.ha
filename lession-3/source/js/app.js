@@ -11,10 +11,12 @@ $(document).ready(function(){
 
   $('.js-menu-btn').on('click', function(){
     $('.js-mobile-nav').addClass('active');
+    $('.js-mobile-filter').addClass('active');
   });
 
-  $('.js-mobile-nav-btn').on('click', function(){
+  $('.js-mobile-nav-btn, .js-mobile-filter').on('click', function(){
     $('.js-mobile-nav').removeClass('active');
+    $('.js-mobile-filter').removeClass('active');
   });
 
   $('.js-mobile-nav-trigger').on('click', function(){

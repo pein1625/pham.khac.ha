@@ -59,15 +59,17 @@
     }
   }
 
-  &__btn {
-    visibility: hidden;
+  &__btns {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: center;
     padding-top: 12px;
     padding-bottom: 30px;
     background-color: $white;
+  }
 
-    &--mr8 {
-      margin-right: 8px;
-    }
+  &__btn {
+    margin: 0 4px 8px;
   }
 
   &:hover > &__btn {

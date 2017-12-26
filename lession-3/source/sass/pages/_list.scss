@@ -1,5 +1,6 @@
 .list-banner {
   background-color: $graish-blue;
+  margin-top: -1px;
   
   &__wrap {
     display: flex;
@@ -10,29 +11,75 @@
 
   &__img {
     height: 100%;
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
   }
 }
 
 .list-intro {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   color: $white;
 
   &__heading {
     font-family: $lobster;
-    font-size: 74px;
     margin: 0 20px 0 0;
   }
 
   &__subheading {
     font-family: $roboto;
     font-weight: 200;
-    font-size: 23px;
   }
 
   &__time {
-    font-size: 27px;
     font-weight: 500;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__heading {
+      font-size: 34px;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+
+    &__subheading {
+      font-size: 14px;
+    }
+
+    &__time {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+
+    &__heading {
+      font-size: 54px;
+    }
+
+    &__subheading {
+      font-size: 18px;
+    }
+
+    &__time {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__heading {
+      font-size: 74px;
+    }
+
+    &__subheading {
+      font-size: 23px;
+    }
+
+    &__time {
+      font-size: 27px;
+    }
   }
 }
 
@@ -40,23 +87,8 @@
   padding: 50px 0 80px;
 }
 
-.list-sidebar-block {
-  &__heading {
-    font-family: $opensans;
-    font-size: 18px;
-    font-weight: 800;
-    padding-bottom: 12px;
-    border-bottom: 1px solid $lighten-grey;
-    margin: 0 0 20px;
-  }
-
-  &__icon {
-    margin-right: 8px;
-  }
-}
-
 .list-menu {
-  margin: -10px 0 44px 0;
+  margin: -10px 0 20px 0;
 
   &__item {
     padding: 10px 0;
@@ -66,9 +98,16 @@
   &__link {
     display: block;
     font-size: 16px;
+    line-height: 1;
     font-family: $opensans;
     color: $lighter-black;
     position: relative;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $lighter-green;
+    }
 
     &::after {
       content: '\f0da';
@@ -93,7 +132,7 @@
 .list-submenu {
   display: none;
   list-style: disc;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-left: 25px;
   &__item {
     padding: 5px 0;
@@ -101,16 +140,20 @@
 
   &__link {
     font-size: 14px;
+    line-height: 20px;
     font-family: $opensans;
     color: $gray;
-    &:hover {
-      text-decoration: underline;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $lighter-green;
     }
   }
 }
 
 .list-compare {
-  margin: 20px 0 40px;
+  margin-top: 20px;
 }
 
 .list-tags {
@@ -123,6 +166,10 @@
 
 .list-ads {
   width: 100%;
+  
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
 }
 
 .list-product {

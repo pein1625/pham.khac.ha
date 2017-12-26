@@ -9,34 +9,35 @@ mixin product(img)
           sup đ
         span.product__price--old 450.000
           sup đ
-    .product__btn
-      a.button.button--white.product__btn--mr8(href="#") MUA HÀNG
-      a.button.button--black.product__btn--mr8(href="#")
-        i.fa.fa-heart
-      a.button.button--white(href="#")
+    .product__btns
+      a.button.button--white.product__btn(href="#")
         i.fa.fa-refresh
+      a.button.button--black.product__btn(href="#")
+        i.fa.fa-heart
+      a.button.button--white.product__btn(href="#") MUA HÀNG
 
-mixin product-h(img)
-  .product-h
-    .product-h__image
-      img.product-h__img(src=img, alt="")
-    .product-h__info
-      h4.product-h__name Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới
-      p.product-h__rate
+mixin product2(img)
+  .product2
+    a.product2__image(href="#!")
+      img.product2__img(src=img, alt="")
+    .product2__info
+      a(href="#!")
+        h4.product2__name Mỹ phẩm châu Âu thương hiệu hàng đầu thế giới
+      p.product2__rate
         i.fa.fa-heart
         i.fa.fa-heart
         i.fa.fa-heart
         i.fa.fa-heart
         i.fa.fa-heart
-        span.product-h__purchases ( 4 lượt mua )
-      p.product-h__desc Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
-      p.product-h__price 350.000đ
-      .product-h__btn
-        a.button.button--white.product-h__btn--mr8(href="#!") MUA HÀNG
-        a.button.button--black.product-h__btn--mr8(href="#!")
-          i.fa.fa-heart
-        a.button.button--white(href="#!")
+        span.product2__purchases ( 4 lượt mua )
+      p.product2__desc Tự hào được ghi là năm mà Tiffany & Co là thành lập, bộ sưu tập mang tính biểu tượng này cung cấp cho một cái gật đầu với qua trong khi thể hiện một cảm giác hiện đại với kiểu dáng đẹp đường cong và đường nét mượt mà.
+      p.product2__price 350.000đ
+      .product2__btns
+        a.button.button--white.product2__btn(href="#!")
           i.fa.fa-refresh
+        a.button.button--black.product2__btn(href="#!")
+          i.fa.fa-heart
+        a.button.button--white.product2__btn(href="#!") MUA HÀNG
 
 mixin product-aside
   .product-aside
