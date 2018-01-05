@@ -1,0 +1,127 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //- bread-cumb
+    +breadcumb('Trang chủ', 'Danh sách đơn hàng')
+    .container
+      //- blog header
+      h2.title-left ĐƠN HÀNG
+
+      .row
+        .col-lg-9
+          .order-header
+            h5.order-header__heading DANH SÁCH ĐƠN HÀNG
+            ul.order-info
+              each item in ['Trạng thái Tất cả (16)', 'Đã hủy (10)', 'Chưa duyệt (0)', 'Đã duyệt (0)', 'Đã thanh toán-chờ mua hàng (0)', 'Đã mua hàng (0)', 'Hàng đã về-chờ giao hàng (0)', 'Đã kết thúc (6)']
+                li.order-info__item(class={'order-info__item--lastchild': item === "Đã kết thúc (6)"})= item
+          table.order
+            thead.order__head
+              tr.order__row
+                th.order__headcol STT
+                th.order__headcol MÃ HOÁ ĐƠN/NGÀY MUA HÀNG
+                th.order__headcol KHO NHẬN HÀNG
+                th.order__headcol SỐ SP
+                th.order__headcol TỔNG TIỀN
+                th.order__headcol TÌNH TRẠNG
+                th.order__headcol THAO TÁC
+            tbody.order__body
+              tr.order__row
+                td.order__col.order__serial 01
+                td.order__col.order__codebox 
+                  .order__code
+                    p.order__name LEANHGIANG89 - 17/06/2015
+                    p.order__date 01:36 14/03/2015
+                td.order__col.order__place HÀ ĐÔNG
+                td.order__col.order__number 7
+                td.order__col.order__price 350.000đ
+                td.order__col.order__purchase Đã thanh toán
+                td.order__col.order__manipulate
+                  a.order__detail(href="#!") Chi tiết
+              tr.order__row
+                td.order__col.order__serial 02
+                td.order__col.order__codebox 
+                  .order__code
+                    p.order__name LEANHGIANG89 - 17/06/2015
+                    p.order__date 01:36 14/03/2015
+                td.order__col.order__place HÀ ĐÔNG
+                td.order__col.order__number 7
+                td.order__col.order__price 350.000đ
+                td.order__col.order__purchase Đã thanh toán
+                td.order__col.order__manipulate
+                  a.order__detail(href="#!") Chi tiết
+              tr.order__row
+                td.order__col.order__serial 03
+                td.order__col.order__codebox 
+                  .order__code
+                    p.order__name LEANHGIANG89 - 17/06/2015
+                    p.order__date 01:36 14/03/2015
+                td.order__col.order__place HÀ ĐÔNG
+                td.order__col.order__number 7
+                td.order__col.order__price 350.000đ
+                td.order__col.order__purchase Đã thanh toán
+                td.order__col.order__manipulate
+                  a.order__detail(href="#!") Chi tiết
+              tr.order__row
+                td.order__col.order__serial 04
+                td.order__col.order__codebox 
+                  .order__code
+                    p.order__name LEANHGIANG89 - 17/06/2015
+                    p.order__date 01:36 14/03/2015
+                td.order__col.order__place HÀ ĐÔNG
+                td.order__col.order__number 7
+                td.order__col.order__price 350.000đ
+                td.order__col.order__purchase Đã thanh toán
+                td.order__col.order__manipulate
+                  a.order__detail(href="#!") Chi tiết
+              tr.order__row
+                td.order__col.order__serial 05
+                td.order__col.order__codebox 
+                  .order__code
+                    p.order__name LEANHGIANG89 - 17/06/2015
+                    p.order__date 01:36 14/03/2015
+                td.order__col.order__place HÀ ĐÔNG
+                td.order__col.order__number 7
+                td.order__col.order__price 350.000đ
+                td.order__col.order__purchase Đã thanh toán
+                td.order__col.order__manipulate
+                  a.order__detail(href="#!") Chi tiết
+              tr.order__row
+                td.order__col.order__serial 06
+                td.order__col.order__codebox 
+                  .order__code
+                    p.order__name LEANHGIANG89 - 17/06/2015
+                    p.order__date 01:36 14/03/2015
+                td.order__col.order__place HÀ ĐÔNG
+                td.order__col.order__number 7
+                td.order__col.order__price 350.000đ
+                td.order__col.order__purchase Đã thanh toán
+                td.order__col.order__manipulate
+                  a.order__detail(href="#!") Chi tiết
+        .col-lg-3
+          .customer
+            h5.customer__heading THÔNG TIN KHÁCH HÀNG
+            ul.customer__info
+              li.customer__contact
+                i.fa.fa-user.customer__icon
+                | GiangLe
+                br
+                | Leanhgiang89@gmail.com
+              li.customer__contact
+                i.fa.fa-map-marker.customer__icon
+                | Toà nhà Hà Nội group
+                br
+                | 442 Đội Cấn, Ba Đình Hà Nội
+              li.customer__contact
+                i.fa.fa-phone.customer__icon
+                | (04) 3786 8904
+            a.customer__link(href="#!") Chi tiết địa chỉ
+
+    +footer
+    script(src="js/main.js")

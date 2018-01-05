@@ -1,0 +1,148 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //- bread-cumb
+    +breadcumb('Trang chủ', 'Địa chỉ')
+    .container.add-page
+      //- blog header
+      h2.title-left ĐỊA CHỈ
+      .row
+        .col-md-6
+          h5.add-page__heading ĐỊA CHỈ CỦA BẠN
+          form.add-form
+            .add-form__group
+              label.add-form__label Tên
+              input.add-form__input(type="text", value="Giang")
+            .add-form__group
+              label.add-form__label Họ & tên đệm
+              input.add-form__input(type="text", value="Lê Anh")
+            .add-form__group
+              label.add-form__label Công ty
+              input.add-form__input(type="text", value="Cổ phần công nghệ DKT")
+            .add-form__group
+              label.add-form__label Địa chỉ
+              input.add-form__input(type="text", value="Toà nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội")
+            .add-form__group
+              label.add-form__label Thành phố
+              input.add-form__input(type="text", value="Hà Nội")
+            .add-form__group
+              label.add-form__label Quốc tịch
+              input.add-form__input(type="text", value="Việt Nam")
+            .add-form__group
+              label.add-form__label Postal/Zip Code
+              input.add-form__input(type="text", value="2300089")
+            .add-form__group
+              label.add-form__label Phone
+              input.add-form__input(type="text", value="0974554928")
+            .add-form__group.add-form__group--mx10
+              .add-form__label
+              input.add-form__checkbox(type="checkbox")
+              label.add-form__check-label Đặt làm địa chỉ mặc định?
+            .add-form__group
+              label.add-form__label
+              input.main-btn.add-form__submit(type="submit", value="Chỉnh sửa địa chỉ")
+              a.main-btn.add-form__btn(href="#!") Xoá
+
+        .col-md-6
+          a.add-page__link(href="#!") Thêm địa chỉ
+          form.add-form
+            .add-form__group
+              label.add-form__label Tên
+              input.add-form__input(type="text", value="Giang")
+            .add-form__group
+              label.add-form__label Họ & tên đệm
+              input.add-form__input(type="text", value="Lê Anh")
+            .add-form__group
+              label.add-form__label Công ty
+              input.add-form__input(type="text", value="Cổ phần công nghệ DKT")
+            .add-form__group
+              label.add-form__label Địa chỉ
+              input.add-form__input(type="text", value="Toà nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội")
+            .add-form__group
+              label.add-form__label Thành phố
+              input.add-form__input(type="text", value="Hà Nội")
+            .add-form__group
+              label.add-form__label Quốc tịch
+              input.add-form__input(type="text", value="Việt Nam")
+            .add-form__group
+              label.add-form__label Postal/Zip Code
+              input.add-form__input(type="text", value="2300089")
+            .add-form__group
+              label.add-form__label Phone
+              input.add-form__input(type="text", value="0974554928")
+            .add-form__group.add-form__group--mx10
+              .add-form__label
+              input.add-form__checkbox(type="checkbox")
+              label.add-form__check-label Đặt làm địa chỉ mặc định?
+            .add-form__group
+              label.add-form__label
+              input.main-btn.add-form__submit(type="submit", value="Chỉnh sửa địa chỉ")
+              a.main-btn.add-form__btn(href="#!") Xoá
+        .add-line
+        .col-md-6
+          table.add-table
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Tên
+              td.add-table__col Giang
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Họ & tên đệm
+              td.add-table__col Lê Anh
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Công ty
+              td.add-table__col Công ty cổ phần công nghệ DKT
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Địa chỉ
+              td.add-table__col Toà nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Thành phố
+              td.add-table__col Hà Nội
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Quốc tịch
+              td.add-table__col Việt Nam
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Postal/Zip Code
+              td.add-table__col 2300089
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Phone
+              td.add-table__col 0974554928
+          .add-page__linkwrap
+            a.add-page__link(href="#!") Chỉnh sửa địa chỉ
+        .add-line
+        .col-md-6
+          table.add-table
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Tên
+              td.add-table__col Giang
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Họ & tên đệm
+              td.add-table__col Lê Anh
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Công ty
+              td.add-table__col Công ty cổ phần công nghệ DKT
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Địa chỉ
+              td.add-table__col Toà nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Thành phố
+              td.add-table__col Hà Nội
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Quốc tịch
+              td.add-table__col Việt Nam
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Postal/Zip Code
+              td.add-table__col 2300089
+            tr.add-table__row
+              td.add-table__col.add-table__col--firstchild Phone
+              td.add-table__col 0974554928
+          .add-page__linkwrap           
+            a.add-page__link(href="#!") Chỉnh sửa địa chỉ
+
+    +footer
+    script(src="js/main.js")

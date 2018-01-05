@@ -1,0 +1,72 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //- bread-cumb
+    +breadcumb('Trang chủ', 'Địa chỉ')
+    .container.contact
+      //-  header
+      h2.title-left LIÊN HỆ
+      .row
+        .col-lg-8
+          <iframe class="contact-map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5909.320743811043!2d-0.15052734885744692!3d51.484529437452544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1514864140935" frameborder="0" style="border:0" allowfullscreen></iframe>
+        .col-lg-4
+          .contact-info
+            .contact-info__logo
+              img.contact-info__logoimg(src="images/logo.png", alt="logo image")
+            ul.contact-info__list
+              li.contact-info__item
+                i.fa.fa-map-marker.contact-info__icon
+                | Tầng 4 toà nhà Hanoi Group Số 442 Đội Cấn, P Cống Vị. Q Ba Đình, Hà Nội.
+              li.contact-info__item
+                i.fa.fa-phone.contact-info__icon
+                | (04) 6674 2332
+              li.contact-info__item
+                i.fa.fa-envelope.contact-info__icon
+                | support@milano.com
+            h4.contact-info__heading FOLLOW US:
+            ul.contact-social
+              li.contact-social__item
+                a.contact-social__link(href="#!")
+                  i.fa.fa-facebook.contact-social__icon
+              li.contact-social__item
+                a.contact-social__link(href="#!")
+                  i.fa.fa-google-plus.contact-social__icon
+              li.contact-social__item
+                a.contact-social__link(href="#!")
+                  i.fa.fa-twitter.contact-social__icon
+              li.contact-social__item
+                a.contact-social__link(href="#!")
+                  i.fa.fa-youtube-play.contact-social__icon
+              li.contact-social__item
+                a.contact-social__link(href="#!")
+                  i.fa.fa-pinterest.contact-social__icon
+              li.contact-social__item
+                a.contact-social__link(href="#!")
+                  i.fa.fa-vk.contact-social__icon
+        .col-lg-8
+          form.contact-form.js-contact-form
+            .contact-form__group
+              label.contact-form__label Your Name
+              input.contact-form__input(type="text", name="name", data-msg="Bạn chưa nhập mục này")
+            .contact-form__group
+              label.contact-form__label Your Email
+              input.contact-form__input(type="email", name="email", data-msg="Bạn chưa nhập mục này", data-msg-email="Email không đúng")
+            .contact-form__group
+              label.contact-form__label Subject
+              input.contact-form__input(type="text", name="subject", data-msg="Bạn chưa nhập mục này")
+            .contact-form__group
+              label.contact-form__label Your Message
+              textarea.contact-form__textarea(rows="5", name="message", data-msg="Bạn chưa nhập mục này")
+            .contact-form__group
+              label.contact-form__label
+              input.main-btn.contact-form__btn(type="submit", value="GỬI")
+
+    +footer
+    script(src="js/main.js")

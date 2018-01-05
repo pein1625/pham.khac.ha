@@ -1,0 +1,129 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/breadcumb
+include modules/components/product
+include modules/components/blog
+
+doctype html
+html
+  +head
+  body
+    +header
+    //- bread-cumb
+    +breadcumb('Trang chủ', 'Sản phẩm', 'Rượu vang đỏ')
+    .container
+      .detail
+        .row
+          .col-md-7
+            .product-image 
+              .product-image__aside
+                .product-image__up.js-product-image__up
+                  i.fa.fa-arrow-up
+                .product-image__thumbnail.js-product-image__thumbnail
+                  .thumbnail-slider.js-thumbnail-slider
+                    .thumbnail-slider__item.js-thumbnail-slider__item.thumbnail-slider__item--firstchild.active(data-item="1",  data-img="images/product/1.jpg")
+                      img.thumbnail-slider__img(src="images/product/thumbnail-1.png", alt="")
+                    .thumbnail-slider__item.js-thumbnail-slider__item(data-item="2",  data-img="images/product/2.jpg")
+                      img.thumbnail-slider__img(src="images/product/thumbnail-2.png", alt="")
+                    .thumbnail-slider__item.js-thumbnail-slider__item(data-item="3",  data-img="images/product/3.jpg")
+                      img.thumbnail-slider__img(src="images/product/thumbnail-1.png", alt="")
+                    .thumbnail-slider__item.js-thumbnail-slider__item(data-item="4",  data-img="images/product/4.jpg")
+                      img.thumbnail-slider__img(src="images/product/thumbnail-2.png", alt="")
+                    .thumbnail-slider__item.js-thumbnail-slider__item.thumbnail-slider__item--lastchild(data-item="5",  data-img="images/product/5.jpg")
+                      img.thumbnail-slider__img(src="images/product/thumbnail-1.png", alt="")
+                .product-image__down.js-product-image__down
+                  i.fa.fa-arrow-down
+              .product-image__imgwrap
+                img.product-image__img.js-product-image__img(src="images/product/1.jpg", alt="product img")
+          .col-md-5
+            .product-detail
+              h4.title-left.product-detail__name RƯỢU NHO NĂM  1987
+              p.product-detail__price 330.000
+                sup đ
+              .product-detail__rate
+                .product-detail__star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star
+                  i.fa.fa-star-half-o
+                  i.fa.fa-star-o
+                | 1 Review(S) |
+                a.product-detail__review(href="#!") Add Your Review
+              .product-property
+                h5.product-property__title MÀU SẮC
+                input.product-property__color.product-property__color--gold(type="radio", name="product_color", value="gold")
+                input.product-property__color.product-property__color--black(type="radio", name="product_color", value="black")
+                input.product-property__color.product-property__color--red(type="radio", name="product_color", value="red")
+              .product-property
+                h5.product-property__title KÍCH THƯỚC
+                select.product-property__size
+                  option Loại to
+                  option Loại vừa
+                  option Loại nhỏ
+              .product-property
+                h5.product-property__title SỐ LƯỢNG
+                .product-property__number
+                  .product-property__sub.js-product-property__sub -
+                  input.product-property__input.js-product-property__input(type="text", value="1")
+                  .product-property__add.js-product-property__add +
+                a.main-btn.product-property__btn(href="#!") ADD TO CART
+              .product-links
+                a.product-links__link(href="#!")
+                  i.fa.fa-heart.product-links__icon
+                  | Yêu thích
+                a.product-links__link(href="#!")
+                  i.fa.fa-signal.product-links__icon
+                  | So sánh
+                a.product-links__link(href="#!")
+                  i.fa.fa-envelope.product-links__icon
+                  | Email
+              .product-property
+                h5.product-property__title MÔ TẢ
+                p.product-property__desc Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+              .detail-social
+                .detail-social__group
+                  a.detail-social__item(href="#!")
+                    img.detail-social__icon(src="images/icons/icon-facebook.png", alt="")
+                  span.detail-social__index 0
+                .detail-social__group
+                  a.detail-social__item(href="#!")
+                    img.detail-social__icon(src="images/icons/icon-twitter.png", alt="")
+                  span.detail-social__index 0
+                .detail-social__group
+                  a.detail-social__item(href="#!")
+                    img.detail-social__icon(src="images/icons/icon-google-plus.png", alt="")
+                  span.detail-social__index 0
+                .detail-social__group
+                  a.detail-social__item(href="#!")
+                    img.detail-social__icon(src="images/icons/icon-linkedin.png", alt="")
+                .detail-social__group
+                  a.detail-social__item(href="#!")
+                    img.detail-social__icon(src="images/icons/icon-pinterest.png", alt="")
+            
+      .feature
+        .row
+          .col-md-8
+            .detail-tabs
+              .detail-tabs__tab.js-detail-tabs__tab.active(data-target="feature") ĐẶC ĐIỂM NỔI BẬT
+              .detail-tabs__tab.js-detail-tabs__tab(data-target="info") THÔNG TIN SẢN PHẨM
+              .detail-tabs__tab.js-detail-tabs__tab(data-target="evaluate") ĐÁNH GIÁ
+            .detail-content
+              .detail-content__block.js-detail-content__block.active(data-tab="feature")
+                p.product-feature Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn.Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to.Đừng nghĩ rằng chỉ vì đôi chân to mà bạn không thể mặc được món đồ nào khác ngoài quần dài. Sau đây là những item vừa trendy lại vừa có tác dụng rất hiệu quả trong việc điều chỉnh đôi chân to của bạn.
+                  br
+                  | Mùa hè là mùa của những bộ cánh thoải mái, thoáng mát và hẳn cô gái nào cũng muốn khoe chân tối đa. Tuy nhiên, điều này lại không hề dễ dàng đối với những cô nàng sở hữu đôi chân to. Vậy diện đồ thế nào để vừa tạo cảm giác nhẹ nhàng nhưng lại khéo léo giấu được nhược điểm ấy? Sau đây, chúng tôi xin đưa ra gợi ý về loạt item mà các cô nàng chân to nên gắn bó trong mùa hè này.
+              .detail-content__block.js-detail-content__block(data-tab="info")
+                | product info
+              .detail-content__block.js-detail-content__block(data-tab="evaluate")
+                | product evaluate
+          .col-md-4
+            img.feature__img(src="images/detail-feature.png", alt="detail feature img")
+      .related
+        h4.title-dark.related__heading SẢN PHẨM LIÊN QUAN
+        .product-slider.js-product-slider.owl-carousel
+          each item in [1,2,3,4,5,6,7,8,9,10]
+            .product-slider__item
+              +product("images/product/"+item+".jpg")
+    +footer
+    script(src="js/main.js")

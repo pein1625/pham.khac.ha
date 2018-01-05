@@ -1,0 +1,44 @@
+mixin product(img, state)
+  .product
+    a.product__imgwrap(class={"state-sale": state==="sale", "state-new": state==="new", "state-hot": state==="hot"}, href="detail.html")
+      img.product__img(src=img, alt="")
+    .product__linkswrap
+      .product__links
+        a.product__link(href="#!")
+          i.fa.fa-heart.product__icon
+          | Yêu thích
+        a.product__link(href="#!")
+          i.fa.fa-signal.product__icon
+          | So sánh
+        a.product__link.product__link--lastchild(href="#!")
+          i.fa.fa-compress
+    h6.product__name
+      a.product__anchor(href="detail.html") RƯỢU VANG ĐÀ LẠT
+    .product__price
+      span.product__new-price
+        | 370.000
+        sup đ
+      del.product__old-price
+        | 450.000
+        sup đ
+    a.main-btn.product__btn(href="#!") ADD TO CART
+
+mixin product2(img, state)
+  .product2
+    .row
+      .col-4
+        a.product2__imgwrap(class={"state-sale": state==="sale", "state-new": state==="new", "state-hot": state==="hot"}, href="detail.html")
+          img.product2__img(src=img, alt="")
+      .col-8
+        h2.product2__name
+          a.product2__name-link(href="detail.html") RƯỢU NHO NĂM 1987
+        p.product2__price 330.000
+          sup đ
+        p.product2__desc Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+        a.main-btn.product2__btn(href="#!") ADD TO CART
+        a.product2__link.product2__link--firstchild(href="#!")
+          i.fa.fa-heart.product2__icon
+          | Yêu thích
+        a.product2__link(href="#!")
+          i.fa.fa-signal.product2__icon
+          | So sánh

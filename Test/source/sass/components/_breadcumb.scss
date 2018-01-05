@@ -1,0 +1,42 @@
+.breadcumb {
+  margin: 34px 0;
+
+  &__list {
+    @include clearfix;
+  }
+
+  &__item {
+    float: left;
+    margin-right: 3px;
+
+    &::after {
+      content: '/';
+      font-size: 12px;
+      margin-left: 1px;
+      color: $gray;
+    }
+
+    &--lastchild::after {
+      content: '';
+      display: none;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $gray;  
+
+    &:hover {
+      text-decoration: underline;
+      color: $gray;
+    }
+
+    &--lastchild {
+      color: $goldish-brown;
+
+      &:hover {
+        color: $goldish-brown;
+      }
+    }
+  }
+}

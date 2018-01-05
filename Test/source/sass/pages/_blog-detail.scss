@@ -1,0 +1,153 @@
+.blog-detail {
+  font-family: $times-new-roman;
+  margin-bottom: 60px;
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 46px;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: $gray-900;
+  }
+
+  &__info {
+    font-size: 21px;
+    margin-bottom: 30px;
+    color: $gray-400;
+  }
+
+  &__content {
+    font-size: 19px;
+    font-style: italic;
+    color: $gray;
+  }
+}
+
+.blog-form {
+  font-family: $times-new-roman;
+  margin-bottom: 55px;
+
+  &__heading {
+    font-size: 18px;
+    font-style: italic;
+    color: $gray-900;
+    margin-bottom: 30px;
+  }
+
+  &__group {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    flex-flow: row wrap;
+    margin-bottom: 35px;
+  }
+
+  &__label {
+    min-width: 64px;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 10px;
+
+    .red {
+      color: $red;
+    }
+
+    @include respond-to('smallphone-and-down') {
+      width: 100%;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    flex: 1;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 12px;
+    border: 1px solid $gray-border;
+  }
+
+  &__input {
+    height: 40px;
+  }
+
+  &__textarea {
+    padding: 10px 12px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    color: $gray-900;
+    padding: 10px 18px;
+    line-height: 25px;
+    background-color: $gray-border;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $gray-300;
+    }
+  }
+
+  label.error {
+    display: block;
+    color: $red;
+    font-size: 12px;
+    font-family: $times-new-roman;
+    width: 100%;
+    padding-left: 64px;
+
+    @include respond-to('smallphone-and-down') {
+      padding-left: 0;
+    }
+  }
+}
+
+.blog-sidebar {
+  @include respond-to('tablet-and-down') {
+    -webkit-order: 2;
+    order: 2;
+  }
+}
+
+.blog-aside {
+  font-family: $roboto;
+  margin-bottom: 60px;
+
+  &__heading {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+}
+
+.blog-list {
+  margin: 36px 0 40px;
+
+  &__item {
+    padding: 12px 0;
+  }
+}
+
+.blog-tags {
+  margin: 40px 0 60px 0;
+  @include clearfix;
+
+  &__link {
+    background-color: $gray-border;
+    border-radius: 5px;
+  }
+}
+
+.blog-video {
+  display: block;
+  margin-top: 25px;
+
+  &__thumbnail {
+    width: 100%;
+    height: auto;
+  }
+}

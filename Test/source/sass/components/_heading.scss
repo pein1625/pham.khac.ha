@@ -1,0 +1,38 @@
+.title-dark {
+  text-align: center;
+  font-family: $times-new-roman;
+  font-size: 21px;
+  color: $black;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 43px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 16px;
+    background: url('../images/title-dark.png') no-repeat center center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.title-left {
+  font-size: 24px;
+  font-family: $times-new-roman;
+  color: $gray-900;
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url("../images/titleleft-dark.png") no-repeat left center;
+  }
+}

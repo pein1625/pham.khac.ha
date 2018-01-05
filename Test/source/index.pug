@@ -1,0 +1,151 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/product
+include modules/components/blog
+
+doctype html
+html
+  +head
+  body
+    +header("home")
+    main.home-page
+      .container
+        .present
+          h4.title-dark.present__heading  GIỚI THIỆU
+          p.present__desc Mriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui faciteorum claritatem. Investigtiones demonstraverunt lectores legere me lius quod ii legunt saepius.Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putam
+          a.main-btn.present__btn(href="#!") XEM THÊM
+        .intro
+          .intro__box
+            .row.product3
+              .col-md-7
+                .product3__imgwrap.state-sale.state-sale--responsive
+                  img.product3__img(src="images/product/1.jpg", alt="product img")
+              .col-md-5
+                h3.title-left.product3__name RƯỢU NHO NĂM  1987
+                p.product3__price 330.000
+                  sup đ
+                a.main-btn.product3__btn(href="#!") ADD TO CART
+                p.product3__desc Một hợp chất có trong rượu vang được gọi là resveratro có khả năng làm tăng tối đa tuổi thọ. Resveratro còn có khả năng ngăn chặn mật độ ôxy hoá của protein béo.
+
+                .row.product3__grid
+                  .col-6.product3__col
+                    .product3__number 334
+                    .product3__type NGÀY
+                  .col-6.product3__col
+                    .product3__number 26
+                    .product3__type GIỜ
+                  .col-6.product3__col
+                    .product3__number 60
+                    .product3__type PHÚT
+                  .col-6.product3__col
+                    .product3__number 15
+                    .product3__type GIÂY
+
+        .new-product
+          h4.title-dark SẢN PHẨM MỚI
+          .product-slider.js-product-slider.owl-carousel
+            .product-slider__item.product-slide2__item
+              +product("images/product/1.jpg", "sale")
+            .product-slider__item.product-slide2__item
+              +product("images/product/2.jpg", "new")
+            .product-slider__item.product-slide2__item
+              +product("images/product/3.jpg", "hot")
+            .product-slider__item.product-slide2__item
+              +product("images/product/4.jpg")
+            .product-slider__item.product-slide2__item
+              +product("images/product/5.jpg")
+
+      .home-grid.js-home-grid.owl-carousel
+        .home-grid__item
+          .home-grid__imgwrap
+            img.home-grid__img(src="images/home-grid-1.png", alt="")
+            .home-grid__hover
+              .home-grid__year 1987
+              .home-grid__text RƯỢU
+          .home-grid__imgwrap
+            img.home-grid__img(src="images/home-grid-2.png", alt="")
+            .home-grid__hover
+              .home-grid__year 1987
+              .home-grid__text RƯỢU
+        .home-grid__item
+          .home-grid__imgwrap
+            img.home-grid__img(src="images/home-grid-3.png", alt="")
+            .home-grid__hover
+              .home-grid__year 1987
+              .home-grid__text RƯỢU
+          .home-grid__imgwrap
+            img.home-grid__img(src="images/home-grid-4.png", alt="")
+            .home-grid__hover
+              .home-grid__year 1987
+              .home-grid__text RƯỢU
+        .home-grid__item
+          .home-grid__imgwrap
+            img.home-grid__img(src="images/home-grid-5.png", alt="")
+            .home-grid__hover
+              .home-grid__year 1987
+              .home-grid__text RƯỢU
+          .home-grid__imgwrap
+            img.home-grid__img(src="images/home-grid-6.png", alt="")
+            .home-grid__hover
+              .home-grid__year 1987
+              .home-grid__text RƯỢU
+        .home-grid__item
+          .home-grid__imgwrap
+            img.home-grid__img(src="images/home-grid-7.png", alt="")
+            .home-grid__hover
+              .home-grid__year 1987
+              .home-grid__text RƯỢU
+          .home-grid__imgwrap
+            img.home-grid__img(src="images/home-grid-8.png", alt="")
+            .home-grid__hover
+              .home-grid__year 1987
+              .home-grid__text RƯỢU
+        
+      .container 
+        .hot-product
+          h4.title-dark SẢN PHẨM BÁN CHẠY
+          .product-slider.js-product-slider.owl-carousel
+            each item in [1,2,3,4,5,6,7]
+              .product-slider__item.product-slide2__item
+                +product("images/product/"+item+".jpg")
+        .row
+          .col-md-8
+            h4.title-dark TIN TỨC & BLOG
+            .row.home-blogs
+              .col-sm-6
+                +blog("images/blog-1.png")
+              .col-sm-6
+                +blog("images/blog-2.png")
+          .col-md-4
+            h4.title-dark KHÁCH HÀNG
+            .testimonial.js-testimonial.owl-carousel
+              .testimonial__item
+                .testimonial__quote
+                  i.fa.fa-quote-right
+                p.testimonial__text Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
+                a.testimonial__readmore(href="#!") Readmore
+                .testimonial__avatar  
+                  img.testimonial__img(src="images/testimonial.png", alt="")
+                p.testimonial__name GIANGLT
+                p.testimonial__desc Graphic design
+              .testimonial__item
+                .testimonial__quote
+                  i.fa.fa-quote-right
+                p.testimonial__text Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
+                a.testimonial__readmore(href="#!") Readmore
+                .testimonial__avatar  
+                  img.testimonial__img(src="images/testimonial.png", alt="")
+                p.testimonial__name GIANGLT
+                p.testimonial__desc Graphic design
+              .testimonial__item
+                .testimonial__quote
+                  i.fa.fa-quote-right
+                p.testimonial__text Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
+                a.testimonial__readmore(href="#!") Readmore
+                .testimonial__avatar  
+                  img.testimonial__img(src="images/testimonial.png", alt="")
+                p.testimonial__name GIANGLT
+                p.testimonial__desc Graphic design
+    +footer
+    script(src="js/main.js")

@@ -1,0 +1,103 @@
+.product {
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  
+  &__imgwrap {
+    display: block;
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__linkswrap {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  &__links {
+    display: flex;
+    background-color: $black;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+  }
+
+  &:hover &__links {
+    opacity: 1;
+  }
+
+  &__link {
+    display: block;
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 30px;
+    color: $gray-600;
+    text-align: center;
+    border-right: 1px solid $gray-600;
+
+    &--lastchild {
+      border-right: 0;
+    }
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &__icon {
+    margin-right: 8px;
+  }
+
+  &__name {
+    font-family: $times-new-roman;
+    font-size: 14px;
+    color: $black;
+  }
+
+  &__anchor {
+    
+    &,
+    &:link,
+    &:hover,
+    &:active {
+      color: inherit;
+    }
+  }
+
+  &__price {
+    margin-bottom: 24px;
+    font-family: $caviar;
+  }
+
+  &__new-price {
+    font-size: 21px;
+    color: $goldish-brown;
+  }
+
+  &__old-price {
+    font-size: 14px;
+    color: $gray-500;
+
+    &::before {
+      content: '-';
+      margin-right: 5px;
+      text-decoration: none;
+    }
+  }
+
+  &__btn {
+    padding: 0 16px;
+    line-height: 30px;
+    margin-bottom: 35px;
+
+    &:hover {
+      background-color: $goldish-brown;
+    }
+  }
+}

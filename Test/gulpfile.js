@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
 var del = require('del');
@@ -62,8 +63,9 @@ var scss = {
     precison: 3,
     errLogToConsole: true,
     includePaths: [
-      './node_modules/bootstrap-sass/assets/stylesheets',
-      './node_modules/font-awesome/scss/'
+      './node_modules/bootstrap/scss',
+      './node_modules/font-awesome/scss/',
+      './node_modules/owl.carousel2/src/scss/',
     ]
   }
 };
@@ -74,6 +76,7 @@ var fonts = {
   in: [
     source + 'fonts/*.*',
     './node_modules/bootstrap-sass/assets/fonts/**/*.*',
+    './node_modules/slick-carousel/slick/fonts/**/*.*',
     './node_modules/font-awesome/fonts/*', source + 'fonts-2/**/*'
   ],
   out: dest + 'fonts/'
@@ -88,6 +91,9 @@ var js = {
   out: dest + 'js/'
 };
 
+
+
+
 /**
  * Tasks
  * Allow add filter
@@ -101,7 +107,6 @@ gulp.task('watch', function (cb) {
   $.watch(source + '/sass/**/*.scss', function () {
     gulp.start('compile-styles');
   });
-
   $.watch(source + '/images/**/*', function () {
     gulp.start('compile-images');
     gulp.start('build-images-name');
@@ -151,7 +156,7 @@ gulp.task('cleanup', function (cb) {
 
 
 // = Build Style
-gulp.task('compile-styles',['fonts', 'scss-lint'], function (cb) {
+gulp.task('compile-styles',['fonts'], function (cb) {
   return gulp.src([
     source + '/sass/*.scss',
     '!'+ source +'/sass/_*.scss'
@@ -166,22 +171,15 @@ gulp.task('compile-styles',['fonts', 'scss-lint'], function (cb) {
   }))
   .pipe(gulp.dest(dest + '/css'))
   .pipe(browserSync.stream());
-});
-
-gulp.task('scss-lint', function (cb) {
-  return gulp.src([
-    source + '/sass/*.scss',
-    source + '/sass/**/*.scss'
-  ])
-  .pipe($.scssLint());
-});
+})
 
 // = Build HTML
 gulp.task('compile-html', function (cb) {
   return gulp.src(['*.html', '!_*.html'], {cwd: 'source'})
   .pipe($.prettify(options.htmlPrettify))
   .pipe(gulp.dest(dest));
-});
+
+})
 
 // = Build Pug
 gulp.task('compile-pug', function (cb) {
@@ -190,13 +188,9 @@ gulp.task('compile-pug', function (cb) {
   options.pug.locals = jsonData;
 
   return gulp.src(['*.pug', '!_*.pug'], {cwd: 'source'})
-    .pipe($.plumber(function(error){
-      console.log('Task compile-pug has error', error.message);
-      this.emit('end');
-    }))
     .pipe($.changed('dest', {extension: '.html'}))
     .pipe($.pugInheritance({
-      basedir: 'source',
+      basedir: "source",
       skip: ['node_modules']
     }))
     .pipe($.pug(options.pug))
@@ -205,8 +199,8 @@ gulp.task('compile-pug', function (cb) {
       this.emit('end');
     })
     .pipe($.prettify(options.htmlPrettify))
-    .pipe($.plumber.stop())
     .pipe(gulp.dest(dest));
+
 });
 
 gulp.task('build-html', function (cb) {
@@ -218,22 +212,19 @@ gulp.task('build-html', function (cb) {
   );
 });
 
+
 // = Build JS
+
 gulp.task('compile-js', function() {
-  return gulp.src(['*.js', '!_*.js'], {cwd: 'source/js'})
-  .pipe($.plumber(function(error){
-    console.log('Task compile-js has error', error.message);
-    this.emit('end');
-  }))
+  return gulp.src(["*.js", "!_*.js"], {cwd: 'source/js'})
   .pipe($.include(options.include))
-  .pipe($.babel())
-  .pipe($.plumber.stop())
   .pipe(gulp.dest(dest + '/js'));
 });
 
+
 // = Build image
 gulp.task('compile-images', function() {
-  return gulp.src(source + '/images/*.*')
+  return gulp.src(source + "/images/**/*.*")
   .pipe(gulp.dest(dest + '/images'));
 });
 
@@ -278,7 +269,7 @@ gulp.task('dev', function (cb) {
       'watch'
     ],
     cb
-  );
+    )
 });
 
 // ================ Build

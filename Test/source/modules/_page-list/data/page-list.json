@@ -1,11 +1,47 @@
 {
   "pageList": {
     "data": [{
-        "title": "Style Guides",
-        "url": "styleguides"
+        "title": "Trang chủ",
+        "url": "index"
       },{
-        "title": "P000 welcome",
-        "url": "p000-welcome"
+        "title": "Chi tiết sản phẩm",
+        "url": "detail"
+      },{
+        "title": "Sản phẩm",
+        "url": "list"
+      },{
+        "title": "Sản phẩm",
+        "url": "grid"
+      },{
+        "title": "Đăng nhập",
+        "url": "login"
+      },{
+        "title": "Đăng ký",
+        "url": "register"
+      },{
+        "title": "Blog",
+        "url": "blog"
+      },{
+        "title": "Blog",
+        "url": "blog-detail"
+      },{
+        "title": "Giỏ hàng",
+        "url": "cart"
+      },{
+        "title": "Liên hệ",
+        "url": "contact"
+      },{
+        "title": "Địa chỉ khách hàng",
+        "url": "address"
+      },{
+        "title": "Giới thiệu",
+        "url": "introduce"
+      },{
+        "title": "Đơn hàng",
+        "url": "order"
+      },{
+        "title": "error 404",
+        "url": "404"
       }
     ]
   }

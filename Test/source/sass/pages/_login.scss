@@ -1,0 +1,32 @@
+.login__register {  
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+
+.login-form {
+  &__desc {
+    font-family: $opensans;
+    font-size: 14px;
+    color: $black;
+    margin-bottom: 46px;
+  }
+
+  &__passforgot {
+    display: block;
+    max-width: 150px;
+    margin: -10px 0 28px 80px;
+    font-size: 14px;
+    font-family: $times-new-roman;
+    color: $black;
+
+    &:hover {
+      color: $goldish-brown;
+      text-decoration: underline;
+    }
+
+    @include respond-to('phone-and-down') {
+      margin-left: 0;
+    }
+  }
+}

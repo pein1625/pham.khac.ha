@@ -1,0 +1,241 @@
+.home-page {
+  padding-top: 96px;
+  background:
+    url('../images/home-bg-1.png') left top no-repeat,
+    url('../images/home-bg-2.png') right top no-repeat;
+
+  @include respond-to('desktop-and-down') {
+    background:
+      url('../images/home-bg-1.png') -250px -50px no-repeat,
+      url('../images/home-bg-2.png') right top no-repeat;
+  }
+
+  @include respond-to('phone-and-down') {
+    background:  url('../images/home-bg-2.png') right top no-repeat;
+  }
+}
+
+.present {
+  margin:  0 0 104px;
+  text-align: center;
+  font-family: $times-new-roman;
+
+  &__heading {
+    margin-bottom: 25px;
+    font-size: 21px;
+  }
+
+  &__desc {
+    font-size: 16px; 
+    line-height: 21px;
+    color: $gray-600;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 0 45px;
+  }
+
+  &__btn {
+    line-height: 31px;
+    padding: 0 17px;
+  }
+}
+
+.intro {
+  background: url('../images/intro-bg.png') no-repeat top;
+  background-size: contain;
+  padding: 345px 100px 0;
+  margin-bottom: 95px;
+
+  &__box {
+    padding: 100px;
+    background-color: $white;
+  }
+
+  @include respond-to('desktop-and-down') {
+    padding: 250px 50px 0;
+
+    &__box {
+      padding: 50px;
+    }
+  }
+
+  @include respond-to('tablet-and-down') {
+    padding: 150px 50px 0;
+
+    &__box {
+      padding: 50px 15px;
+    }
+  }
+
+  @include respond-to('phone-and-down') {
+    padding: 100px 25px 0;
+
+    &__box {
+      padding: 50px 15px;
+    }
+  }
+}
+
+
+.home-grid {
+  margin-bottom: 96px;
+  
+  &__imgwrap {
+    position: relative;
+  }
+
+  &__imgwrap:hover > &__hover {
+    opacity: 1;
+  }
+
+  &__hover {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 0 4px $goldish-brown;
+    font-family: $times-new-roman;
+    background-color: $black-opacity-5;
+    opacity: 0;
+    transition: opacity .2s ease;
+  }
+
+  &__year {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: $white;
+  }
+  
+  &__text {
+    display: inline-block;
+    color: $white;
+    font-size: 72px;
+    line-height: 1;
+    border-top: 1px solid $white;
+    border-bottom: 1px solid $white;
+    padding: 10px 20px;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: calc(100% - 20px);
+      height: calc(100% + 20px);
+      position: absolute;
+      left: 10px;
+      top: -10px;
+      border-right: 1px solid $white;
+      border-left: 1px solid $white;
+    }
+
+    @include respond-to('desktop-and-down') {
+      font-size: 60px;
+    }
+
+    @include respond-to('smallphone-and-down') {
+      font-size: 30px;
+    }
+  }
+}
+
+.home-blogs {
+  margin-bottom: 60px;
+}
+
+.testimonial {
+  font-family: $times-new-roman;
+  text-align: center;
+  position: relative;
+  margin-bottom: 100px;
+
+  &__quote {
+    width: 63px;
+    height: 63px;
+    margin: 0 auto 28px;
+    font-size: 25px;
+    line-height: 63px;
+    text-align: center;
+    background-color: $goldish-brown;
+    border-radius: 50%;
+    color: $white;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 21px;
+    color: $gray-600;
+    padding: 0 15px;
+    margin-bottom: 0;
+  }
+
+  &__readmore {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    color: $gray-500;
+    margin-bottom: 26px;
+
+    &:hover {
+      color: $gray;
+      text-decoration: underline;
+    }
+  }
+
+  &__avatar {
+    width: 102px;
+    height: 102px;
+    margin: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__name {
+    font-size: 14px;
+    color: $gray-900;
+    margin-bottom: 5px;
+  }
+
+  &__desc {
+    font-size: 12px;
+    color: $gray-500;
+    margin-bottom: 45px;
+  }
+
+  .owl-dots {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .owl-dot {
+    display: inline-block;
+    margin: 0 3px;
+    cursor: pointer;
+
+    span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $gray-500; 
+    }
+
+    &:hover > span,
+    &.active > span {
+      background-color: $goldish-brown;
+    }
+  }
+}

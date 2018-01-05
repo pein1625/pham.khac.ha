@@ -1,0 +1,50 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //- bread-cumb
+    +breadcumb('Trang chủ', 'Đăng ký')
+    .container
+      //-  header
+      .register__title
+        a.main-btn.main-btn--big.register__login(href="login.html") ĐĂNG NHẬP
+        h2.title-left ĐĂNG KÝ
+
+      form.main-form.register-form.js-register-form
+        h5.main-form__title THÔNG TIN CÁ NHÂN
+        .main-form__group
+          label.main-form__label Tên trước *
+          input.main-form__input(type="text", name="firstname", data-msg="Bạn chưa nhập mục này!", required)
+        .main-form__group
+          label.main-form__label Tên sau *
+          input.main-form__input(type="text", name="lastname", data-msg="Bạn chưa nhập mục này!", required)
+        .main-form__group
+          label.main-form__label Email *
+          input.main-form__input(type="email", name="email", data-msg="Bạn chưa nhập mục này!", data-msg-email="Email không đúng!", required)
+        .main-form__group
+          label.main-form__label Password *
+          input.main-form__input(type="password", name="password", data-msg="Bạn chưa nhập mục này!", data-msg-minlength="Độ dài mật khẩu phải lớn hơn 6", required)
+        .main-form__group
+          label.main-form__label
+          input.main-form__checkbox#get-news(type="checkbox")
+          label.main-form__checkbox-desc(for="get-news") Đăng ký nhận bản tin
+
+        h5.main-form__title THÔNG TIN ĐĂNG NHẬP
+        .main-form__group
+          label.main-form__label Mật khẩu *
+          input.main-form__input.js-register-password2(type="password", name="password2", data-msg="Bạn chưa nhập mục này!", data-msg-minlength="Độ dài mật khẩu phải lớn hơn 6", required)
+        .main-form__group
+          label.main-form__label Xác nhận mật khẩu *
+          input.main-form__input(type="password", name="re_password2", data-msg="Bạn chưa nhập mục này!", data-msg-equalTo="Xác nhận mật khẩu không đúng", required)
+        .main-form__group
+          label.main-form__label
+          input.main-btn.register-btn(type="submit", value="GỬI")
+          a.main-btn(href="#!") QUAY LẠI
+    +footer
+    script(src="js/main.js")

@@ -1,0 +1,206 @@
+.footer {
+  &__widget {
+    margin-bottom: 30px;
+  }
+
+  &__heading {
+    font-size: 18px;
+    font-family: $times-new-roman;
+    line-height: 30px;
+    color: $black;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-family: $times-new-roman;
+    color: $gray;
+    line-height: 30px;
+    margin-bottom: 5px;
+  }
+}
+
+.footer-brands {
+  margin: 0 0 45px;
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    &--lastchild {
+      border-right: 0;
+    }
+
+    @include respond-to('smallphone-and-down') {
+      border-right: 0;
+
+      &--lastchild {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.sublist {
+  word-break: break-word;
+
+  &__link {
+    font-size: 12px;
+    font-family: $times-new-roman;
+    line-height: 20px;
+    color: $gray;
+
+    &:hover {
+      color: $goldish-brown;
+    }
+  }
+}
+
+.send-mail {
+  display: flex;
+  width: calc(100% - 18px);
+  max-width: 300px;
+  height: 30px;
+  font-family: $times-new-roman;
+  margin-bottom: 24px;
+
+  &__input {
+    flex: 1;
+    padding: 0 14px;
+    font-size: 12px;
+    color: $gray;
+    border: 1px solid $gray;
+    border-right: 0;
+  }
+
+  &__btn {
+    font-size: 14px;
+    padding: 0 19px;
+    background-color: $gray-900;
+    color: $white;
+    border: 0;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+      content: '';
+      border: 15px solid;
+      border-color: transparent transparent transparent $gray-900;
+      position: absolute;
+      top: 0;
+      left: 100%;
+    }
+
+    &:hover {
+      background-color: $black;
+
+      &::after {
+        border-left-color: $black;
+      }
+    }
+  }
+}
+
+.mini-social {
+  @include clearfix;
+
+  &__item {
+    float: left;
+    margin-right: 11px;
+  }
+
+  &__link {
+    color: $gray;
+
+    &:hover {
+      color: $goldish-brown;
+    }
+  }
+}
+
+.footer-contact {
+  &__line {
+    @include clearfix;
+  }
+
+  &__group {
+    display: inline-block;
+    float: left;
+    margin-right: 12px;
+    @include clearfix;
+
+    &--hyphen {
+      margin-right: 5px;
+
+      &::after {
+        content: '-';
+        display: inline-block;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 16px;
+    color: $gray-900;
+    margin-right: 8px;
+    margin-top: 4px;
+    float: left;
+  }
+
+  &__detail {
+    line-height: 28px;
+    font-size: 14px;
+    font-family: $times-new-roman;
+    color: $gray-700;
+    float: left;
+    max-width: calc(100% - 20px);
+
+    &:hover {
+      color: $goldish-brown;
+    }
+  }
+}
+
+.bottom-site {
+  border-top: 1px solid $gray-border;
+  padding: 11px 0;
+}
+
+.copyright {
+  float: left;
+  font-family: $roboto;
+  font-size: 12px;
+  line-height: 24px;
+  color: $gray;
+
+  @include respond-to('phone-and-down') {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.payments {
+  display: flex;
+  align-items: center;
+  float: right;
+
+  &__item {
+    margin-right: 15px;
+  }
+
+  @include respond-to('phone-and-down') {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+}
