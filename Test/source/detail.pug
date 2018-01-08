@@ -1,6 +1,7 @@
 include modules/head/head
 include modules/header/header
 include modules/footer/footer
+include modules/components/nav
 include modules/components/breadcumb
 include modules/components/product
 include modules/components/blog
@@ -10,19 +11,19 @@ html
   +head
   body
     +header
-    //- bread-cumb
+    +nav
     +breadcumb('Trang chủ', 'Sản phẩm', 'Rượu vang đỏ')
     .container
       .detail
         .row
           .col-md-7
-            .product-image 
+            .product-image
               .product-image__aside
                 .product-image__up.js-product-image__up
                   i.fa.fa-arrow-up
                 .product-image__thumbnail.js-product-image__thumbnail
                   .thumbnail-slider.js-thumbnail-slider
-                    .thumbnail-slider__item.js-thumbnail-slider__item.thumbnail-slider__item--firstchild.active(data-item="1",  data-img="images/product/1.jpg")
+                    .thumbnail-slider__item.first.js-thumbnail-slider__item.active(data-item="1",  data-img="images/product/1.jpg")
                       img.thumbnail-slider__img(src="images/product/thumbnail-1.png", alt="")
                     .thumbnail-slider__item.js-thumbnail-slider__item(data-item="2",  data-img="images/product/2.jpg")
                       img.thumbnail-slider__img(src="images/product/thumbnail-2.png", alt="")
@@ -30,7 +31,7 @@ html
                       img.thumbnail-slider__img(src="images/product/thumbnail-1.png", alt="")
                     .thumbnail-slider__item.js-thumbnail-slider__item(data-item="4",  data-img="images/product/4.jpg")
                       img.thumbnail-slider__img(src="images/product/thumbnail-2.png", alt="")
-                    .thumbnail-slider__item.js-thumbnail-slider__item.thumbnail-slider__item--lastchild(data-item="5",  data-img="images/product/5.jpg")
+                    .thumbnail-slider__item.last.js-thumbnail-slider__item(data-item="5",  data-img="images/product/5.jpg")
                       img.thumbnail-slider__img(src="images/product/thumbnail-1.png", alt="")
                 .product-image__down.js-product-image__down
                   i.fa.fa-arrow-down
@@ -100,7 +101,7 @@ html
                 .detail-social__group
                   a.detail-social__item(href="#!")
                     img.detail-social__icon(src="images/icons/icon-pinterest.png", alt="")
-            
+
       .feature
         .row
           .col-md-8

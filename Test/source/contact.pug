@@ -1,6 +1,7 @@
 include modules/head/head
 include modules/header/header
 include modules/footer/footer
+include modules/components/nav
 include modules/components/breadcumb
 
 doctype html
@@ -8,10 +9,9 @@ html
   +head
   body
     +header
-    //- bread-cumb
+    +nav
     +breadcumb('Trang chủ', 'Địa chỉ')
     .container.contact
-      //-  header
       h2.title-left LIÊN HỆ
       .row
         .col-lg-8

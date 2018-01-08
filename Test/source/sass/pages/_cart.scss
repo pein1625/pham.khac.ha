@@ -130,5 +130,9 @@
     padding: 0 17px;
     margin-left: 15px;
     margin-bottom: 15px;
+
+    &.first {
+      margin-left: 0;
+    }
   }
 }

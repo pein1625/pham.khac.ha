@@ -65,11 +65,11 @@
       background-color: $gray-border;
     }
 
-    &--firstchild {
+    &.first {
       margin-top: 0;
     }
 
-    &--lastchild {
+    &.last {
       margin-bottom: 0;
 
       &::after {

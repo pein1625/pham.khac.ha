@@ -1,6 +1,7 @@
 include modules/head/head
 include modules/header/header
 include modules/footer/footer
+include modules/components/nav
 include modules/components/breadcumb
 include modules/components/product
 
@@ -9,7 +10,7 @@ html
   +head
   body
     +header
-    //- bread-cumb
+    +nav
     +breadcumb('Trang chủ', 'Sản phẩm', 'Rượu vang đỏ')
     .container
       .list-banner
@@ -43,7 +44,6 @@ html
                     a.tags__link(href="#!")= item
             .list-aside__block
               img.list-aside__ad(src="images/list-ad.png", alt="")
-
         .col-md-9
           .list-content
             .list-headbar
@@ -53,19 +53,18 @@ html
                 a.product-view__btn(href="list.html")
                   i.fa.fa-th-list
               ul.product-page
-                li.product-page__item.product-page__item--firstchild
+                li.product-page__item.first
                   a.product-page__link(href="#!")
                     i.fa.fa-caret-left
                 each item in [1,2,3,4,5]
                   li.product-page__item
                     a.product-page__link(href="#!")= item
-                li.product-page__item.product-page__item--lastchild
+                li.product-page__item.last
                   a.product-page__link(href="#!")
                     i.fa.fa-caret-right
             ul.list-product
               each item in [1,2,3,4]
-                li.list-product__item(class={"list-product__item--lastchild": item === 4})
+                li.list-product__item(class={"last": item === 4})
                   +product2("images/product/"+item+".jpg")
-
     +footer
     script(src="js/main.js")

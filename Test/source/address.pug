@@ -1,6 +1,7 @@
 include modules/head/head
 include modules/header/header
 include modules/footer/footer
+include modules/components/nav
 include modules/components/breadcumb
 
 doctype html
@@ -8,10 +9,9 @@ html
   +head
   body
     +header
-    //- bread-cumb
+    +nav
     +breadcumb('Trang chủ', 'Địa chỉ')
     .container.add-page
-      //- blog header
       h2.title-left ĐỊA CHỈ
       .row
         .col-md-6
@@ -89,28 +89,28 @@ html
         .col-md-6
           table.add-table
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Tên
+              td.add-table__col.first Tên
               td.add-table__col Giang
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Họ & tên đệm
+              td.add-table__col.first Họ & tên đệm
               td.add-table__col Lê Anh
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Công ty
+              td.add-table__col.first Công ty
               td.add-table__col Công ty cổ phần công nghệ DKT
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Địa chỉ
+              td.add-table__col.first Địa chỉ
               td.add-table__col Toà nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Thành phố
+              td.add-table__col.first Thành phố
               td.add-table__col Hà Nội
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Quốc tịch
+              td.add-table__col.first Quốc tịch
               td.add-table__col Việt Nam
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Postal/Zip Code
+              td.add-table__col.first Postal/Zip Code
               td.add-table__col 2300089
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Phone
+              td.add-table__col.first Phone
               td.add-table__col 0974554928
           .add-page__linkwrap
             a.add-page__link(href="#!") Chỉnh sửa địa chỉ
@@ -118,30 +118,30 @@ html
         .col-md-6
           table.add-table
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Tên
+              td.add-table__col.first Tên
               td.add-table__col Giang
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Họ & tên đệm
+              td.add-table__col.first Họ & tên đệm
               td.add-table__col Lê Anh
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Công ty
+              td.add-table__col.first Công ty
               td.add-table__col Công ty cổ phần công nghệ DKT
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Địa chỉ
+              td.add-table__col.first Địa chỉ
               td.add-table__col Toà nhà Hà Nội Group, 442 Đội Cấn, Ba Đình, Hà Nội
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Thành phố
+              td.add-table__col.first Thành phố
               td.add-table__col Hà Nội
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Quốc tịch
+              td.add-table__col.first Quốc tịch
               td.add-table__col Việt Nam
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Postal/Zip Code
+              td.add-table__col.first Postal/Zip Code
               td.add-table__col 2300089
             tr.add-table__row
-              td.add-table__col.add-table__col--firstchild Phone
+              td.add-table__col.first Phone
               td.add-table__col 0974554928
-          .add-page__linkwrap           
+          .add-page__linkwrap
             a.add-page__link(href="#!") Chỉnh sửa địa chỉ
 
     +footer

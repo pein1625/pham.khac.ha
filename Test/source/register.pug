@@ -1,6 +1,7 @@
 include modules/head/head
 include modules/header/header
 include modules/footer/footer
+include modules/components/nav
 include modules/components/breadcumb
 
 doctype html
@@ -8,10 +9,9 @@ html
   +head
   body
     +header
-    //- bread-cumb
+    +nav
     +breadcumb('Trang chủ', 'Đăng ký')
     .container
-      //-  header
       .register__title
         a.main-btn.main-btn--big.register__login(href="login.html") ĐĂNG NHẬP
         h2.title-left ĐĂNG KÝ

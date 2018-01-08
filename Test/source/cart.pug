@@ -1,6 +1,7 @@
 include modules/head/head
 include modules/header/header
 include modules/footer/footer
+include modules/components/nav
 include modules/components/breadcumb
 
 doctype html
@@ -8,12 +9,10 @@ html
   +head
   body
     +header
-    //- bread-cumb
+    +nav
     +breadcumb('Trang chủ', 'Sản phẩm', 'Giỏ hàng')
     .container
-      //- blog header
       h2.title-left GIỎ HÀNG
-      
       table.cart
         thead.cart__head
           tr.cart__row
@@ -77,7 +76,7 @@ html
               a.cart__delete(href="#!")
                 i.fa.fa-trash
       .cart-btns
-        a.main-btn.cart-btns__btn.cart-btns__btn--firstchild(href="#!") TIẾP TỤC MUA HÀNG
+        a.main-btn.cart-btns__btn.first(href="#!") TIẾP TỤC MUA HÀNG
         a.main-btn.cart-btns__btn(href="#!") XOÁ
         a.main-btn.cart-btns__btn(href="#!") CẬP NHẬT
     +footer

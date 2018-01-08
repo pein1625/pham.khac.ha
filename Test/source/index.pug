@@ -1,6 +1,7 @@
 include modules/head/head
 include modules/header/header
 include modules/footer/footer
+include modules/components/nav
 include modules/components/product
 include modules/components/blog
 
@@ -9,6 +10,7 @@ html
   +head
   body
     +header("home")
+    +nav
     main.home-page
       .container
         .present
@@ -101,8 +103,8 @@ html
             .home-grid__hover
               .home-grid__year 1987
               .home-grid__text RƯỢU
-        
-      .container 
+
+      .container
         .hot-product
           h4.title-dark SẢN PHẨM BÁN CHẠY
           .product-slider.js-product-slider.owl-carousel
@@ -125,7 +127,7 @@ html
                   i.fa.fa-quote-right
                 p.testimonial__text Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
                 a.testimonial__readmore(href="#!") Readmore
-                .testimonial__avatar  
+                .testimonial__avatar
                   img.testimonial__img(src="images/testimonial.png", alt="")
                 p.testimonial__name GIANGLT
                 p.testimonial__desc Graphic design
@@ -134,7 +136,7 @@ html
                   i.fa.fa-quote-right
                 p.testimonial__text Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
                 a.testimonial__readmore(href="#!") Readmore
-                .testimonial__avatar  
+                .testimonial__avatar
                   img.testimonial__img(src="images/testimonial.png", alt="")
                 p.testimonial__name GIANGLT
                 p.testimonial__desc Graphic design
@@ -143,7 +145,7 @@ html
                   i.fa.fa-quote-right
                 p.testimonial__text Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long ...
                 a.testimonial__readmore(href="#!") Readmore
-                .testimonial__avatar  
+                .testimonial__avatar
                   img.testimonial__img(src="images/testimonial.png", alt="")
                 p.testimonial__name GIANGLT
                 p.testimonial__desc Graphic design

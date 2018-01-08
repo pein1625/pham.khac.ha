@@ -67,7 +67,7 @@
     border: 1px solid $gray-border;
   }
 
-  &__submit, 
+  &__submit,
   &__btn {
     font-size: 16px;
     padding: 5px 26px;
@@ -78,7 +78,7 @@
     margin-right: 11px;
     padding: 5px 20px;
   }
-  
+
   &__checkbox {
     width: 12px;
     height: 12px;
@@ -99,7 +99,7 @@
   &__col {
     height: 50px;
     padding: 5px 0;
-    &--firstchild {
+    &.first {
       width: 138px;
     }
   }

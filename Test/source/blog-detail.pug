@@ -1,6 +1,7 @@
 include modules/head/head
 include modules/header/header
 include modules/footer/footer
+include modules/components/nav
 include modules/components/blog
 include modules/components/breadcumb
 
@@ -9,7 +10,7 @@ html
   +head
   body
     +header
-    //- bread-cumb
+    +nav
     +breadcumb('Trang chủ', 'Blog')
     .container
       h2.title-left BLOG

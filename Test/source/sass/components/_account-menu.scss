@@ -1,0 +1,68 @@
+.account-menu {
+  float: left;
+  color: inherit;
+  @include clearfix;
+
+  &__item {
+    float: left;
+    margin-right: 10px;
+
+    &::after {
+      content: '-';
+      margin-left: 10px;
+    }
+
+    &--lastchild {
+      margin-right: 0;
+
+      &::after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    line-height: 33px;
+    font-size: 12px;
+    font-family: $times-new-roman;
+    color: inherit;
+
+    &:hover {
+      color: $goldish-brown;
+      text-decoration: underline;
+    }
+  }
+
+  @include respond-to('tablet-and-down') {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $white;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+
+
+    &__item {
+      float: none;
+      margin: 0;
+      border: 1px solid $gray-border;
+      border-bottom: 0;
+
+      &::after {
+        content: '';
+        display: none;
+      }
+
+      &--lastchild {
+        border-bottom: 1px solid $gray-border;
+      }
+    }
+
+    &__link {
+      padding: 0 12px;
+      color: $gray;
+    }
+  }
+}

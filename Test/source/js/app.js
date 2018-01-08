@@ -1,18 +1,15 @@
 $(document).ready(function(){
 
-  //account btn 
   $('.js-account-btn').on('click', function(){
     $('.js-account-menu').slideToggle(250);
   });
 
-  // menu button
   $('.js-menu-button').on('click', function(){
     console.log('clicked');
     $(this).toggleClass('active')
     $('.js-mobile-nav').slideToggle(250);
   });
 
-  //product slider 2
   var productSlider = $('.js-product-slider');
   productSlider.owlCarousel({
     loop: true,
@@ -34,7 +31,6 @@ $(document).ready(function(){
     }
   });
 
-  // home grid 
   $('.js-home-grid').owlCarousel({
     loop: false,
     nav: false,
@@ -52,7 +48,6 @@ $(document).ready(function(){
     }
   });
 
-  // testimonial carousel
   $('.js-testimonial').owlCarousel({
     loop: true,
     margin: 0,
@@ -60,7 +55,6 @@ $(document).ready(function(){
     items: 1
   });
 
-  // detail tabs
   $('.js-detail-tabs__tab').on('click', function(){
     if ($(this).hasClass('active')) return false;
 
@@ -73,7 +67,6 @@ $(document).ready(function(){
     $('.js-detail-content__block[data-tab="'+data+'"]').addClass('active');
   });
 
-  //detail thumnail slider 
   function checkPosition(){
     var wrapper = $('.js-product-image__thumbnail');
     var inner = $('.js-thumbnail-slider');
@@ -139,8 +132,8 @@ $(document).ready(function(){
       }
     });
 
-    checkPosition();  
-    changeImage();  
+    checkPosition();
+    changeImage();
   });
 
   $('.js-product-image__down').on('click', function(){
@@ -160,7 +153,6 @@ $(document).ready(function(){
     changeImage();
   });
 
-  // product number
   $('.js-product-property__sub').on('click', function(){
     $('.js-product-property__input').val(function(i, oldval){
       if (oldval > 1) {
@@ -179,47 +171,31 @@ $(document).ready(function(){
   });
 
   $('.js-product-property__input').on('keydown', function(e){
-    // Allow: backspace, delete, tab, escape, enter and .
     if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
-         // Allow: Ctrl/cmd+A
-        (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
-         // Allow: Ctrl/cmd+C
-        (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
-         // Allow: Ctrl/cmd+X
-        (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
-         // Allow: home, end, left, right
-        (e.keyCode >= 35 && e.keyCode <= 39)) {
-             // let it happen, don't do anything
-             return;
+      (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+      (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+      (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+      (e.keyCode >= 35 && e.keyCode <= 39)) {
+        return;
     }
-    // Ensure that it is a number and stop the keypress
     if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-        e.preventDefault();
+      e.preventDefault();
     }
   });
 
-  // cart number
   $('.js-cart__input').on('keydown', function(e){
-    // Allow: backspace, delete, tab, escape, enter and .
     if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
-         // Allow: Ctrl/cmd+A
-        (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
-         // Allow: Ctrl/cmd+C
-        (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
-         // Allow: Ctrl/cmd+X
-        (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
-         // Allow: home, end, left, right
-        (e.keyCode >= 35 && e.keyCode <= 39)) {
-             // let it happen, don't do anything
-             return;
+      (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+      (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+      (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+      (e.keyCode >= 35 && e.keyCode <= 39)) {
+        return;
     }
-    // Ensure that it is a number and stop the keypress
     if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-        e.preventDefault();
+      e.preventDefault();
     }
   });
 
-  // validate register form
   $('.js-register-form').validate({
     rules: {
       firstname: {

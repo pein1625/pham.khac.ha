@@ -1,5 +1,3 @@
-include ../components/nav
-
 mixin header(page)
   .top-site(class={'top-site--transparent': page==="home"})
     .container
@@ -25,4 +23,3 @@ mixin header(page)
   if (page === "home")
     .home-banner
       img.home-banner__img(src="images/home-banner.png", alt="home banner")
-  +nav

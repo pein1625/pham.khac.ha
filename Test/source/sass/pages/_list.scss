@@ -32,44 +32,12 @@
   }
 }
 
-.product-page {
-  display: flex;
-  align-items: center;
-  float: right;
-
-  &__item {
-    display: inline-block;
-    float: left;
-    padding: 0 3px;
-
-    &--firstchild {
-      padding-right: 10px;
-    }
-
-    &--lastchild {
-      padding-right: 0;
-      padding-left: 10px;
-    }
-  }
-
-  &__link {
-    font-size: 14px;
-    color: $gray-400;
-
-    &:hover,
-    &.active {
-      color: $goldish-brown;
-    }
-
-  }
-}
-
 .list-product {
   &__item {
     padding: 20px 0;
     border-bottom: 1px solid $gray-border;
 
-    &--lastchild {
+    &.last {
       border-bottom: 0;
     }
   }
