@@ -1,0 +1,68 @@
+mixin nav
+  nav.navigation
+    .container.clearfix
+      .logo
+        a(href="index.html")
+          img.logo__img(src="images/logo.png", alt="logo")
+      .menu-button.js-menu-button
+        .menu-button__wrap
+          span.menu-button__bar.menu-button__bar--1
+          span.menu-button__bar.menu-button__bar--2
+          span.menu-button__bar.menu-button__bar--3
+      ul.menu
+        li.menu__item
+          a.menu__link(href="index.html") TRANG CHỦ
+        li.menu__item.dropdown
+          a.menu__link(href="list.html") RƯỢU VANG ĐỎ
+          .dropdown-menu
+            img.dropdown-menu__img(src="images/dropdown-img.png", alt="dropdown-img")
+            .row
+              .col-4
+                h6.dropdown-menu__heading RƯỢU NGOẠI
+                ul.submenu
+                  - var list = ['Rượu Chivas', 'Hàng độc - Rượu độc đáo', 'Johnnie Walker', 'Rượu Whisky', 'Rượu Remy Martin', 'Rượu Glenmorangie']
+                  each item in list
+                    li.submenu__item
+                      a.submenu__link(href="#!")= item
+              .col-4
+                h6.dropdown-menu__heading RƯỢU VANG
+                ul.submenu
+                  - var list = ['Rượu Chivas', 'Hàng độc - Rượu độc đáo', 'Johnnie Walker', 'Rượu Whisky', 'Rượu Remy Martin', 'Rượu Glenmorangie']
+                  each item in list
+                    li.submenu__item
+                      a.submenu__link(href="#!")= item
+              .col-4
+                h6.dropdown-menu__heading RƯỢU NGOẠI
+                ul.submenu
+                  - var list = ['Rượu Chivas', 'Hàng độc - Rượu độc đáo', 'Johnnie Walker', 'Rượu Whisky', 'Rượu Remy Martin', 'Rượu Glenmorangie']
+                  each item in list
+                    li.submenu__item
+                      a.submenu__link(href="#!")= item
+
+        li.menu__item
+          a.menu__link(href="list.html") RƯỢU TRẮNG
+        li.menu__item
+          a.menu__link(href="grid.html") CHAMPAGNE
+        li.menu__item
+          a.menu__link(href="info.html") THÔNG TIN
+        li.menu__item
+          a.menu__link(href="blog.html") BLOG
+        li.menu__item.menu__item--lastchild
+          a.menu__link(href="contact.html") LIÊN HỆ
+  nav.mobile-nav.js-mobile-nav
+    .container
+      ul.mobile-menu
+        li.mobile-menu__item
+          a.mobile-menu__link(href="#!") TRANG CHỦ
+        li.mobile-menu__item
+          a.mobile-menu__link(href="#!") RƯỢU VANG ĐỎ
+        li.mobile-menu__item
+          a.mobile-menu__link(href="#!") RƯỢU TRẮNG
+        li.mobile-menu__item
+          a.mobile-menu__link(href="#!") CHAMPAGNE
+        li.mobile-menu__item
+          a.mobile-menu__link(href="#!") THÔNG TIN
+        li.mobile-menu__item
+          a.mobile-menu__link(href="#!") BLOG
+        li.mobile-menu__item.mobile-menu__item--lastchild
+          a.mobile-menu__link(href="#!") LIÊN HỆ

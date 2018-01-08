@@ -1,0 +1,24 @@
+.tags {
+  @include clearfix;
+
+  &__tag {
+    margin: 0 8px 8px 0;
+    float: left;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 12px;
+    font-family: $roboto;
+    color: $gray;
+    padding: 0 10px;
+    line-height: 25px;
+    border: 1px solid $gray-border;
+
+    &:hover {
+      color: $white;
+      background-color: $orange;
+      border-color: transparent;
+    }
+  }
+}

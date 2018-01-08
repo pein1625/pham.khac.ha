@@ -2,9 +2,14 @@
 /// @access public
 /// @param {String} $breakpoint - Breakpoint
 /// @requires $breakpoints
-
+///
 $breakpoints: (
-  'small': 420
+  'smallerphone-and-down': (max-width: 399px),
+  'smallphone-and-down': (max-width: 575px),
+  'phone-and-down': (max-width: 767px),
+  'tablet-and-down': (max-width: 991px),
+  'desktop-and-down': (max-width: 1199px),
+  'large-desktop-and-down': (max-width: 1500px)
 );
 
 @mixin respond-to($breakpoint) {

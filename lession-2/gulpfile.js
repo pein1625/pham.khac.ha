@@ -31,7 +31,8 @@ var options = {
   ],
   browserSync: {
     server: {
-      baseDir: dest
+      baseDir: dest,
+      index: 'links.html'
     }
   },
   htmlPrettify: {
@@ -45,16 +46,16 @@ var options = {
   include: {
     hardFail: true,
     includePaths: [
-      __dirname + "/",
-      __dirname + "/node_modules",
-      __dirname + "/source/js"
+      __dirname + '/',
+      __dirname + '/node_modules',
+      __dirname + '/source/js'
     ]
   },
   pug: {
     pug: pug,
     pretty: '\t'
-  },
-}
+  }
+};
 
 var scss = {
   sassOpts: {
@@ -223,7 +224,7 @@ gulp.task('compile-js', function() {
 
 // = Build image
 gulp.task('compile-images', function() {
-  return gulp.src(source + "/images/*.*")
+  return gulp.src(source + "/images/**/*.*")
   .pipe(gulp.dest(dest + '/images'));
 });
 
@@ -259,7 +260,6 @@ gulp.task('combine-data', function (cb) {
 });
 
 // ================ Develop
-
 gulp.task('dev', function (cb) {
   return runSequence(
     'build',
@@ -269,7 +269,7 @@ gulp.task('dev', function (cb) {
       'watch'
     ],
     cb
-    )
+  );
 });
 
 // ================ Build
@@ -281,5 +281,5 @@ gulp.task('build', function (cb) {
     'compile-js',
     'build-html',
     cb
-    );
+   );
 });

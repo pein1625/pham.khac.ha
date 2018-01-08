@@ -1,0 +1,22 @@
+mixin blog(img)
+  .blog
+    .blog__imgwrap
+      a.blog__imglink(href="blog-detail.html")
+        i.fa.fa-link
+      img.blog__img(src=img, alt="blog img")
+    h5.blog__title
+      a.blog__link(href="blog-detail.html") VANG THĂNG LONG CLASSIC
+    p.blog__info Đăng bởi Giangle | 30/06/2015 | 60 bình luận
+    p.blog__content Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...
+    a.blog__readmore(href="blog.html") Readmore
+
+mixin mini-blog(img)
+  .mini-blog
+    a.mini-blog__imgwrap(href="#!")
+      img.mini-blog__img(src=img, alt="")
+    .mini-blog__info
+      h6.mini-blog__title
+        a.mini-blog__link(href="#!") CÁCH XẮP XẾP NỘI THẤT TRONG NHÀ
+      .mini-blog__date
+        i.fa.fa-calendar-o.mini-blog__icon
+        | 12/06/2015

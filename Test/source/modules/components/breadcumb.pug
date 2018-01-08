@@ -1,0 +1,7 @@
+mixin breadcumb(...list)
+  .breadcumb
+    .container
+      ul.breadcumb__list
+        each item in list
+          li.breadcumb__item(class={"breadcumb__item--lastchild": item === list[list.length - 1]})
+            a.breadcumb__link(class={"breadcumb__link--lastchild": item === list[list.length - 1]},href="#!")= item

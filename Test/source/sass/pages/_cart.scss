@@ -1,0 +1,134 @@
+.cart {
+  width: 100%;
+  text-align: center;
+  background-color: $gray-100;
+  font-family: $times-new-roman;
+  color: $gray-900;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+
+  &__col,
+  &__headcol {
+    border: 1px solid $gray-border;
+    padding: 10px;
+  }
+
+  &__headcol {
+    height: 58px;
+    font-weight: 500;
+  }
+
+  &__imgcol {
+    width: 195px;
+    padding: 26px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__price,
+  &__total {
+    font-family: $caviar;
+    font-size: 16px;
+    color: $goldish-brown;
+  }
+
+  &__input {
+    width: 30px;
+    height: 30px;
+    border: 1px solid $gray-border;
+    text-align: center;
+    background-color: $gray-100;
+    font-size: 13px;
+  }
+
+  &__delete {
+    font-size: 20px;
+    color: $gray-800;
+
+    &:hover {
+      color: $black;
+    }
+  }
+
+  @include respond-to('phone-and-down') {
+    background-color: $white;
+
+    &__head {
+      display: none;
+    }
+
+    &__row {
+      display: block;
+      margin-bottom: 30px;
+      background-color: $gray-100;
+    }
+
+    &__col {
+      display: block;
+      margin-left: 150px;
+      position: relative;
+
+      &::before {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 150px;
+        height: calc(100% + 2px);
+        position: absolute;
+        left: -150px;
+        top: -1px;
+        font-size: 14px;
+        font-family: $times-new-roman;
+        color: $gray-900;
+        border: 1px solid $gray-border;
+        border-right: 0;
+      }
+    }
+
+    &__imgcol {
+      width: auto;
+      padding: 10px;
+
+      &::before {
+        content: 'ẢNH';
+      }
+    }
+
+    &__name::before {
+      content: 'TÊN SẢN PHẨM';
+    }
+
+    &__price::before {
+      content: 'GIÁ';
+    }
+
+    &__number::before {
+      content: 'SỐ LƯỢNG';
+    }
+
+    &__total::before {
+      content: 'TỔNG SỐ';
+    }
+
+    &__del::before {
+      content: 'XOÁ';
+    }
+  }
+}
+
+.cart-btns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  margin-bottom: 92px;
+
+  &__btn {
+    line-height: 29px;
+    padding: 0 17px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+}

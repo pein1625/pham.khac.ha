@@ -1,0 +1,84 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //- bread-cumb
+    +breadcumb('Trang chủ', 'Sản phẩm', 'Giỏ hàng')
+    .container
+      //- blog header
+      h2.title-left GIỎ HÀNG
+      
+      table.cart
+        thead.cart__head
+          tr.cart__row
+            th.cart__headcol ẢNH
+            th.cart__headcol TÊN SẢN PHẨM
+            th.cart__headcol GIÁ
+            th.cart__headcol SỐ LƯỢNG
+            th.cart__headcol TỔNG SỐ
+            th.cart__headcol XOÁ
+        tbody.cart__body
+          tr.cart__row
+            td.cart__col.cart__imgcol
+              img.cart__img(src="images/product/1.jpg", alt="")
+            td.cart__col.cart__name RƯỢU VANG ĐỎ
+            td.cart__col.cart__price 345.000
+              sup đ
+            td.cart__col.cart__number
+              input.cart__input.js-cart__input(type="text", value="1")
+            td.cart__col.cart__total 345.000
+              sup đ
+            td.cart__col.cart__del
+              a.cart__delete(href="#!")
+                i.fa.fa-trash
+          tr.cart__row
+            td.cart__col.cart__imgcol
+              img.cart__img(src="images/product/2.jpg", alt="")
+            td.cart__col.cart__name HUMBURGER THỊT BÒ
+            td.cart__col.cart__price 345.000
+              sup đ
+            td.cart__col.cart__number
+              input.cart__input.js-cart__input(type="text", value="1")
+            td.cart__col.cart__total 345.000
+              sup đ
+            td.cart__col.cart__del
+              a.cart__delete(href="#!")
+                i.fa.fa-trash
+          tr.cart__row
+            td.cart__col.cart__imgcol
+              img.cart__img(src="images/product/3.jpg", alt="")
+            td.cart__col.cart__name RƯỢU VANG ĐỎ
+            td.cart__col.cart__price 345.000
+              sup đ
+            td.cart__col.cart__number
+              input.cart__input.js-cart__input(type="text", value="1")
+            td.cart__col.cart__total 345.000
+              sup đ
+            td.cart__col.cart__del
+              a.cart__delete(href="#!")
+                i.fa.fa-trash
+          tr.cart__row
+            td.cart__col.cart__imgcol
+              img.cart__img(src="images/product/4.jpg", alt="")
+            td.cart__col.cart__name HUMBURGER THỊT BÒ
+            td.cart__col.cart__price 345.000
+              sup đ
+            td.cart__col.cart__number
+              input.cart__input.js-cart__input(type="text", value="1")
+            td.cart__col.cart__total 345.000
+              sup đ
+            td.cart__col.cart__del
+              a.cart__delete(href="#!")
+                i.fa.fa-trash
+      .cart-btns
+        a.main-btn.cart-btns__btn.cart-btns__btn--firstchild(href="#!") TIẾP TỤC MUA HÀNG
+        a.main-btn.cart-btns__btn(href="#!") XOÁ
+        a.main-btn.cart-btns__btn(href="#!") CẬP NHẬT
+    +footer
+    script(src="js/main.js")

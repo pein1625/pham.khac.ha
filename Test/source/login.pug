@@ -1,0 +1,32 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //- bread-cumb
+    +breadcumb('Trang chủ', 'Đăng nhập')
+    .container
+      //-  header
+      .login__title
+        a.main-btn.main-btn--big.login__register(href="register.html") ĐĂNG KÝ
+        h2.title-left ĐĂNG NHẬP
+      form.main-form.login-form.js-login-form
+        h5.main-form__title KHÁCH HÀNG ĐĂNG NHẬP
+        p.login-form__desc Nếu bạn có một tài khoản xin vui lòng đăng nhập.
+        .main-form__group
+          label.main-form__label Email *
+          input.main-form__input(type="email", name="email", data-msg="Bạn chưa nhập mục này", data-msg-email="Email không đúng")
+        .main-form__group
+          label.main-form__label Password *
+          input.main-form__input(type="password", name="password", data-msg="Bạn chưa nhập mục này")
+        a.login-form__passforgot(href="#!") Quên mật khẩu
+        .main-form__group
+          label.main-form__label
+          input.main-btn(type="submit", value="ĐĂNG NHẬP")
+    +footer
+    script(src="js/main.js")

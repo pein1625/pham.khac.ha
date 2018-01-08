@@ -1,0 +1,71 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/breadcumb
+include modules/components/product
+
+doctype html
+html
+  +head
+  body
+    +header
+    //- bread-cumb
+    +breadcumb('Trang chủ', 'Sản phẩm', 'Rượu vang đỏ')
+    .container
+      .list-banner
+        img.list-banner__img(src="images/list-banner.png", alt="list banner")
+      .row
+        .col-md-3
+          .list-aside
+            .list-aside__block
+              h5.title-left.list-aside__heading DANH MỤC SẢN PHẨM
+              ul.list-menu
+                li.list-menu__item
+                  a.list-menu__link(href="#!") RƯỢU NGOẠI
+                  ul.list-submenu
+                    each item in ['Rượu Chivas (26)', 'Hàng độc - Rượu độc đáo (36)', 'Johnnie Walker (46)', 'Rượu Whisky (24)', 'Rượu Remy Martin (16)', 'Rượu Glenmorangie  (11)', "Rượu Ballantine's (7)", 'Rượu Cognac (40)', 'Rượu Vodka (93)', 'Rượu Macallan (19)', 'Rượu Brandy (62)', 'Rượu Hennessy (20)', 'RượuGin - Tequila - Liqueur - Rượu mùi (36)', 'Rượu Champagne (12)', 'Rượu Single malt Scotch whisky (47)', 'Rượu Spirits (4)']
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!")= item
+                li.list-menu__item
+                  a.list-menu__link(href="#!") RƯỢU VANG
+                  ul.list-submenu
+                    each item in ['Rượu Vang Pháp (44)', 'Rượu Vang Úc (34)', 'Rượu Vang Mỹ (16)', 'Rượu Vang ChiLe (48)', 'Rượu Vang Philip (1)', 'Rượu Vang Nam Phi (20)', 'Rượu Vang Ý (2)']
+                      li.list-submenu__item
+                        a.list-submenu__link(href="#!")= item
+            .list-aside__block
+              h5.title-left.list-aside__heading SO SÁNH SẢN PHẨM
+              .list-compare Bạn chưa có sản phẩm nào để so sánh
+            .list-aside__block
+              h5.title-left.list-aside__heading TAG SẢN PHẨM
+              ul.tags.list-tags
+                each item in ['Đồng hồ', 'Túi', 'Phụ kiện', 'Giày', 'Sandal', 'Áo sơ mi', 'Nước hoa', 'Trẻ em', 'Thời trang nữ']
+                  li.tags__tag
+                    a.tags__link(href="#!")= item
+            .list-aside__block
+              img.list-aside__ad(src="images/list-ad.png", alt="")
+
+        .col-md-9
+          .list-content
+            .list-headbar
+              .product-view
+                a.product-view__btn(href="grid.html")
+                  i.fa.fa-th
+                a.product-view__btn(href="list.html")
+                  i.fa.fa-th-list
+              ul.product-page
+                li.product-page__item.product-page__item--firstchild
+                  a.product-page__link(href="#!")
+                    i.fa.fa-caret-left
+                each item in [1,2,3,4,5]
+                  li.product-page__item
+                    a.product-page__link(href="#!")= item
+                li.product-page__item.product-page__item--lastchild
+                  a.product-page__link(href="#!")
+                    i.fa.fa-caret-right
+            ul.list-product
+              each item in [1,2,3,4]
+                li.list-product__item(class={"list-product__item--lastchild": item === 4})
+                  +product2("images/product/"+item+".jpg")
+
+    +footer
+    script(src="js/main.js")

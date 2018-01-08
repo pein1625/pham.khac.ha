@@ -1,3 +1,28 @@
+include ../components/nav
+
 mixin header(page)
-  .header
-    h1 This is Header modules
+  .top-site(class={'top-site--transparent': page==="home"})
+    .container
+      .top-site__wrap
+        span.account-btn.js-account-btn Tài khoản
+        ul.account-menu.js-account-menu
+          li.account-menu__item
+            a.account-menu__link(href="#!") Tài khoản của tôi
+          li.account-menu__item
+            a.account-menu__link(href="#!") Trạng thái đơn hàng
+          li.account-menu__item
+            a.account-menu__link(href="#!") Danh sách ưa thích
+          li.account-menu__item
+            a.account-menu__link(href="#!") Giỏ hàng
+          li.account-menu__item
+            a.account-menu__link(href="#!") Đăng nhập
+          li.account-menu__item.account-menu__item--lastchild
+            a.account-menu__link(href="#!") Đăng ký
+        form.search-top
+          input.search-top__input(type="text", placeholder="Tìm kiếm ở đây")
+          button.search-top__btn(type="submit")
+            i.fa.fa-search
+  if (page === "home")
+    .home-banner
+      img.home-banner__img(src="images/home-banner.png", alt="home banner")
+  +nav

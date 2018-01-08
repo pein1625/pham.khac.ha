@@ -1,0 +1,12 @@
+.register {
+  &__login {
+    float: right;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.register-btn {
+  margin-left: auto;
+  margin-right: 7px;
+}

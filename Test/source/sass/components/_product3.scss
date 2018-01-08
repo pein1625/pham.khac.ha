@@ -1,0 +1,55 @@
+.product3 {
+  font-family: $times-new-roman;
+
+  &__img {
+    width: 100%;
+  }
+  
+  &__price {
+    font-size: 34px;
+    color: $goldish-brown;
+    font-family: $caviar;
+    margin-bottom: 40px;
+    line-height: 1;
+  }
+
+  &__btn {
+    line-height: 29px;
+    padding: 0 16px;
+
+    &:hover {
+      background-color: $goldish-brown;
+    }
+  }
+
+  &__desc {
+    font-size: 13px;
+    line-height: 18px;
+    color: $gray-600;
+    margin: 24px 0 50px;
+  }
+
+  &__grid {
+    color: $goldish-brown;
+    border: 1px solid $goldish-brown;
+    border-collapse: collapse;
+    margin: 0;
+  }
+
+  &__col {
+    border: 1px solid $goldish-brown;
+    text-align: center;
+    padding: 15px;
+  }
+
+  &__number {
+    font-family: $caviar;
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  &__type {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,41 @@
+.product-slider {
+  margin-bottom: 65px;
+  
+  &__item {
+    padding: 0 15px;
+  }
+
+  .owl-prev,
+  .owl-next {
+    width: 20px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    padding-left: 20px;
+    overflow: hidden;
+
+    &::before {
+      content: '\f060';
+      font-family: 'FontAwesome';
+      font-size: 16px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $black;
+    }
+
+    &:hover::before {
+      color: $goldish-brown;
+    }
+  }
+
+  .owl-next {
+    left: auto;
+    right: 0;
+
+    &::before {
+      content: '\f061';
+    }
+  }
+}

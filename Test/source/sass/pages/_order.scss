@@ -1,0 +1,188 @@
+.order-header {
+  padding: 35px 32px;
+  border: 1px solid $gray-border;
+  background-color: $gray-100;
+
+  &__heading {
+    font-size: 16px;
+    font-family: $times-new-roman;
+    color: $gray-900;
+    margin-bottom: 20px;
+  }
+}
+
+.order-info {
+  border-bottom: 0;
+  @include clearfix;
+
+  &__item {
+    display: inline-block;  
+    float: left;
+    margin-right: 12px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $gray-900;
+
+    &::after {
+      content: '|';
+      margin-left: 11px;
+    }
+  }
+}
+
+.order {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: $times-new-roman;
+  font-size: 14px;
+  color: $gray-900;
+  text-align: center;
+  margin-bottom: 90px;
+
+  &,
+  &__col,
+  &__headcol {
+    border: 1px solid $gray-border;
+    padding: 10px;
+  }
+
+  &__headcol {
+    font-size: 12px;
+    height: 46px;
+  }
+
+  &__col {
+    border-bottom: 0;
+    border-top: 0;
+  }
+
+  &__code {
+    display: inline-block;
+    text-align: left;
+  }
+
+  &__name {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+
+  &__date {
+    font-size: 12px;
+    color: $gray-600;
+    margin-bottom: 0;
+  }
+
+  &__detail {
+    color: $gray-900;
+
+    &:hover {
+      color: $black;
+      text-decoration: underline;
+    }
+  }
+
+  @include respond-to(phone-and-down) {
+    &__head {
+      display: none;
+    }
+
+    &__row:nth-child(even) {
+      background-color: $gray-100;
+    }
+
+    &__row {
+      border: 1px solid $gray-border;
+    }
+
+    &__col {
+      display: block; 
+      text-align: left;
+      margin-left: 150px;
+      position: relative;
+
+      &::before {
+        content: '';
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: -150px;
+        top: 0;
+        width: 150px;
+        height: 100%;
+        padding: 10px;
+        font-weight: 500;
+      }
+    }
+
+    &__serial::before {
+      content: 'STT';
+    }
+
+    &__codebox::before {
+      content: 'MÃ HOÁ ĐƠN / NGÀY MUA HÀNG';
+    }
+
+    &__place::before {
+      content: 'KHO NHẬN HÀNG';
+    }
+
+    &__number::before {
+      content: 'SỐ SP';
+    }
+
+    &__price::before {
+      content: 'TỔNG TIỀN';
+    }
+
+    &__purchase::before {
+      content: 'TÌNH TRẠNG';
+    }
+
+    &__manipulate::before {
+      content: 'THAO TÁC';
+    }
+  }
+}
+
+.customer {
+  padding: 32px 26px;
+  background-color: $gray-100;
+  border: 1px solid $gray-border;
+  font-family: $times-new-roman;
+  color: $gray-900;
+  margin-bottom: 60px;
+
+  &__heading {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    margin-bottom: 40px;
+  }
+
+  &__contact {
+    position: relative;
+    padding-left: 23px;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+  }
+
+  &__link {
+    font-size: 16px;
+    text-decoration: underline;
+    color: $gray-900;
+
+    &:hover {
+      color: $goldish-brown;
+    }
+  }
+}

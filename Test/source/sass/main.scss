@@ -10,15 +10,37 @@
 @import 'vendors/bootstrap-override-variable';
 @import 'bootstrap';
 @import 'font-awesome';
+@import 'owl.carousel';
 
-@import 'layout/grid';
-@import 'layout/content';
+@import 'abstracts/shame';
+@import 'base/normalize';
+
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/section';
 
-@import 'components/ui-elements';
-@import 'components/title';
-@import 'components/navigation-tab';
-@import 'components/table';
-@import 'components/block';
+@import 'components/breadcumb';
+@import 'components/button';
+@import 'components/heading';
+@import 'components/form';
+@import 'components/nav';
+@import 'components/blog';
+@import 'components/state';
+@import 'components/product';
+@import 'components/product2';
+@import 'components/product3';
+@import 'components/product-slider';
+@import 'components/tags';
+
+@import 'pages/home';
+@import 'pages/blog';
+@import 'pages/blog-detail';
+@import 'pages/list';
+@import 'pages/cart';
+@import 'pages/detail';
+@import 'pages/register';
+@import 'pages/login';
+@import 'pages/introduce';
+@import 'pages/contact';
+@import 'pages/address';
+@import 'pages/order';
+@import 'pages/404';

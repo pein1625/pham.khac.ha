@@ -1,0 +1,93 @@
+.state-sale,
+.state-new,
+.state-hot {
+  position: relative;
+  overflow:hidden;
+
+  &::before {
+    content: '';
+    width: 100px;
+    height: 58px;
+    background-color: $goldish-brown;
+    position: absolute;
+    left: -2px;
+    top: 2px;
+    transform-origin: left bottom;
+    transform: rotate(-45deg);
+    box-shadow:
+      0 2px 0 0 $white,
+      0 3px 0 0 $goldish-brown;
+  }
+
+  &::after {
+    content: 'Sale';
+    font-size: 16px;
+    font-family: $times-new-roman;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    color: $white;
+    transform: rotate(-45deg);  
+  }
+
+  &--responsive {
+    &::before {
+      height: 122px;
+      width: 200px;
+    }
+
+    &::after {
+      font-size: 32px;
+      top: 18px;
+      left: 18px;
+    }
+
+    @include respond-to('desktop-and-down') {
+      &::before {
+        height: 80px;
+      }
+
+      &::after {
+        font-size: 25px;
+        top: 8px;
+        left: 8px;
+      }
+    }
+
+    @include respond-to('smallphone-and-down') {
+      &::before {
+        height: 58px;
+      }
+
+      &::after {
+        font-size: 16px;
+        top: 8px;
+        left: 8px;
+      }
+    }
+  }
+}
+
+.state-new {
+  &::before {
+    background-color: $green;
+    box-shadow:   0 2px 0 0 $white,
+                  0 3px 0 0 $green;
+  }
+
+  &::after {
+    content: 'Mới';
+  }
+}
+
+.state-hot {
+  &::before {
+    background-color: $red;
+    box-shadow:   0 2px 0 0 $white,
+                  0 3px 0 0 $red;
+  }
+
+  &::after {
+    content: 'Hot';
+  }
+}

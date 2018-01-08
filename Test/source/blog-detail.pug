@@ -1,0 +1,63 @@
+include modules/head/head
+include modules/header/header
+include modules/footer/footer
+include modules/components/blog
+include modules/components/breadcumb
+
+doctype html
+html
+  +head
+  body
+    +header
+    //- bread-cumb
+    +breadcumb('Trang chủ', 'Blog')
+    .container
+      h2.title-left BLOG
+      .row
+        .col-lg-3.blog-sidebar
+          .blog-aside
+            .blog-aside__block
+              h5.blog-aside__heading BÀI VIẾT MỚI NHẤT
+              ul.blog-list
+                each item in [1, 2, 3]
+                  li.blog-list__item
+                    +mini-blog("images/mini-blog-"+item+".png")
+
+            .blog-aside__block
+              h5.blog-aside__heading BLOG TAGS
+              ul.tags.blog-tags
+                each item in ['Đồng hồ', 'Túi', 'Phụ kiện', 'Giày', 'Scandal', 'Áo sơ mi', 'Nước hoa', 'Trẻ em', 'Thời trang nữ']
+                  li.tags__tag
+                    a.tags__link.blog-tags__link(href="#!")= item
+
+            .blog-aside__block
+              h5.blog-aside__heading LASTEST VIDEO
+              a.blog-video(href="#!")
+                img.blog-video__thumbnail(src="images/blog-video.png", alt="")
+
+        .col-lg-9
+          .blog-detail
+            img.blog-detail__img(src="images/blog-detail.png", alt="")
+            h1.blog-detail__title VANG THĂNG LONG CLASSIC
+            p.blog-detail__info Đăng bởi Giangle | 30/06/2015 | 60 bình luận
+            p.blog-detail__content Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từhoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảmgiác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml.Vang nổ Thăng Long có hương vị đặc trưng của sản phẩm lên men tự nhiên từ hoa quả với độ rượu nhẹ, bọt ga đầy trắng mịn. Vang Nổ thăng long tạo cảm giác hương phấn, êm dịu, vui tươi, sản phẩm được đóng chai dung tích 750ml...
+          form.blog-form.js-blog-form
+            h5.blog-form__heading ĐÓNG GÓP Ý KIẾN
+            .blog-form__group
+              label.blog-form__label Tên
+                span.red *
+              input.blog-form__input(type="text", name="name", data-msg="Bạn chưa nhập mục này")
+            .blog-form__group
+              label.blog-form__label Email
+                span.red *
+              input.blog-form__input(type="email", name="email", data-msg="Bạn chưa nhập mục này", data-msg-email="Email không đúng")
+            .blog-form__group
+              label.blog-form__label Ý kiến
+                span.red *
+              textarea.blog-form__textarea(rows="10", name="message", data-msg="Bạn chưa nhập mục này")
+            .blog-form__group
+              label.blog-form__label
+              input.blog-form__btn(type="submit", value="GỬI Ý KIẾN")
+
+    +footer
+    script(src="js/main.js")

@@ -1,0 +1,127 @@
+.contact {
+  margin-bottom: 100px;
+}
+
+.contact-map {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 400px;
+  margin-bottom: 60px;
+}
+
+.contact-info {
+  &__logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  &__logoimg {
+    width: 100%;
+    height: auto;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    position: relative;
+    color: $gray-700;
+    font-size: 14px;
+    line-height: 25px;
+    padding-left: 25px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 25px;
+    font-size: 14px;
+  }
+
+  &__heading {
+    font-size: 18px;
+    color: $gray-700;
+  }
+
+  margin-bottom: 60px;
+}
+
+.contact-social {
+  @include clearfix;
+
+  &__item {
+    float: left;
+    margin-right: 20px;
+  }
+
+  &__link {
+    color: $gray-600;
+    font-size: 20px;
+
+    &:hover {
+      color: $goldish-brown;
+    }
+  }
+}
+
+.contact-form {
+  &__group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    min-width: 120px;
+    font-size: 14px;
+    line-height: 30px;
+    color: $gray-700;
+
+    @include respond-to('phone-and-down') {
+      min-width: 100%;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    flex: 1;
+    font-size: 14px;
+    line-height: 30px;
+    border: 1px solid $gray-300;
+    background-color: $gray-100;
+    padding: {
+      left: 10px;
+      right: 10px;
+    }
+  }
+
+  &__input {
+    height: 35px;
+  }
+
+  &__textarea {
+    resize: none;
+  }
+
+  &__btn {
+    font-size: 14px;
+    padding: 8px 24px 6px;
+    margin-top: 10px;
+  }
+
+  label.error {
+    font-size: 12px;
+    font-family: $roboto;
+    color: $red;
+    width: 100%;
+    padding-left: 120px;
+
+    @include respond-to('phone-and-down') {
+      padding-left: 0;
+    }
+  }
+}

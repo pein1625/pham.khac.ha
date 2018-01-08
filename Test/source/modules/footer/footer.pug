@@ -1,5 +1,100 @@
-mixin footer()
-  //Footer
-  footer Footer
-  //./Footer
-  script(type='text/javascript', src='js/main.js')
+mixin footer
+  footer.footer
+    .container
+      .row.footer-brands
+        .col-sm-4.footer-brands__wrap
+          img.footer-brands__img(src="images/brand-1.png", alt="footer brand")
+        .col-sm-4.footer-brands__wrap
+          img.footer-brands__img(src="images/brand-2.png", alt="footer brand")
+        .col-sm-4.footer-brands__wrap.footer-brands__wrap--lastchild
+          img.footer-brands__img(src="images/brand-3.png", alt="footer brand")
+      .row
+        .col-lg-2.footer__widget
+          h5.footer__heading THÔNG TIN
+          ul.sublist
+            li.sublist__item
+              a.sublist__link(href="#!") VỀ CHÚNG TÔI
+            li.sublist__item
+              a.sublist__link(href="#!") GIAO HÀNG
+            li.sublist__item
+              a.sublist__link(href="#!") CẢM NGHĨ
+            li.sublist__item
+              a.sublist__link(href="#!") LƯU TRỮ
+            li.sublist__item
+              a.sublist__link(href="#!") CHÍNH SÁCH RIÊNG TƯ
+
+        .col-lg-2.footer__widget
+          h5.footer__heading MUA HÀNG
+          ul.sublist
+            li.sublist__item
+              a.sublist__link(href="#!") VẬN CHUYỂN VÀ TRẢ HÀNG
+            li.sublist__item
+              a.sublist__link(href="#!") MUA HÀNG AN TOÀN
+            li.sublist__item
+              a.sublist__link(href="#!") VẬN QUỐC TẾ
+            li.sublist__item
+              a.sublist__link(href="#!") LIÊN KẾT
+            li.sublist__item
+              a.sublist__link(href="#!") DỊCH VỤ GIẢM GIÁ
+
+        .col-lg-4.footer__widget
+          h5.footer__heading GỬI EMAIL
+          p.footer__text Gửi email cho chúng tôi để được hỗ trợ
+          form.send-mail
+            input.send-mail__input(type="text", placeholder="Enter your email")
+            button.send-mail__btn(type="submit") GỬI
+          ul.mini-social
+            li.mini-social__item
+              a.mini-social__link(href="#!")
+                i.fa.fa-twitter
+            li.mini-social__item
+              a.mini-social__link(href="#!")
+                i.fa.fa-google-plus
+            li.mini-social__item
+              a.mini-social__link(href="#!")
+                i.fa.fa-dribbble
+            li.mini-social__item
+              a.mini-social__link(href="#!")
+                i.fa.fa-linkedin
+            li.mini-social__item
+              a.mini-social__link(href="#!")
+                i.fa.fa-rss
+
+        .col-lg-4.footer__widget
+          h5.footer__heading LIÊN HỆ
+          ul.footer-contact
+            li.footer-contact__line
+              .footer-contact__group
+                i.fa.fa-map-marker.footer-contact__icon
+                span.footer-contact__detail Tầng 4, Tòa nhà Hanoi Group  Số 442 Đội Cấn,  P. Cống Vị, Q. Ba Đình, Hà Nội.
+            li.footer-contact__line
+              .footer-contact__group.footer-contact__group--hyphen
+                i.fa.fa-phone.footer-contact__icon
+                span.footer-contact__detail (04) 6674 2332
+              .footer-contact__group
+                i.fa.fa-phone.footer-contact__icon
+                span.footer-contact__detail (04) 3786 8904
+            li.footer-contact__line
+              .footer-contact__group
+                i.fa.fa-phone.footer-contact__icon
+                span.footer-contact__detail (08) 6680 9686
+              .footer-contact__group
+                i.fa.fa-envelope.footer-contact__icon
+                span.footer-contact__detail Support@bizweb.vn
+
+    .bottom-site
+      .container.clearfix
+        .copyright © Copyright 2008-2014 DKT Technology JSC
+        ul.payments
+          li.payments__item
+            a.payments__link(href="#!")
+              img(src="images/payment-1.png", alt="payment")
+          li.payments__item
+            a.payments__link(href="#!")
+              img(src="images/payment-2.png", alt="payment")
+          li.payments__item
+            a.payments__link(href="#!")
+              img(src="images/payment-3.png", alt="payment")
+          li.payments__item
+            a.payments__link(href="#!")
+              img(src="images/payment-4.png", alt="payment")
